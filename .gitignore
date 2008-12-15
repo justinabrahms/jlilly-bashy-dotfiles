@@ -1,0 +1,7 @@
+*.pyc
+*.db
+.svn/
+.gitignore
+.git/
+local_settings.py
+.DS_Store

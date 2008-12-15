@@ -1,0 +1,17 @@
+nethack on
+vbell off
+bind o other
+caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
+startup_message off
+deflogin on
+# Never, ever turn this off.
+autodetach on
+# Just in case it isn't clear...
+zombie cr
+defscrollback 5000
+# Run everything in UTF-8.
+defutf8 on
+# If a window goes unresponsive, don't block the whole session waiting for it.
+defnonblock on
+# Clear screen after fullscreen apps - top, vim. 
+altscreen on
