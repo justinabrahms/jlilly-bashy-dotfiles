@@ -43,7 +43,6 @@ case $MACHTYPE in
         ini () {
             command sudo /etc/init.d/$@
         }
-        # I only work on debian systems, thankfully
         alias agi="sudo apt-get install"
         alias acs="sudo apt-cache search"
         alias acsh="sudo apt-cache show"
