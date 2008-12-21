@@ -1,7 +1,10 @@
-nethack on
-vbell off
+nethack on # turn on funny error messages
 bind o other
 caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
+
+activity "%c activity -> %n%f %t"
+bell "%c bell -> %n%f %t^G"
+
 startup_message off
 deflogin on
 # Never, ever turn this off.
@@ -15,3 +18,5 @@ defutf8 on
 defnonblock on
 # Clear screen after fullscreen apps - top, vim. 
 altscreen on
+
+bind s select bash # should move to the closest bash prompt
