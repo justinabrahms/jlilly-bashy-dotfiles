@@ -1,2 +1,4 @@
 [core]
 	excludesfile = /Users/jlilly/.gitignore
+[alias]
+  log1 = log --pretty=oneline --abbrev-commit
