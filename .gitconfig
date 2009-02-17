@@ -1,2 +1,9 @@
 [core]
 	excludesfile = /Users/jlilly/.gitignore
+[user]
+  name = Justin Lilly
+  email = justinlilly@gmail.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
