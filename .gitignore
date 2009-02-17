@@ -5,3 +5,4 @@
 .git/
 local_settings.py
 .DS_Store
+.#*
