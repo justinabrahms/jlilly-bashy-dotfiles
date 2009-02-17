@@ -549,12 +549,15 @@ bind ^Y screen -t log watch -n 5 rail -40 /var/log/syslog
 # vbell off
 # bind o other
 # caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
-# Never, ever turn this off.
-# Just in case it isn't clear...
-# zombie cr
-# Run everything in UTF-8.
-# defutf8 on
-# If a window goes unresponsive, don't block the whole session waiting for it.
-# defnonblock on
-# Clear screen after fullscreen apps - top, vim. 
+=======
+nethack on # turn on funny error messages
+bind o other
+caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
+
+activity "%c activity -> %n%f %t"
+bell "%c bell -> %n%f %t^G"
+
+startup_message off
+deflogin on
 # altscreen on
+bind s select bash # should move to the closest bash prompt

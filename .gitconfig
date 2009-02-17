@@ -7,3 +7,5 @@
   diff = auto
   status = auto
   branch = auto
+[alias]
+  log1 = log --pretty=oneline --abbrev-commit
