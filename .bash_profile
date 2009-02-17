@@ -1,4 +1,4 @@
-export PATH=/opt/local/bin:/opt/local/apache2/bin:/Library/PostgreSQL/8.3/bin/:/usr/local/bin:/usr/local/sbin:/Users/jlilly/Code/air/sdk/bin:/usr/local/mysql/bin:/usr/games:/usr/sbin:/opt/local/apache/bin:$PATH
+export PATH=/usr/local/bin:/opt/local/bin:/opt/local/apache2/bin:/Library/PostgreSQL/8.3/bin/:/usr/local/sbin:/Users/jlilly/Code/air/sdk/bin:/usr/local/mysql/bin:/usr/games:/usr/sbin:/opt/local/apache/bin:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPATH=/opt/local/share/man:$MANPATH
 export DISPLAY=:0.0
@@ -181,6 +181,9 @@ ips () {
     ifconfig | grep "inet " | awk '{ print $2 }'
 }
 
+gsvn () {
+     cat .git/config | grep url
+}
 
 git_modified() {
     if [ "$(git branch 2> /dev/null)" != '' ]; then 
