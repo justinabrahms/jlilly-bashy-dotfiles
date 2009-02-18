@@ -112,8 +112,8 @@ screen -t GOOGLE      3 links http://www.google.com
 # in addition to the hardstatus line.
 #
 # use caption to show window list:
-caption always "%{= kw}%?%-Lw%?%{+b kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
-
+# caption always "%{= kw}%?%-Lw%?%{+b kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
+caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
 
 # caption always '%{= wb}%50=%n%f %t%{= wb}'
 # this basically just shows the current window number and title
@@ -352,7 +352,7 @@ hardstatus alwayslastline "%{+b kr}[ %H ] %{ky} Load: %l %-=%{kb} %c  %d.%m.%Y"
 #
 # BUUG - Berlin Unix User Group - read some news about Unix
 #  bind B screen -t 'buug' 4 links www.buug.de
-#
+ bind b select # make it like emacs
 # CHEM - LinuxTag event in Chemnitz -- 2002-03-09 + 2002-03-10
 #  bind C screen -t 'CHEM' 9 links www.tu-chemnitz.de/linux/tag/
 # NOTE:  This overrides the default binding for the "clear" command.
