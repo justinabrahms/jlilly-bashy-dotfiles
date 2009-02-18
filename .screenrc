@@ -31,10 +31,10 @@
 # ===============================================================
 # Uncomment one/some following lines to automatically let
 # SCREEN start some programs in the given window numbers:
-screen -t irssi			0 irssi
-screen -t mutt       1 mutt
-screen -t EDIT        2 emacs
-screen -t GOOGLE      3 links http://www.google.com
+screen -t irssi     0 irssi
+screen -t mutt      1 mutt
+screen -t EDIT      2 emacs
+screen -t GOOGLE    3 links http://www.google.com
 # screen -t NEWS        4 slrn
 # screen -t WWW         5 links http://www.math.fu-berlin.de/~guckes/
 #
@@ -48,7 +48,7 @@ screen -t GOOGLE      3 links http://www.google.com
   hardcopy_append       on              # default: off
   nethack               on              # default: off
   startup_message       off             # default: on
-# termcap  xterm        'AF=\E[3%dm:AB=\E[4%dm'
+# termcap  xterm            'AF=\E[3%dm:AB=\E[4%dm'
 # terminfo xterm        'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
 # Matthias Kopfermann  [020222]:
   termcapinfo linux "ve=\E[?25h\E[?17;0;64c" # red
@@ -145,7 +145,7 @@ caption always "%{= kw}%?%-Lw%?%{+b kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
 # On the right there is the time in green and the date in yellow.
 #
 #hardstatus alwayslastline "%?%{wk}%-Lw%?%{yK}%n*%f %t%?(%u)%?%?%{wk}%+Lw%? %{gk}%=%c %{yk}%d/%M/%Y"
-hardstatus alwayslastline "%{+b kr}[ %H ] %{ky} Load: %l %-=%{kb} %c  %d.%m.%Y"
+hardstatus alwayslastline "%{+b kr}[ %H ] %{ky} Load: %l %-=%{kb} %c  %m.%d.%Y"
 
 #hardstatus alwayslastline "%{+b kr}[ %H ] %{kw} Load: %l %-=%  %{kb} %c:%s  %d.%m.%Y "
 
@@ -542,22 +542,3 @@ bind ^Y screen -t log watch -n 5 rail -40 /var/log/syslog
 # ie expands TABs to the next column
 # whose number is a multiple of eight.
 # EOF  vim: ts=8
-
-
-
-
-# vbell off
-# bind o other
-# caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
-=======
-nethack on # turn on funny error messages
-bind o other
-caption always "%H %= %-w%L>%{= BW}%n*%t%{-}%52<%+w %L="
-
-activity "%c activity -> %n%f %t"
-bell "%c bell -> %n%f %t^G"
-
-startup_message off
-deflogin on
-# altscreen on
-bind s select bash # should move to the closest bash prompt
