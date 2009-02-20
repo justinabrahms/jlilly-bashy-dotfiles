@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/opt/local/bin:/opt/local/apache2/bin:/Library/PostgreSQL/8.3/bin/:/usr/local/sbin:/Users/jlilly/Code/air/sdk/bin:/usr/local/mysql/bin:/usr/games:/usr/sbin:/opt/local/apache/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPATH=/opt/local/share/man:$MANPATH
 export DISPLAY=:0.0
@@ -27,9 +27,9 @@ case $MACHTYPE in
         ini () {
             command sudo service $@
         }
-        alias agi="sudo yum install"
-        alias acs="sudo yum search"
-        alias acsh="sudo yum info"
+        alias agi="time sudo yum -C install"
+        alias acs="time sudo yum -C search"
+        alias acsh="time sudo yum -C info"
         alias ls="ls -F --color"
         export GOOGLE_CODE_CHECKOUTS="/opt/trunks/"
         export EDITOR='vim'
@@ -50,7 +50,7 @@ case $MACHTYPE in
         ;;
     *darwin*)
         # Mac Specific
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/Users/jlilly/Code/django-trunk:/opt/local/lib/python2.5/site-packages:
+        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/opt/local/lib/python2.5/site-packages:
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
