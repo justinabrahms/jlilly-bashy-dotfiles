@@ -205,7 +205,7 @@ BLUE='\[\033[0;34m\]'
 CYAN='\[\033[0;36m\]'
 NORMAL='\[\033[00m\]'
 # Prompt
-PS1="${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\h${RED}\$ ${NORMAL}"
+PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
 
 # Old Prompts 
 #export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
