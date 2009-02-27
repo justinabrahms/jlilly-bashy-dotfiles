@@ -53,6 +53,7 @@ case $MACHTYPE in
         export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/opt/local/lib/python2.5/site-packages:
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
+        export WORKON_HOME="$HOME/.virtualenvs"
         alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
         alias agi='sudo port install'
         alias acs='sudo port list'
@@ -211,6 +212,7 @@ PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_
 #export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 #export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 
+source $HOME/bin/virtualenvwrapper_bashrc
 
 
 # Welcome Message
