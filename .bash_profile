@@ -92,6 +92,7 @@ alias emc='emacsclient'
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
+alias pyclean='find . -name "*.pyc" -exec rm "{}" ";"'
 
 # GIT ALIASES
 alias gb='git branch'
