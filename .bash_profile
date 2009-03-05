@@ -10,11 +10,14 @@ export GOOGLE_CODE_CHECKOUTS="$HOME/Code/trunks"
 
 export HISTCONTROL=erasedups  # Ignore duplicate entries in history
 export HISTSIZE=10000         # Increases size of history
-export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear"
+export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
 shopt -s histappend        # Append history instead of overwriting
 shopt -s cdspell           # Correct minor spelling errors in cd command
 shopt -s dotglob           # includes dotfiles in pathname expansion
 shopt -s checkwinsize      # If window size changes, redraw contents
+shopt -s cmdhist           # Multiline commands are a single command in history.
+shopt -s extglob           # Allows basic regexps in bash.
+set ignoreeof on           # Typing EOF (CTRL+D) will not exit interactive sessions
 
 # ALAISES
 
@@ -92,7 +95,7 @@ alias emc='emacsclient'
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
-alias pyclean='find . -name "*.pyc" -exec rm "{}" ";"'
+alias pycclean='find . -name "*.pyc" -exec rm {} \;'
 
 # GIT ALIASES
 alias gb='git branch'
