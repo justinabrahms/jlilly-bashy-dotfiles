@@ -1,0 +1,660 @@
+_HiStOrY_V2_
+from\040django.db.models\040import\040get_model
+y
+y
+from\040django.db.models\040import\040get_mode
+from\040django.db.models\040import\040get_model
+import\040django
+import\040sys
+sys.path
+from\040django.db.models\040import\040get_model
+help(set_env)
+import\040os
+y
+from\040django.db.models\040impor\040get_model
+from\040django.db.models\040import\040get_model
+help(get_model)
+from\040django.db\040import\040models
+models.get_model("tips",\040"tip")
+mod\040=\040models.get_model("tips",\040"tip")
+mod
+mod.name
+mod.submitted_by
+mod._meta.get_field
+help(mod._meta.get_field)
+help(mod._meta.get_latest_by)
+q
+help(mod._meta.get_latest_by)
+q
+mod._meta.get_latest_by
+help(mod._meta.get_latest_by)
+q
+meta\040=\040mod._meta
+meta.fields
+meta.fields[0].name
+for\040i\040in\040meta.fields:\012isinstance(models.DateTimeField,\040i)
+for\040i\040in\040meta.fields:\012for\040i\040in\040meta.fields:\012\040\040\040\040isinstance(models.DateTimeField,\040i)
+for\040i\040in\040meta.fields:\012isinstance(models.DateTimeField,\040i)
+for\040field\040in\040meta.fields:\012\040\040\040\040isinstance(models.DateTimeField,\040field)
+meta.fields
+fields\040=\040meta.fields[0]
+fields
+field\040=\040meta.fields[1]
+field
+isinstance(field,\040models.CharField)
+getattr(year,\040self.field)
+y
+from\040django.core.urlresolvers\040import\040reverse
+reverse('portfolio-detail')
+reverse('portfolio-detail',\040slug='go-gamecocks')
+reverse('portfolio-detail',\040args="go-gamecocks")
+reverse('portfolio-list')
+reverse('portfolio-detail',\040kwargs={'slug':"go-gamecocks"})
+from\040tagging.fields\040import\040TagField
+from\040django.db.models\040import\040ImageField()
+from\040django.db.models\040import\040ImageField
+import\040crypt
+crypt.version
+crypt.__version__
+crypt.VERSION
+y
+from\040pkg_resources\040import\040load_entry_point
+load_entry_point('Fabric==0.0.9',\040'console_scripts',\040'fab')()
+import\040polib
+polib
+help(polib)
+n
+y
+import\040polib
+help(polib)
+clear
+foo\040=\040POFile()
+from\040polib\040import\040POFile
+foo\040=\040POFile()
+foo
+foo.to_binary
+foo.to_binary()
+import\040polib
+foo\040=\040polib.MOFile()
+help(foo)
+list
+template_dir
+template_dires
+template_dirs
+import\040os
+os.path.isfile('/Users/jlilly/Code/django/neolocales/templates/no_template.html')
+step
+cont
+next
+filepath
+next
+step
+display_name
+loader
+loader.is_usable
+name
+dirs
+list
+LoaderOrigin(display_name,\040loader,\040name,\040dirs)
+cont
+next
+source
+origin
+parent
+next
+context
+next
+cont
+template_dirs
+template_name
+get_template_sources(template_name,\040template_dirs)
+get_template_sources(template_name,\040template_dirs).len()
+foo\040=\040get_template_sources(template_name,\040template_dirs)
+len(foo)
+template_dirs
+template_dir
+continue
+cont
+template_dir
+safe_join(template_dir,\040"no_template.html")
+foo\040=\040safe_join(template_dir,\040"no_template.html")
+open(foo).read().decode(settings.FILE_CHARSET)
+ls
+tried
+cont
+tried
+cont
+tried
+open(filepath).read().decode(settings.FILE_CHARRSET),\040filepath)
+open(filepath).read().decode(settings.FILE_CHARSET),\040filepath)
+open(filepath).read().decode(settings.FILE_CHARSET)
+filepath
+(open(filepath).read().decode(settings.FILE_CHARSET),\040filepath)
+step
+next
+list
+next
+step
+next
+template
+t
+template_name
+next
+tried
+import\040plugables
+plugables.__file__
+plugables.__str__
+plugables.__doc__
+y
+list
+self
+self._inherited
+model
+model._meta.abstract
+if\040self._inherited:
+self._inherited
+next
+cls
+name
+value
+next
+attrs.items()
+c
+n
+obj_name
+obj
+n
+f
+n
+parents
+base._meta
+base
+parents
+parents[0]._meta
+list
+n
+abstract
+list
+n
+new_class
+n
+self
+self._inherited
+break\040/Users/jlilly/Code/django-trunk/django/db/models/manager.py:37
+c
+self._inherited
+c
+self._inherited
+c
+self._inherited
+c
+self._inherited
+c
+self._inherited
+c
+self._inherited
+c
+self._inherited
+self
+model
+c
+self
+c
+self
+c
+self
+self._inherited
+c
+n
+c
+import\040MySQLdb
+from\040MySQLdb\040import\040cursors
+y
+list
+obj
+site
+site.name
+"%s:\040latest\040commits\040for\040%s"\040%\040(site.name,\040obj.name)
+c
+import\040django.contrib.comments.models
+from\040django.contrib.comments.models\040import\040FreeComment
+from\040urlresolvers\040import\040reverse
+from\040django.core.urlresolvers\040import\040reverse
+reverse('django.contrib.comments.views.comments.post_comment')
+help(reverse)
+reverse('django.contrib.comments.views.comments.post_comment',\040'django.contrib.comments.urls')
+)
+reverse('django.contrib.comments.views.comments.post_comment',\040prefix='comments')
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040args='2008')
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040args=2008)
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040args=[2008])
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040args=[2009])
+reverse('oebfare2.apps.blog.views.blog_archive_year',\0402009)
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040kwargs={'year':2009})
+reverse('oebfare2.apps.blog.views.blog_archive_index')
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040args=[2009])
+import\040oebfare2.blog
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040kwargs={'year':2009})
+from\040django.core.urlresolvers\040import\040reverse
+reverse('oebfare2.apps.blog.views.blog_archive_year',\040kwargs={'year':2009})
+reverse('oebfare2.blog.views.blog_archive_year',\040kwargs={'year':2009})
+import\040oebfare2.apps.blog
+import\040oebfare2.apps.blog.urls
+reverse('oebfare_home')
+reverse('blog_archive_year',\040args=[2009])
+reverse('blog_archive_year',\040kwargs={'year':2009})
+reverse('blog_archive_detail',\040kwargs={'year':2009,\040'month':'Jan',\040'day':20,\040'slug':'test-post'})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':20})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':'20'})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':'21'})
+reverse('blog_archive_month',\040kwargs={'year':2009,\040'month':'Jan'})
+reverse('blog_archive_monthly',\040kwargs={'year':2009,\040'month':'Jan'})
+reverse('blog_archive_monthly',\040kwargs={'year':2009,\040'month':'jan'})
+reverse('blog_archive_month',\040kwargs={'year':2009,\040'month':'jan'})
+reverse('blog_archive_detail',\040kwargs={'year':2009,\040'month':'jan',\040'day':20,\040'slug':'test-post'})
+reverse('blog_archive_detail',\040kwargs={'year':2009,\040'month':'jan',\040'day':'20',\040'slug':'test-post'})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':'20'})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':'21'})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':21})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'Jan',\040'day':20})
+reverse('blog_archive_daily',\040kwargs={'year':2009,\040'month':'jan',\040'day':20})
+reverse('blog_archive_detail',\040kwargs={'year':2009,\040'month':'jan',\040'day':20,\040'slug':'test-post'})
+from\040oebfare2.blog.models\040import\040*
+from\040oebfare2.apps.blog.models\040import\040*
+Post.objects.all()
+from\040oebfare2.apps.blog.models\040import\040Post
+y
+list\040=\040['microsoft',\040'apple',\040'microsoft.',\040'Apple?',\040'security',\040'microsoft',\040'internet']
+list
+foo\040=\040{}
+foo['blue']
+for\040i\040in\040list:
+\040\040\040\040i.replace('.').replace('?')
+\040\040\040\040i.lower()
+\040\040\040\040try:
+\040\040\040\040\040\040\040\040foo[i]\040+=\0401
+\040\040\040\040except\040KeyError:
+\040\040\040\040\040\040\040\040foo[i]\040=\0401
+\040\040\040\040\040\040\040\040
+for\040i\040in\040list:
+\040\040\040\040i.replace('.','').replace('?','')
+\040\040\040\040i.lower()
+\040\040\040\040try:
+\040\040\040\040\040\040\040\040foo[i]\040+=\0401
+\040\040\040\040except\040KeyError:
+\040\040\040\040\040\040\040\040foo[i]\040=\0401
+\040\040\040\040\040\040\040\040
+foo
+'Apple'.lower()
+for\040i\040in\040list:
+\040\040\040\040i\040=\040i.replace('.','').replace('?','')
+\040\040\040\040i.f:
+\040\040\040\040\040\040\040\040foo[i]\040+=\0401
+\040\040\040\040except\040KeyError:
+\040\040\040\040\040\040\040\040foo[i]\040=\0401
+for\040i\040in\040list:
+\040\040\040\040i\040=\040i.replace('.','').replace('?','').lower()
+\040\040\040\040try:
+\040\040\040\040\040\040\040\040foo[i]\040+=\0401
+\040\040\040\040except\040KeyError:
+\040\040\040\040\040\040\040\040foo[i]\040=\0401
+\040\040\040\040\040\040\040\040
+foo
+foo\040=\040{}
+for\040i\040in\040list:
+\040\040\040\040i\040=\040i.replace('.','').replace('?','').lower()
+\040\040\040\040try:
+\040\040\040\040\040\040\040\040foo[i]\040+=\0401
+\040\040\040\040except\040KeyError:
+\040\040\040\040\040\040\040\040foo[i]\040=\0401
+\040\040\040\040\040\040\040\040
+foo
+for\040key,\040val\040in\040foo:
+\040\040\040\040print\040key\040+\040'\040'\040+\040val
+\040\040\040\040
+print\040foo
+for\040key\040in\040foo:
+\040\040\040\040print\040key
+\040\040\040\040
+for\040key,\040val\040in\040foo:
+\040\040\040\040print\040key,val
+\040\040\040\040
+for\040key,\040val\040in\040foo:
+\040\040\040\040print\040key
+\040\040\040\040print\040val
+\040\040\040\040
+for\040key,\040val\040in\040foo:
+\040\040\040\040print\040key
+\040\040\040\040
+\040\040\040\040
+for\040item\040in\040foo:
+\040\040\040\040if\040foo[item]\040>\0401:
+\040\040\040\040\040\040\040\040print\040item\040+\040'\040'\040+\040foo[item]
+\040\040\040\040\040\040\040\040
+for\040item\040in\040foo:
+\040\040\040\040if\040foo[item]\040>\0401:
+\040\040\040\040\040\040\040\040print\040item\040+\040'\040'\040+\040str(foo[item])
+\040\040\040\040\040\040\040\040
+class\040MyObj(object):
+\040\040\040\040def\040pass(self):
+class\040MyObj(object):
+\040\040\040\040def\040passe(self):
+\040\040\040\040\040\040\040\040pass
+\040\040\040\040
+MyObj.passe()
+import\040urllib2\040as\040url
+url.HTTPSHandler
+y
+import\040smtpd
+smtpd.DebuggingServer()
+smtpd.DebuggingServer(('127.0.0.1',\0401008),\040None)
+from django.contrib.auth.models import User
+foo = User.objects.all()[0]
+foo
+foo.is_staff
+from blog.admin import *
+from django.contrib.comments.models import *
+Comment.objects.all()
+foo
+foo
+foo.content_type
+foo.content_type.objects
+foo.content_type
+foo.content_type._default_manager
+foo.content_type._default_manager.all()
+foo.content_type.pk
+from django.contrib.contenttypes.models import ContentType
+ContentType.objects.all()
+bar = ContentType.objects.all()[0]
+foo.content_type.get_object_for_this_type(id=foo.object_id)
+foo.object_pk
+foo.content_type.get_object_for_this_type(id=foo.object_pk)
+from blog.admin import *
+from django.contrib.comments.models import *
+foo = Comment.objects.all()[0]
+foo
+foo.get_absolute_url()
+foo.get_content_object_url()
+foo.url
+foo._get_url
+foo._get_url()
+foo._meta.admin
+foo.get_urls()
+from django.contrib import admin
+admin.ModelAdmin.get_urls()
+CommentsAdmin
+CommentsAdmin.get_urls()
+help(CommentsAdmin.get_urls)
+CommentsAdmin.urls
+CommentsAdmin.urls()
+CommentsAdmin.urls.all()
+CommentsAdmin.get_urls
+CommentsAdmin.get_urls()
+from django.core.urlresolvers import reverse
+CommentsAdmin
+zot = CommentsAdmin.__new__
+zot
+zot = CommentsAdmin.__new__()
+zot
+zot = CommentsAdmin
+zot.get_urls
+zot.get_urls()
+from django.contrib.comments.models import *
+foo = Comment.objects.all()[0]
+foo.model
+foo._meta.app_label
+from django.contrib.comments.models import *
+foo = Comment.objects.all()[0]
+foo.userinfo
+foo._meta
+foo._meta.admin
+foo._meta.
+from django.contrib.comments.models import *
+foo = Comment.objects.all()[0]
+bar = foo._meta.fields.all()[0]
+bar
+bar = foo._meta.fields
+bar
+bar[0]
+bar = bar[1]
+bar
+bar.name
+bar.name.replace('_', '-')
+bar.replace('_', '-')
+from django.contrib.comments.models import *
+foo = Comment.objects.all()[0]
+foo
+foo.content_object
+y
+from django.db import models
+n
+import sys
+sys.path
+import django_test
+import django.django_test
+y
+Place(name="foo", address="bar")
+sorted
+n
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+    relations = models.ManyToManyField("self")
+    class Meta:
+        ordering = ('name',)
+    def __unicode__(self):
+        return u"%s the place" % self.name
+class Restaurant(Place):
+    serves_hot_dogs = models.BooleanField()
+    serves_pizza = models.BooleanField()
+    def __unicode__(self):
+        return u"%s the restaurant" % self.name
+class ItalianRestaurant(Restaurant):
+    serves_gnocchi = models.BooleanField()
+    def __unicode__(self):
+        return u"%s the italian restaurant" % self.name
+class ParkingLot(Place):
+    # An explicit link to the parent (we can control the attribute name).
+    parent = models.OneToOneField(Place, primary_key=True, parent_link=True)
+    capacity = models.IntegerField()
+    def __unicode__(self):
+        return u"%s the parking lot" % self.name
+class Supplier(models.Model):
+    restaurant = models.ForeignKey(Restaurant)
+class Parent(models.Moclas:
+    created = models.DateTimeField(default=datetime.datetime.now)
+class Child(Parent):
+    name = models.CharField(max_length=10)
+class SelfRefParent(modelsclass SelfRefparclass SelfRefParent(modelsield()
+    self_data = models.F reignKey('self', null=True)
+class SelfRefCcild(SelfRefParent):
+                                          Ar                                       els                        0)
+                                             ss Meta:
+        ordering = ('-pub_date', 'headline')
+    def __unicode__(self):
+    def __unicode__(self):
+class ArticleWithAuthor(Article):
+    author = models.Cha    author = models.Ch
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccle)ccccccccccccccccccccccccccccccccccccccccccccccccccield(max_length=50)
+class Evaluation(Article):
+    quality = mod    quality = mod    quacla    quality = mod    quality =ue
+class QualityConclass Qaluation):
+    assignee = models.CharField(max_length=50)
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+    relations = models.ManyToManyField("self")
+    class Meta:
+        ordering = ('name',)
+    def __unicode__(self):
+        return u"%s the place" % self.name
+class Restaurant(Place):
+    serves_hot_dogs = models.BooleanField()
+    serves_pizza = models.BooleanField()
+    def __unicode__(self):
+        return u"%s the restaurant" % self.name
+class ItalianRestaurant(Restaurant):
+    serves_gnocchi = models.BooleanField()
+    def __unicode__(self):
+        return u"%s the italian restaurant" % self.name
+class ParkingLot(Place):
+    # An explicit link to the parent (we can control the attribute name).
+    parent = models.OneToOneField(Place, primary_key=True, parent_link=True)
+    capacity = models.IntegerField()
+    def __unicode__(self):
+        return u"%s the parking lot" % self.name
+class Supplier(models.Model):
+    restaurant = models.ForeignKey(Restaurant)
+class Parent(models.Model):
+    created = models.DateTimeField(default=datetime.datetime.now)
+class Child(Parent):
+    name = models.CharField(max_length=10)
+class SelfRefParent(modelsclass SelfRefParclass SelfRefParent(modelFieldclass SelfRefParent(odels.ForeignKey('self', null=True)
+class SelfRefCclass SelfRefCclass:
+                                           ss Ar                                      dels                        0)
+    pub_date = models.DateTimeField()
+    class M    class M    class M    class M e',    class M    class M    class M    cl:
+                            
+ss M    class M e',    c.Chass M    class M e'100)
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccce)cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccclass cccccccccccccccccccccccccccccccccccmodels.IntegerField()
+    class Meta:
+        abstract = True
+class QualityControl(Evaluation):
+    assignee = models.CharField(max_length=50)
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+    relations = models.ManyToManyField("self")
+    
+from django.db import models
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+    relations = models.ManyToManyField("self")
+    
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+    
+list
+from urllib import urlencode
+from urllib import urldecode
+help(urlencode)
+import urllib
+urllib.parse('http%3A%2F%2Femedia.entertonement.com%2Faudio%2F000%2F039%2F780%2F39780.mp3')
+urllib.urlparse('http%3A%2F%2Femedia.entertonement.com%2Faudio%2F000%2F039%2F780%2F39780.mp3')
+import urlparse
+urlparse.parse('http%3A%2F%2Femedia.entertonement.com%2Faudio%2F000%2F039%2F780%2F39780.mp3')
+urlparse.urlparse('http%3A%2F%2Femedia.entertonement.com%2Faudio%2F000%2F039%2F780%2F39780.mp3')
+urlparse.urldefrag('http%3A%2F%2Femedia.entertonement.com%2Faudio%2F000%2F039%2F780%2F39780.mp3')
+import solango
+solango.connection.is_available()
+import solango
+solango.connection.is_available()
+from solango import connection
+results = connection.select(q='django')
+results.success
+results.count
+results = connection.select(q='solango')
+results.count
+results = connection.select(q='test')
+results.count
+n
+results = connection.select(q='test')
+results.count
+results = connection.select(q='solango')
+results.count
+from solango import connection
+results = connection.select(q='solango')
+results.count
+results = connection.select(q='a')
+results.count
+results = connection.select(q='e')
+results.count
+import solango
+solango.connection.is_available()
+from solango import connection
+results = connection.select(q='django')
+results.count
+results.documents
+results.documents[0].fields
+results.facets
+restuls.highlighting
+resultss.highlighting
+results.highlighting
+import urllib2
+response = urllib2.urlopen('http://baconfile.com/justinlilly.json')
+html = response.read()
+html
+import urllib2
+auth_handler = urllib2.HTTPBasicAuthHandler()
+auth_handler.add_password(realm="Default',
+auth_handler.add_password(realm='Default',
+uri='http://baconfile.com/justinlilly.json',
+user='justinlilly',
+passwd='gold75')
+urllib2.build_opener(auth_handler)
+opener = urllib2.build_opener(auth_handler)
+urllib2.install_opener(opener)
+urllib2.urlopen('http://baconfile.com/justinlilly.json', data='name=new_folder')
+t = 1236055484.219274
+t
+str(t)
+"%s" % t
+"%d" % t
+"%f" % t
+"%f" % (t,)
+import urllib
+import urllib2
+import SimpleHTTPServer
+SimpleHTTPServer.test?
+SimpleHTTPServer.test??
+SimpleHTTPServer.test()
+n
+import cherrypy
+cherrypy.server?
+cherrypy.server.socket_port = 80
+n
+cherrypy.server.socket_port?
+cherrypy.server?
+cherrypy.server.quickstart()
+import twistd
+import twisted
+twisted.version
+import account.views
+"this is fucked up".translate(string.maketrans("",""), "aeiou")
+"this is fucked up".translate("".maketrans("",""), "aeiou")
+import string
+"foo".translate(string.maketrans("",""), "aeiou")
+"fucked up piece of shit".translate(string.maketrans("",""), "aeiou")
+string.translate?
+translate("fucked up piece of shit", 'aeiou')
+string.translate("fucked up piece of shit", 'aeiou')
+"fucked up piece of shit".translate(string.maketrans(), "aeiou")
+string.maketrans?
+"fucked up piece of shit".translate(string.maketrans(""), "aeiou")
+"fucked up piece of shit".translate(string.maketrans("",""), "aeiou")
+"fucked up piece of shit".replace('aeiou','')
+string.translate?
+for i in "aeiou":
+	pass
+foo = "fucked up piece of shit"
+for i in "aeiou":
+    foo.replace(i, '')
+    
+foo
+for i in "aeiou":
+    foo = foo.replace(i, '')
+    
+foo
+foo = "fucked up piece of shit"
+for i in "aeiou":
+    foo = foo.replace(i, '')
+    
+foo
+compile?
+editors??
+import ipy_editorsitors
+import ipy_editors
+ipy_editors?
+ipy_editors??
