@@ -22,3 +22,5 @@
   untracked = cyan
 [alias]
   log1 = log --pretty=oneline --abbrev-commit
+[merge]
+  tool=kdiff3
