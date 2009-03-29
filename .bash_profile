@@ -222,6 +222,15 @@ PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_
 
 source $HOME/bin/virtualenvwrapper_bashrc
 
+has_virtualenv() {
+    if [ -e .venv ]; then
+        workon `cat .venv`
+    fi
+}
+venv_cd () {
+    cd "$@" && has_virtualenv
+}
+alias cd="venv_cd"
 
 # Welcome Message
 echo -e ""
