@@ -171,6 +171,10 @@ psgrep() {
     fi
 }
 
+killit() {
+    ps aux | grep -v "grep" | grep "$@" | awk '{print $2}'
+}
+
 tree () {
     find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 }
