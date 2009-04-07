@@ -205,21 +205,38 @@ git_modified() {
     fi
 }
 git_untracked(){ git status 2> /dev/null | grep "untracked" | wc -l; }
-parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'; }
-parse_svn_rev(){ svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'; }
+parse_git_branch(){ 
+    GIT_WORKING_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'`;
+    if test $GIT_WORKING_BRANCH; then
+        echo -en "${BGREEN}git:${NORMAL}$GIT_WORKING_BRANCH"
+    fi
+}
+parse_svn_rev(){ 
+    SVN_WORKING_REV=`svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'`;
+    if test $SVN_WORKING_REV; then
+        echo -en "${BGREEN}svn:${NORMAL}$SVN_WORKING_REV"
+    fi
+}
 
 ## PROMPT
 # Prompt Colors
-BGREEN='\[\033[1;32m\]'
-GREEN='\[\033[0;32m\]'
-BRED='\[\033[1;31m\]'
-RED='\[\033[0;31m\]'
-BBLUE='\[\033[1;34m\]'
-BLUE='\[\033[0;34m\]'
-CYAN='\[\033[0;36m\]'
-NORMAL='\[\033[00m\]'
+BRIGHT=`tput bold`
+DIM=`tput dim`
+GREEN=`tput setaf 2 sgr0`
+BGREEN="${BRIGHT}${GREEN}"
+RED=`tput setaf 1 sgr0`
+BRED="${BRIGHT}${RED}"
+BLUE=`tput setaf 4 sgr0`
+BBLUE="${BRIGHT}${BLUE}"
+CYAN=`tput setaf 6 sgr0`
+DEFAULT=`tput sgr0`
 # Prompt
-PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
+
+BASE_PS1="\[${BBLUE}\][\[${NORMAL}\]\w\[${BBLUE}\]] "
+PROMPT_PS1="\[${BLUE}\]$ \[${NORMAL}\]"
+
+PS1="$BASE_PS1\$(parse_git_branch)\$(parse_svn_rev)$PROMPT_PS1"
+# PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
 
 # Old Prompts 
 #export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
