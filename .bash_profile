@@ -215,7 +215,7 @@ parse_git_branch(){
 }
 git_status(){
     if [ -n "$(git branch 2> /dev/null)" ]; then
-        echo -en "${BRED}git:${NORMAL}$(parse_git_branch):$(git_modified)"
+        echo -en "${BRED}git:${NORMAL}$(parse_git_branch):$(git_modified) "
     fi
 }
 
