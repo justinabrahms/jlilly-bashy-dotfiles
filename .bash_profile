@@ -208,13 +208,13 @@ git_untracked(){ git status 2> /dev/null | grep "untracked" | wc -l; }
 parse_git_branch(){ 
     GIT_WORKING_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'`;
     if test $GIT_WORKING_BRANCH; then
-        echo -en "${BGREEN}git:${NORMAL}$GIT_WORKING_BRANCH"
+        echo -en "${BRED}git:${NORMAL}$GIT_WORKING_BRANCH"
     fi
 }
 parse_svn_rev(){ 
     SVN_WORKING_REV=`svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'`;
     if test $SVN_WORKING_REV; then
-        echo -en "${BGREEN}svn:${NORMAL}$SVN_WORKING_REV"
+        echo -en "${BRED}svn:${NORMAL}$SVN_WORKING_REV"
     fi
 }
 
@@ -230,10 +230,11 @@ BLUE=`tput setaf 4 sgr0`
 BBLUE="${BRIGHT}${BLUE}"
 CYAN=`tput setaf 6 sgr0`
 DEFAULT=`tput sgr0`
+NORMAL="${DIM}${DEFAULT}"
 # Prompt
 
 BASE_PS1="\[${BBLUE}\][\[${NORMAL}\]\w\[${BBLUE}\]] "
-PROMPT_PS1="\[${BLUE}\]$ \[${NORMAL}\]"
+PROMPT_PS1="\[${BBLUE}\]$ \[${NORMAL}\]"
 
 PS1="$BASE_PS1\$(parse_git_branch)\$(parse_svn_rev)$PROMPT_PS1"
 # PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
