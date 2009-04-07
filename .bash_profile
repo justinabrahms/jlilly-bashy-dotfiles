@@ -199,18 +199,26 @@ gsvn () {
      cat .git/config | grep url
 }
 
-git_modified() {
-    if [ "$(git branch 2> /dev/null)" != '' ]; then 
-        git status 2> /dev/null | grep "modified" | wc -l
-    fi
+git_untracked(){ 
+    GIT_UNTRACKED=`git status 2> /dev/null | grep "untracked" | wc -l`;
+    echo -en "u$GIT_UNTRACKED"
 }
-git_untracked(){ git status 2> /dev/null | grep "untracked" | wc -l; }
+git_modified(){
+    GIT_MODIFIED=`git status 2> /dev/null | grep "modified" | wc -l`
+    echo -en "c${GIT_MODIFIED}"
+}
+
 parse_git_branch(){ 
-    GIT_WORKING_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'`;
-    if test $GIT_WORKING_BRANCH; then
-        echo -en "${BRED}git:${NORMAL}$GIT_WORKING_BRANCH"
+    GIT_WORKING_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`;
+    echo -en "$GIT_WORKING_BRANCH"
+    
+}
+git_status(){
+    if [ -n "$(git branch 2> /dev/null)" ]; then
+        echo -en "${BRED}git:${NORMAL}$(parse_git_branch):$(git_modified)"
     fi
 }
+
 parse_svn_rev(){ 
     SVN_WORKING_REV=`svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'`;
     if test $SVN_WORKING_REV; then
@@ -236,7 +244,7 @@ NORMAL="${DIM}${DEFAULT}"
 BASE_PS1="\[${BBLUE}\][\[${NORMAL}\]\w\[${BBLUE}\]] "
 PROMPT_PS1="\[${BBLUE}\]$ \[${NORMAL}\]"
 
-PS1="$BASE_PS1\$(parse_git_branch)\$(parse_svn_rev)$PROMPT_PS1"
+PS1="$BASE_PS1\$(git_status)\$(parse_svn_rev)$PROMPT_PS1"
 # PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
 
 # Old Prompts 
