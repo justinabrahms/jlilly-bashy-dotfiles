@@ -173,7 +173,7 @@ psgrep() {
 
 killit() {
     # Kills any process that matches a regexp passed to it
-    ps aux | grep -v "grep" | grep "$@" | awk '{print $2}' | xargs kill
+    ps aux | grep -v "grep" | grep "$@" | awk '{print $2}' | xargs sudo kill
 }
 
 tree () {
