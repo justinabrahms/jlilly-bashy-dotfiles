@@ -104,9 +104,12 @@ alias gc='git commit -v'
 alias gl='git pull'
 alias gp='git push'
 alias gst='git status'
+alias gsd='git svn dcommit'
+alias gsr='git svn rebase'
+alias gs='git stash'
+alias gsa='git stash apply'
 alias gd='git diff | $GIT_EDITOR -'
 alias gmv='git mv'
-alias gdc='git svn dcommit'
 alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
 
 # HG ALIASES
