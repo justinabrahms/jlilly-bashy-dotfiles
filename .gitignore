@@ -9,3 +9,4 @@ local_settings.py
 .ipython/db/
 .ipython/logs/
 .ipython/history
+.venv

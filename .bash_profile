@@ -40,7 +40,7 @@ case $MACHTYPE in
     *linux*)
         # Linux Specific
         export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages
-        export LS_COLORS="di=34;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
+        export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
         export EDITOR='emacsclient'
         ini () {
             command sudo /etc/init.d/$@
@@ -202,27 +202,53 @@ gsvn () {
      cat .git/config | grep url
 }
 
-git_modified() {
-    if [ "$(git branch 2> /dev/null)" != '' ]; then 
-        git status 2> /dev/null | grep "modified" | wc -l
+git_untracked(){ 
+    GIT_UNTRACKED=`git status 2> /dev/null | grep "untracked" | wc -l`;
+    echo -en "u$GIT_UNTRACKED"
+}
+git_modified(){
+    GIT_MODIFIED=`git status 2> /dev/null | grep "modified" | wc -l`
+    echo -en "c${GIT_MODIFIED}"
+}
+
+parse_git_branch(){ 
+    GIT_WORKING_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`;
+    echo -en "$GIT_WORKING_BRANCH"
+    
+}
+git_status(){
+    if [ -n "$(git branch 2> /dev/null)" ]; then
+        echo -en "${BRED}git:${NORMAL}$(parse_git_branch):$(git_modified) "
     fi
 }
-git_untracked(){ git status 2> /dev/null | grep "untracked" | wc -l; }
-parse_git_branch(){ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'; }
-parse_svn_rev(){ svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'; }
+
+parse_svn_rev(){ 
+    SVN_WORKING_REV=`svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'`;
+    if test $SVN_WORKING_REV; then
+        echo -en "${BRED}svn:${NORMAL}$SVN_WORKING_REV"
+    fi
+}
 
 ## PROMPT
 # Prompt Colors
-BGREEN='\[\033[1;32m\]'
-GREEN='\[\033[0;32m\]'
-BRED='\[\033[1;31m\]'
-RED='\[\033[0;31m\]'
-BBLUE='\[\033[1;34m\]'
-BLUE='\[\033[0;34m\]'
-CYAN='\[\033[0;36m\]'
-NORMAL='\[\033[00m\]'
+BRIGHT=`tput bold`
+DIM=`tput dim`
+GREEN=`tput setaf 2 sgr0`
+BGREEN="${BRIGHT}${GREEN}"
+RED=`tput setaf 1 sgr0`
+BRED="${BRIGHT}${RED}"
+BLUE=`tput setaf 4 sgr0`
+BBLUE="${BRIGHT}${BLUE}"
+CYAN=`tput setaf 6 sgr0`
+DEFAULT=`tput sgr0`
+NORMAL="${DIM}${DEFAULT}"
 # Prompt
-PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
+
+BASE_PS1="\[${BBLUE}\][\[${NORMAL}\]\w\[${BBLUE}\]] "
+PROMPT_PS1="\[${BBLUE}\]$ \[${NORMAL}\]"
+
+PS1="$BASE_PS1\$(git_status)\$(parse_svn_rev)$PROMPT_PS1"
+# PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
 
 # Old Prompts 
 #export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '

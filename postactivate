@@ -1,0 +1,1 @@
+export PS1="$BASE_PS1\$(git_status)\$(parse_svn_rev)${BRED}env:${NORMAL}`basename \"$VIRTUAL_ENV\"` $PROMPT_PS1"
