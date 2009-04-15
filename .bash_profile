@@ -30,6 +30,7 @@ case $MACHTYPE in
         ini () {
             command sudo service $@
         }
+        # this is really just so I have something to bellyache about
         alias agi="time sudo yum -C install"
         alias acs="time sudo yum -C search"
         alias acsh="time sudo yum -C info"
@@ -202,56 +203,35 @@ gsvn () {
      cat .git/config | grep url
 }
 
-git_untracked(){ 
-    GIT_UNTRACKED=`git status 2> /dev/null | grep "untracked" | wc -l`;
-    echo -en "u$GIT_UNTRACKED"
-}
-git_modified(){
-    GIT_MODIFIED=`git status 2> /dev/null | grep "modified" | wc -l`
-    echo -en "c${GIT_MODIFIED}"
-}
-
 parse_git_branch(){ 
-    GIT_WORKING_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`;
-    echo -en "$GIT_WORKING_BRANCH"
-    
-}
-git_status(){
-    if [ -n "$(git branch 2> /dev/null)" ]; then
-        echo -en "${BRED}git:${NORMAL}$(parse_git_branch):$(git_modified) "
-    fi
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /';
 }
 
 parse_svn_rev(){ 
-    SVN_WORKING_REV=`svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /'`;
-    if test $SVN_WORKING_REV; then
-        echo -en "${BRED}svn:${NORMAL}$SVN_WORKING_REV"
-    fi
+    svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /';
 }
+
 
 ## PROMPT
 # Prompt Colors
-BRIGHT=`tput bold`
-DIM=`tput dim`
-GREEN=`tput setaf 2 sgr0`
+BRIGHT="\[`tput bold`\]"
+DIM="\[`tput dim`\]"
+GREEN="\[`tput setaf 2 sgr0`\]"
 BGREEN="${BRIGHT}${GREEN}"
-RED=`tput setaf 1 sgr0`
+RED="\[`tput setaf 1 sgr0`\]"
 BRED="${BRIGHT}${RED}"
-BLUE=`tput setaf 4 sgr0`
+BLUE="\[`tput setaf 4 sgr0`\]"
 BBLUE="${BRIGHT}${BLUE}"
-CYAN=`tput setaf 6 sgr0`
-DEFAULT=`tput sgr0`
+CYAN="\[`tput setaf 6 sgr0`\]"
+DEFAULT="\[`tput sgr0`\]"
 NORMAL="${DIM}${DEFAULT}"
 # Prompt
 
-BASE_PS1="\[${BBLUE}\][\[${NORMAL}\]\w\[${BBLUE}\]] "
-PROMPT_PS1="\[${BBLUE}\]$ \[${NORMAL}\]"
-
-PS1="$BASE_PS1\$(git_status)\$(parse_svn_rev)$PROMPT_PS1"
-# PS1="${RED}:${NORMAL}\@${RED}: ${CYAN}(${NORMAL}\w${CYAN})${GREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${CYAN}@\H${NORMAL}-\!${RED}\$ ${NORMAL}"
+PS1="${BRED}:${NORMAL}\@${BRED}: ${BBLUE}(${NORMAL}\w${BBLUE})${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}\$ ${NORMAL}"
+ORIG_PS1=$PS1
 
 # Old Prompts 
-#export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
+# export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 #export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 
 source $HOME/bin/virtualenvwrapper_bashrc
