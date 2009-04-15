@@ -156,7 +156,10 @@ extract () {
 dict() {
     grep "$@" /usr/share/dict/words
 }
-
+dls () {
+ # directory LS
+ echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
+}
 dgrep() {
     # A recursive, case-insensitive grep that excludes binary files
     grep -iR "$@" * | grep -v "Binary"
