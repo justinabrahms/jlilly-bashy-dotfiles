@@ -99,6 +99,7 @@ alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "eg
 alias pycclean='find . -name "*.pyc" -exec rm {} \;'
 
 # GIT ALIASES
+alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
