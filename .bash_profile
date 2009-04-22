@@ -93,12 +93,14 @@ alias du='du -h -c'         # Calculate total disk usage for a folder
 alias sgi='sudo gem install' # Install ruby stuff
 
 # Nifty extras
+alias irc="ssh justinlilly.com"
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
 alias pycclean='find . -name "*.pyc" -exec rm {} \;'
 
 # GIT ALIASES
+alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
@@ -109,6 +111,7 @@ alias gsd='git svn dcommit'
 alias gsr='git svn rebase'
 alias gs='git stash'
 alias gsa='git stash apply'
+alias gr='git stash && git svn rebase && git svn dcommit && git stash apply' # git refresh
 alias gd='git diff | $GIT_EDITOR -'
 alias gmv='git mv'
 alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
