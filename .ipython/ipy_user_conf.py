@@ -15,7 +15,7 @@ o.automagic = True
 o.banner = False
 o.confirm_exit = False
 o.messages = False
-o.autoexec.append('%colors LightBG')
+o.autoexec.append('%colors Linux')
  
 # Make the prompt a bit more like the standard shell.
 o.prompt_in1 = '[\#] >>> '
