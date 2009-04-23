@@ -210,11 +210,11 @@ gsvn () {
 }
 
 parse_git_branch(){ 
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /';
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /';
 }
 
 parse_svn_rev(){ 
-    svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/(r\1) /';
+    svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
 }
 
 
@@ -233,7 +233,7 @@ DEFAULT="\[`tput sgr0`\]"
 NORMAL="${DIM}${DEFAULT}"
 # Prompt
 
-PS1="${BRED}:${NORMAL}\@${BRED}: ${BBLUE}(${NORMAL}\w${BBLUE})${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}\$ ${NORMAL}"
+PS1="${BRED}: ${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
 ORIG_PS1=$PS1
 
 # Old Prompts 
