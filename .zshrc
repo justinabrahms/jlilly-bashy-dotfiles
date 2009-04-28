@@ -12,7 +12,7 @@ zstyle :compinstall filename '/home/jlilly/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-PS1="%B%F{red}:%f%b %@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
+PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
 
 
 #  BEGINNING OF BASH PROFILE IMPORT
@@ -34,7 +34,7 @@ export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
 # ALAISES
 
 # set some OS specific definitions
-case $MACHTYPE in
+case $OSTYPE in
     *redhat*)
         # Redhat, which I use at work
         export PYTHONPATH=/usr/lib/python2.4/site-packages:$PYTHON_PATH
