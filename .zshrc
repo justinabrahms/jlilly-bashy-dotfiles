@@ -34,7 +34,7 @@ export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
 # ALAISES
 
 # set some OS specific definitions
-case $MACHTYPE in
+case $OSTYPE in
     *redhat*)
         # Redhat, which I use at work
         export PYTHONPATH=/usr/lib/python2.4/site-packages:$PYTHON_PATH
