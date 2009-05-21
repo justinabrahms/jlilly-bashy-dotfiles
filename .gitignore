@@ -10,3 +10,4 @@ local_settings.py
 .ipython/logs/
 .ipython/history
 .venv
+*.wpr
