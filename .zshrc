@@ -168,6 +168,18 @@ extract () {
     fi
 }
 
+pastie() {
+        url=$(curl http://pastie.caboo.se/pastes/create \
+                -H "Expect:"                                \
+                -F "paste[parser]=$PASTIE_LANG"             \
+                -F "paste[body]=<-"                         \
+                -F "paste[authorization]=burger"            \
+                -s -L -o /dev/null -w "%{url_effective}" )
+        echo "$url" | xclip
+	echo "$url"
+}
+
+
 dict() {
     grep "$@" /usr/share/dict/words
 }
