@@ -1,3 +1,11 @@
 [ui]
 username = Justin Lilly <justinlilly@gmail.com>
 ignore = ~/.hgignore
+
+[extensions]
+hgext.bookmarks=
+hgext.hg-git = ~/Code/hgext/hg-git
+color =
+hgext.fetch=
+hgext.rebase=
+hgsvn = ~/Code/hgext/hgsvn/hgsubversion
