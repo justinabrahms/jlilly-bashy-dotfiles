@@ -1,5 +1,6 @@
 [ui]
 username = Justin Lilly <justinlilly@gmail.com>
+ssh = ssh -C
 ignore = ~/.hgignore
 
 [extensions]
