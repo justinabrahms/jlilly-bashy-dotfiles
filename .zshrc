@@ -10,6 +10,7 @@ bindkey -e
 zstyle :compinstall filename '/home/jlilly/.zshrc'
 
 autoload -Uz compinit
+autoload -U zmv
 compinit
 # End of lines added by compinstall
 PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
