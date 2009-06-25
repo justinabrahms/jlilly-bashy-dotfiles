@@ -156,6 +156,20 @@ gcco () {
 }
 
 ## Functions
+add_auth_key () {
+    host=$1
+    if  [ -z $host ] ; then;
+        echo "You must provide a host as the first (and only) argument"
+        return
+    fi
+    if [ ! -f ~/.ssh/id_rsa.pub ] ; then
+        command ssh-keygen -t rsa
+    fi
+    command ssh $host -t "mkdir ~/.ssh/"
+    # TODO: Make this append, not copy
+    command scp ~/.ssh/id_rsa.pub $host:~/.ssh/authorized_keys
+    command ssh $host -t "chmod -R 700 ~/.ssh"
+}
 
 svim () {
     # Run vim as super user
