@@ -72,7 +72,7 @@ case $OSTYPE in
         # Linux Specific
         export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
-        export EDITOR='emacsclient'
+        export EDITOR='vim'
         ini () {
             command sudo /etc/init.d/$@
         }
