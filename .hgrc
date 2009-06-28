@@ -2,6 +2,7 @@
 username = Justin Lilly <justinlilly@gmail.com>
 ssh = ssh -C
 ignore = ~/.hgignore
+merge = internal:merge
 
 [extensions]
 hgext.bookmarks=
@@ -9,4 +10,6 @@ hgext.hg-git = ~/Code/hgext/hg-git
 color =
 hgext.fetch=
 hgext.rebase=
+hgext.purge=
+hgext.mq=
 hgsvn = ~/Code/hgext/hgsvn/hgsubversion
