@@ -150,6 +150,7 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 # HG ALIASES
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
+alias hgo='hg outgoing'
 
 # SVN ALIASES
 gcco () {
