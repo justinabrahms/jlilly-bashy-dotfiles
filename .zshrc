@@ -70,7 +70,7 @@ case $OSTYPE in
         ;;
     *linux*)
         # Linux Specific
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages
+        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
         export EDITOR='vim'
         ini () {
@@ -86,7 +86,7 @@ case $OSTYPE in
     *darwin*)
         # Mac Specific
         export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/opt/local/lib/python2.5/site-packages:
+        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/python:/usr/lib/python2.6/dist-packages/
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
@@ -112,6 +112,7 @@ export GIT_EDITOR=$VISUAL
 # Filesystem
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
+alias ....='cd ../../..'    # this could go on all day, and I love it.
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
@@ -128,7 +129,7 @@ alias irc="ssh justinlilly.com"
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
-alias pycclean='find . -name "*.pyc" -exec rm {} \;'
+alias pycclean='find . -type f -name "*.pyc" -exec rm {} \;'
 
 # GIT ALIASES
 alias ga='git add'
@@ -217,19 +218,24 @@ pastie() {
 dict() {
     grep "$@" /usr/share/dict/words
 }
+
 dls () {
  # directory LS
  echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
 }
+
 dgrep() {
     # A recursive, case-insensitive grep that excludes binary files
     grep -iR "$@" * | grep -v "Binary"
+    echo "You should be using ack. Its awesome."
 }
+
 dfgrep() {
     # A recursive, case-insensitive grep that excludes binary files
     # and returns only unique filenames
     grep -iR "$@" * | grep -v "Binary" | sed 's/:/ /g' | awk '{ print $1 }' | sort | uniq
 }
+
 psgrep() {
     if [ ! -z $1 ] ; then
         echo "Grepping for processes matching $1..."
@@ -285,15 +291,14 @@ has_virtualenv() {
         workon `cat .venv`
     fi
 }
+
 venv_cd () {
     cd "$@" && has_virtualenv
 }
+
 alias cd="venv_cd"
 
 # Welcome Message
-echo -e ""
-echo -ne "Today is "; date
-echo -e ""; cal;
-echo -ne "Up time: ";uptime | awk /'up/ {print $3,$4}'
-echo "";
+echo ""
 fortune
+echo ""
