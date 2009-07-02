@@ -12,4 +12,5 @@ hgext.fetch=
 hgext.rebase=
 hgext.purge=
 hgext.mq=
+hgext.crecord=/home/jlilly/Code/python/crecord/crecord/
 hgsvn = ~/Code/hgext/hgsvn/hgsubversion
