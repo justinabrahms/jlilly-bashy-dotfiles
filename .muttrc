@@ -2,15 +2,29 @@
 # Setting #
 ###########
 
-set folder=imap://jlilly@mail.mse3.exchange.ms/
+set mbox_type="Maildir"
+set mbox="~/Maildir/"
+set folder="~/Maildir/"
+set mask="!^\\.[^.]"
+set spoolfile="~/Maildir"
+
+set xterm_set_titles="yes"
+#set xterm_title="Mutt with %?m?%m messages&no messages?%?n? [%n NEW]?"
+set xterm_title="Mutt %?b?[NEW mail in %b mailboxes]? %f %?m?%m messages&no messages?%?n? [%n NEW]?"
+
+set check_new="yes"
+
+
+
+# set folder=imap://jlilly@mail.mse3.exchange.ms/
 # This option tells mutt to use an IMAP server
 # the format is: imap://[user@]server[:port]/path/to/mailbox
 
-set mail_check=90
+#set mail_check=90
 # Mutt only scanes for mail in mailboxes every mail_check seconds.
 # This can cause lag when fetching from IMAP (ie remote).
 
-set timeout=15
+#set timeout=15
 # This sets the maximum number of times mutt will check for mail in
 # my IMAP mailbox. Default is 600 (10min) which is a bit too long.
 
@@ -80,18 +94,27 @@ set history=30
 # This variable controls the size (in number of strings remembered) of the string history buffer.
 # The buffer is cleared each time the variable is set.
 
-set realname="Justin Lilly"
+set reverse_realname=yes
+#set realname="Justin Lilly"
 # This variable specifies what "real" or "personal" name should be used
 # when sending messages.
 # By default, this is the GCOS field from /etc/passwd. Note that this
 # variable will not be used when the user has set a real name in the
 # ``$from'' variable.
 
+set reverse_name=yes
 #set from=justinlilly@gmail.com
 # When set, this variable contains a default from address. It can be
 # overridden using my_hdr (including from send-hooks) and
 # ````$reverse_name''''.
 # Defaults to the EMAIL environment variable's content.
+
+
+alternates    ^jlilly@hugeinc\\.com$      ^justinlilly@gmail\\.com$
+
+
+set use_from=yes
+# This is the default, but could be unset by Debian's global muttrc
 
 # set envelope_from
 # When set, mutt will try to derive the message's envelope sender from
@@ -133,7 +156,8 @@ set postpone=ask-yes
 # Controls whether or not messages are saved in the
 # '$postponed' mailbox when you elect not to send immediately
 
-set postponed=~/Mail/postponed
+set postponed="+.Drafts"
+#set postponed=~/Mail/postponed
 # folder for postponed messages
 
 set signature=~/Mail/signature
@@ -141,7 +165,8 @@ set signature=~/Mail/signature
 # If the filename ends with a pipe (``|''), it is assumed that filename is a shell
 # command and input should be read from its stdout.
 
-set record=~/Mail/mailsent
+set record="+.Sent"
+# set record=~/Mail/mailsent
 # This specifies the file into which your outgoing messages should be appended.
 # (This is meant as the primary method for saving a copy of your messages, but
 # another way to do this is using the `` my_hdr'' command to create a Bcc: field
@@ -176,6 +201,10 @@ set send_charset=us-ascii:iso-8859-1:iso-8859-15:utf-8
 # koi8-r or iso-2022-jp) either instead of or after "iso-8859-1".
 
 #set sendmail="/usr/sbin/sendmail -oem -oi -f justinlilly@justinlilly.com"
+set sendmail="/usr/sbin/sendmail -oem -oi"
+# The -t header does some stuff that allows BCC's to work.
+# http://sysmonblog.co.uk/2009/04/mutt-exim4-debian-unbuntu-and-bcc-fail-fix-included.html  
+
 
 # Specifies the program and arguments used to deliver mail sent by Mutt.
 # Mutt expects that the specified program interprets additional
@@ -235,6 +264,15 @@ folder-hook duplicates push 'D.\n'
 # This is, of course, optional -- but you'll get lots of good-netizen
 # karma. ;)
 
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+macro compose A "<attach-message>?<toggle-mailboxes>" "attach message(s) to this message"
+# Helper macros to enable moving between maildir folders
+
 set ispell = /usr/lib/mutt/mailspell
 # Wrapper to call ispell on mail messages, ignoring quoted portions
 # and signatures.
@@ -284,13 +322,13 @@ set ispell = /usr/lib/mutt/mailspell
 # d days
 # Example: to select messages less than 1 month old, you would use
 # Limit to messages matching: ~d <1m
-macro index q " ~d>100d"
-folder-hook mailsent 'macro index q " ~d>10d"'
-folder-hook vim 'macro index q " ~d>20d"'
-folder-hook mutt 'macro index q " ~d>300d"'
-folder-hook debian 'macro index q " ~d>300d"'
-folder-hook donnerwetter 'macro index q " ~d>3d"'
-folder-hook tagesschau 'macro index q " ~d>5d"'
+#macro index q " ~d>100d"
+#folder-hook mailsent 'macro index q " ~d>10d"'
+#folder-hook vim 'macro index q " ~d>20d"'
+#folder-hook mutt 'macro index q " ~d>300d"'
+#folder-hook debian 'macro index q " ~d>300d"'
+#folder-hook donnerwetter 'macro index q " ~d>3d"'
+#folder-hook tagesschau 'macro index q " ~d>5d"'
 
 ##############################################
 # How to enable a macro for a special folder #
@@ -313,8 +351,15 @@ macro pager \cb |urlview\n
 # Saving attachments to folder download #
 #########################################
 
-macro attach s /home/mutt/download/
+# macro attach s /home/mutt/download/
 # macro attach s /mnt/vfat/john/muttattachments/
+
+
+##############
+# Send Hooks #
+##############
+send-hook      .                              'set realname="HUGE | Justin Lilly"'
+send-hook      "~f ^jlilly@hugeinc\\.com$"    'set realname="Justin Lilly"'
 
 ###########
 # Binding #
@@ -540,21 +585,10 @@ subscribe sed-users@yahoogroups.com
 # the mailboxes command,and indicate which contain new messages.
 # mutt-announceMutt will automatically enter this mode when invoked from the command line with the -y option.
 
-mailboxes =postponded =mutt \
-=fuck =privat \
-=Administration =procmail =vim =sendmail =Batschkapp \
-=debian =fetchmail =tin \
-=unsubscribe \
-=debian-security =debian-news =debian-curiosa \
-=debian-laptop =debian-books =debian-kde \
-=freenet =bestellbestaetigung \
-=debian-bug =debian-bug-done =debian-testing \
-=spam =caughtspam =spamassassin \
-=duplicates =ebay =donnerwetter =sed-users \
-=tagesschau
-
-#mailboxes `echo $HOME/Mail/*`
-# Choosing all mailboxes in a directory
+mailboxes =lists/django-users =lists/django-devel =lists/pathfinder =lists/rubynyc =lists/lispnyc
+mailboxes =lists/nodejs 
+mailboxes =unimportant =.
+mailboxes =work =work/mercurial =work/buildbot =work/jira 
 
 ###########
 # Aliases #
@@ -568,7 +602,7 @@ set alias_file=~/Mail/aliases
 # Note: Mutt will not automatically source this file;
 # you must explicitly use the `` source'' command for it to be executed.
 
-source ~/Mail/aliases
+#source ~/Mail/aliases
 # Usage: source filename. This command allows the inclusion of initialization commands
 # from other files. For example, I place all of my aliases in ~/.mail_aliases so that
 # I can make my ~/.muttrc readable and keep my aliases private.
