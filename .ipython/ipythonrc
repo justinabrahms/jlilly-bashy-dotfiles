@@ -164,8 +164,8 @@ classic 0
 # in light background terminals.
 
 # keep uncommented only the one you want:
-#colors Linux
-colors LightBG
+colors Linux
+#colors LightBG
 #colors NoColor
 
 ########################
