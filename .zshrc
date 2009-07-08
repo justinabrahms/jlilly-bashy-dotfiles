@@ -281,6 +281,13 @@ parse_svn_rev(){
     svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
 }
 
+unegg () {
+    unzip $1 -d tmp
+    rm $1
+    mv tmp $1
+}
+
+
 
 ORIG_PS1=$PS1
 
