@@ -4,6 +4,11 @@ ssh = ssh -C
 ignore = ~/.hgignore
 merge = internal:merge
 
+[pager]
+pager = LESS='FSRX' less
+quiet = True
+ignore = push
+
 [extensions]
 hgext.bookmarks=
 hgext.hg-git = ~/Code/hgext/hg-git
@@ -14,3 +19,4 @@ hgext.purge=
 hgext.mq=
 hgext.crecord=/home/jlilly/Code/python/crecord/crecord/
 hgsvn = ~/Code/hgext/hgsvn/hgsubversion
+pager =
