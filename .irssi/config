@@ -23,6 +23,7 @@ chatnets = {
 
 channels = (
   { name = "#django-social"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#nycpython"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#django"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##michat"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
