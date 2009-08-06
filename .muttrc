@@ -10,7 +10,7 @@ set spoolfile="~/Maildir"
 
 set xterm_set_titles="yes"
 #set xterm_title="Mutt with %?m?%m messages&no messages?%?n? [%n NEW]?"
-set xterm_title="Mutt %?b?[NEW mail in %b mailboxes]? %f %?m?%m messages&no messages?%?n? [%n NEW]?"
+set xterm_title="Mutt%?b?*? %f"
 
 set check_new="yes"
 
@@ -35,7 +35,7 @@ set check_new="yes"
 set editor="vim -c 'set tw=68'"
 # Thanx to Sven Guckes
 
-set hostname=hugeinc.com
+set hostname=justinlilly.com
 # Specifies the hostname to use after the ``@'' in local e-mail
 # addresses. This overrides the compile time definition obtained from
 # /etc/resolv.conf.
@@ -110,7 +110,7 @@ set reverse_name=yes
 # Defaults to the EMAIL environment variable's content.
 
 
-alternates    ^jlilly@hugeinc\\.com$      ^justinlilly@gmail\\.com$
+#alternates    ^jlilly@hugeinc\\.com$      ^justinlilly@gmail\\.com$
 
 
 set use_from=yes
@@ -358,8 +358,8 @@ macro pager \cb |urlview\n
 ##############
 # Send Hooks #
 ##############
-send-hook      .                              'set realname="HUGE | Justin Lilly"'
-send-hook      "~f ^jlilly@hugeinc\\.com$"    'set realname="Justin Lilly"'
+send-hook      .                              'set realname="Justin Lilly"'
+#send-hook      "~f ^jlilly@justinlilly\\.com$"    'set realname="Justin Lilly"'
 
 ###########
 # Binding #
