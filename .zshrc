@@ -44,7 +44,7 @@ export OOO_FORCE_DESKTOP=gnome
 
 export EDITOR='vim'
 export GOOGLE_CODE_CHECKOUTS="$HOME/Code/trunks"
-export BROWSER=firefox
+export BROWSER=firefox-3.5
 
 
 export HISTCONTROL=erasedups  # Ignore duplicate entries in history
@@ -72,7 +72,7 @@ case $OSTYPE in
         ;;
     *linux*)
         # Linux Specific
-        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/
+        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/var/lib/python-support/python2.6:
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
         export EDITOR='vim'
         ini () {
