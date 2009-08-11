@@ -83,7 +83,7 @@ case $OSTYPE in
         alias acsh="sudo apt-cache show"
         alias aguu="sudo apt-get update && sudo apt-get upgrade"
         alias ls="ls -F --color"       # Color is handled differently on Linux
-        alias open="nautilus"
+        alias open="gnome-open"
         ;;
     *darwin*)
         # Mac Specific
