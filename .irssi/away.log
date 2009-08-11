@@ -1,0 +1,761 @@
+--- Log opened Sun Mar 01 15:05:55 2009
+17:17 1/=g;/Nimbilusgc> esame here man
+17:18 1/=g;/Nimbilusgc> eI played I think end of '98 until 2003
+17:18 1/=g;/Nimbilusgc> eThen it's been on and off, mostly off
+17:18 1/=g;/Nimbilusgc> eUntil recently
+--- Day changed Mon Mar 02 2009
+04:09 #django-social: 1/ 4/_newman_1/c>g ejlilly: are you running emacs 23 yet?
+--- Log closed Mon Mar 02 04:33:05 2009
+--- Log opened Thu Mar 05 22:11:38 2009
+--- Log closed Fri Mar 06 08:53:32 2009
+--- Log opened Fri Mar 06 14:12:24 2009
+--- Log closed Fri Mar 06 15:47:19 2009
+--- Log opened Mon Mar 09 17:09:20 2009
+--- Day changed Tue Mar 10 2009
+10:22 #django: 1/ 4/knightblader1/c>g ejlilly:Django refers to these as subframeworks do you know the rails terminology?  Just asking because I'm trying to do a comparison on the frameworks
+10:23 #django: 1/ 4/knightblader1/c>g ejlilly: http://www.djangobook.com/en/1.0/chapter14/
+10:26 #django: 1/ 4/knightblader1/c>g ejlilly -Thanks for the pointers though, I appreciate it
+12:26 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: how's south?
+12:28 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: didn't they just post a blog entry a few days about about providing better access to the model within migrations?
+12:31 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: I got the impression it meant "freeze how the ORM looks pre (or post) migration so that you can reference the model class without worrying about it changing on you during the migration itself"
+14:53 1/=g;/_newman_gc> ehey bro
+14:57 #django-social: 1/ bitprophet_> emaybe I should go work with jlilly after all
+18:33 1/=g;/jlillyg</>g eyo
+18:33 1/=g;/jlillyg</>g eif you still need me ping away. I'll try to get back to you soon.
+--- Day changed Wed Mar 11 2009
+09:33 1/=g;/jlillyg</>g ereback, if you still need something.
+09:41 #django: 1/ 4/mattmcc1/c>g ejlilly: Usually it'd involve some business logic code to pick the right one, or creating a dummy record to satisfy the constraint until manual effort assigned proper values.
+09:41 #django: 1/ 4/bartek-1/c>g ejlilly: you migrate everything over starting from the lowest leveled table that others rely on. Seems like the only way to go for such a thing
+11:10 #michat: 1/ 4/Clippy1/c>g ejlilly: that sucks
+--- Log closed Wed Mar 11 11:34:32 2009
+--- Log opened Wed Mar 11 14:40:08 2009
+14:44 #django-social: 1/ leahculver> ebrosner: jlilly: for oebfare - the name of setting for which design your blog uses... DESIGN_THEME or just THEME
+14:58 #django-social: 1/ 4/leahculver1/c>g ejlilly: can I name your theme "justinlilly" or is "jlilly" better?
+--- Log closed Wed Mar 11 15:31:27 2009
+--- Log opened Wed Mar 11 15:43:00 2009
+--- Log closed Wed Mar 11 16:59:59 2009
+--- Log opened Wed Mar 11 17:00:02 2009
+17:11 #django-social: 1/ leahculver> ebrosner: jlilly: for posting content to my blog... can I post html?
+--- Log closed Wed Mar 11 18:03:49 2009
+--- Log opened Wed Mar 11 18:04:22 2009
+18:04 #django-social: 1/ 4/leahculver1/c>g ejlilly: you missed an epic conversation about it
+18:04 #django-social: 1/ 4/brosner1/c>g ejlilly: we already did :D
+18:05 #django-social: 1/ 4/_newman_1/c>g ejlilly: openads which is now open-x i think
+18:23 #django-social: 1/ 4/leahculver1/c>g ejlilly: I love this one http://github.com/justinlilly/oebfare/commit/2073ab65512b82703b0a8c88ab63facff5b546b6
+--- Log closed Wed Mar 11 20:03:36 2009
+--- Log opened Wed Mar 18 10:41:49 2009
+--- Log closed Wed Mar 18 11:23:33 2009
+--- Log opened Fri Mar 20 13:47:01 2009
+14:38 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: 16 here
+17:03 1/=g;/jlillyg</>g ehey.
+17:03 1/=g;/jlillyg</>g eNot sure if you're interested in moving to NYC, but figured I'd throw this out there. The company I work at is looking for a Django dev.
+17:05 1/=g;/jlillyg</>g ehttp://hugeinc.com/careers/NYC/django-developer  -- please excuse the poor formatting.
+17:07 1/=g;/ericflogc> eThanks for letting me know
+17:07 1/=g;/ericflogc> eBut even with today being shitty, I still love my job overall
+17:07 1/=g;/jlillyg</>g efair enough. Its much different here, for sure.
+17:07 1/=g;/ericflogc> eYeah I bet
+17:11 #django-social: 1/ 4/robhudson1/c>g ejlilly: don't think so... it does need a closing html body tag to inject the toolbar html into
+17:18 1/=g;/jlillyg</>g eokay.. so related note. Still listening?
+17:19 1/=g;/ericflogc> eListening?
+17:19 1/=g;/jlillyg</>g elooking? I dunno.
+17:19 1/=g;/ericflogc> ehuh??
+17:19 1/=g;/jlillyg</>g eerr. nm.
+17:19 1/=g;/ericflogc> eI'm so confused lol
+17:20 1/=g;/jlillyg</>g eIf the company I worked at wanted to get you guys to say "Looking for a job? Contact Us!" on TWiD... is that something you guys would be open to?
+17:20 1/=g;/jlillyg</>g eI would imagine there would be some amount of money to do it... just curious what the feeling of it is.
+17:20 1/=g;/jlillyg</>g eshow sponsorship, as it were.
+17:20 1/=g;/ericflogc> eI'm not sure, the problem right now is that TWiD 57 was our last one for a while
+17:21 1/=g;/jlillyg</>g ehmm.
+17:21 1/=g;/ericflogc> eWe're going to be stopping for a while while we restructure and figure some things out
+17:21 1/=g;/jlillyg</>g egotcha. Well never mind on that one :-X
+17:21 1/=g;/ericflogc> e:D
+17:21 1/=g;/ericflogc> eAt PyCon we should talk about it though
+17:21 1/=g;/ericflogc> eBecause that's where we're going to be planning our reboot.
+17:21 1/=g;/jlillyg</>g eagreed. Lots of talking at pycon :)
+17:26 #django-social: 1/ 4/robhudson1/c>g ejlilly: I'd consider it... is it common to not have a closing body tag?
+--- Log closed Sat Mar 21 20:34:59 2009
+--- Log opened Sun Mar 22 12:01:06 2009
+--- Log closed Sun Mar 22 12:57:16 2009
+--- Log opened Mon Mar 30 02:01:26 2009
+--- Log closed Mon Mar 30 07:48:54 2009
+--- Log opened Mon Mar 30 08:35:31 2009
+--- Log closed Mon Mar 30 14:27:58 2009
+--- Log opened Mon Mar 30 15:42:24 2009
+--- Log closed Mon Mar 30 15:51:32 2009
+--- Log opened Mon Mar 30 16:32:40 2009
+--- Log closed Mon Mar 30 17:21:13 2009
+--- Log opened Mon Mar 30 17:36:22 2009
+21:19 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: simon has a snippet on djangosnippets
+23:56 1/=g;/Nimbilusgc> ehey
+23:56 1/=g;/Nimbilusgc> eyou there?
+--- Day changed Tue Mar 31 2009
+09:25 1/=g;/jlillyg</>g eI'm here now, fwiw
+10:56 1/=g;/jlillyg</>g eI'm here now, fwiw
+--- Log closed Tue Mar 31 12:23:08 2009
+--- Log opened Tue Mar 31 13:00:58 2009
+--- Log closed Tue Mar 31 13:47:16 2009
+--- Log opened Tue Mar 31 14:45:49 2009
+--- Log closed Tue Mar 31 14:55:33 2009
+--- Log opened Tue Mar 31 14:55:37 2009
+15:18 1/=g;/jlillyg</>g eI'm here now if you still need me.
+15:18 1/=g;/Nimbilusgc> eoh
+15:19 1/=g;/Nimbilusgc> ewas gonna answer your grad question from yesterday
+15:19 1/=g;/jlillyg</>g eahh. gotcha. 90min was the answer.
+15:19 1/=g;/Nimbilusgc> eeh, depends on school
+15:19 1/=g;/Nimbilusgc> eOur commencement was 1 hour
+15:19 1/=g;/Nimbilusgc> eThen we split up into the different colleges
+15:20 1/=g;/Nimbilusgc> eThe 2nd part is where you walk across stage and get the diploma
+15:20 1/=g;/Nimbilusgc> eThe 2nd part depends on how many people in your college are graduating
+15:20 1/=g;/Nimbilusgc> eI think for us the 2nd part took 45+ min
+15:23 1/=g;/jlillyg</>g eahh.
+15:23 1/=g;/jlillyg</>g eso then the answer is 1hr + 90 min.
+15:23 1/=g;/Nimbilusgc> eSorry I can't give a firm time. 
+15:24 1/=g;/Nimbilusgc> eDepends on school size really
+15:24 1/=g;/jlillyg</>g emakes sense. I didn't know about the 2 parts.
+15:24 1/=g;/jlillyg</>g ebut the 2nd part is 90 mins.
+15:24 1/=g;/jlillyg</>g eschool website apparently said so.
+15:24 1/=g;/Nimbilusgc> eYeah, first part is where someone famous or whatever shows up to speak
+15:24 1/=g;/Nimbilusgc> eOr important
+15:24 5/*g Nimbilus shrugs
+15:28 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: well i knew THAT
+15:33 #django-social: 1/ 4/Gulopine1/c>g ejlilly, where is it next year?
+17:53 #django: 1/ 4/mattmcc1/c>g ejlilly: Looks like the first argument should be different.
+17:53 #django: 1/ 4/mattmcc1/c>g ejlilly: Incidentally, '_' is included in \w
+--- Log closed Tue Mar 31 20:35:11 2009
+--- Log opened Wed Apr 01 11:01:46 2009
+--- Log closed Wed Apr 01 11:41:57 2009
+--- Log opened Wed Apr 01 11:42:07 2009
+14:03 #django-social: 1/ 4/jezdez1/c>g ejlilly: wrong ;)
+14:16 #django-social: 1/ 4/dreid1/c>g ejlilly: I am the awesome guy who does this: http://blog.dreid.org/2009/03/twisted-pinax-hey-yeah-that-works.html
+14:18 #django-social: 1/ 4/robhudson1/c>g ejlilly: http://docs.djangoproject.com/en/dev/ref/models/options/#django.db.models.Options.managed
+16:40 #django: 1/ 4/adsworth1/c>g ejlilly: the ImageField only save the filename the data is stored on the file system. have a read of http://docs.djangoproject.com/en/dev/topics/files/#topics-files
+16:47 #django: 1/ 4/adsworth1/c>g ejlilly: nope not really, since I haven'T work with files in django since the new file backends were implemented.
+16:48 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: theres a ticket for that just search for the mro issue
+16:52 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: Dunno, ask karen or maybe Gulopine if they know a workaroun
+16:53 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: well the trick would be not to do File assignment
+16:56 #django-social: 1/ 4/tonyhauber1/c>g ejlilly: yeah, sorry wont be coming to NYC
+22:43 #avendar: 1/@4/Nimbilus1/c>g ejlilly: Now I remember you
+--- Day changed Thu Apr 02 2009
+11:50 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: yes sir
+12:02 #django-social: 1/ 4/ipmb1/c>g ejlilly: http://www.postgresql.org/docs/8.1/interactive/runtime-config-logging.html#GUC-LOG-MIN-ERROR-STATEMENT
+12:18 #postgresql: 1/ 4/RhodiumToad1/c>g ejlilly: I'm pretty sure nothing in pg ever uses --sysconfdir
+12:19 #postgresql: 1/ 4/RhodiumToad1/c>g ejlilly: if you haven't run initdb, then you have no configuration file yet
+12:19 #postgresql: 1/ 4/RhodiumToad1/c>g ejlilly: ok, so the config file will be in your data directory
+12:53 #django-social: 1/ 4/robhudson1/c>g ejlilly: I don't know... I don't use svn
+14:39 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: did that help any? >_>
+14:51 #django-social: 1/ _newman_> edoes everyone else agree with jlilly?
+14:52 #django-social: 1/ bitprophet_> eroffel @ jlilly 
+15:05 #django-social: 1/ 4/jezdez1/c>g ejlilly: given malcolms regular posts on django-users, django-dev and django-i18n I think it's safe to say he is also helping the community
+15:41 #django: 1/ 4/davidcramer1/c>g ejlilly -- no idea, dont have it setup -- i just want to modify my middleware to handle pgsql too :)
+15:59 1/=g;/sarperdaggc> eI guess I cannot really explain it in the channel
+16:02 1/=g;/jlillyg</>g ekk.
+16:03 1/=g;/sarperdaggc> ewere you able to read it what I wrote?
+16:03 1/=g;/jlillyg</>g ewhy aren't you subclassing image field instead of file field?
+16:03 1/=g;/jlillyg</>g eyea, just did.
+16:03 1/=g;/sarperdaggc> eactually I am using ImageField only
+16:03 1/=g;/jlillyg</>g e    ph.photo = os.path.join('media', 'img', 'data_gen', 'test%s.jpg' % (i % 2,))
+16:04 1/=g;/jlillyg</>g ethat's how I'm saving an imagefield in on my site.
+16:04 1/=g;/jlillyg</>g erelative to media root
+16:04 1/=g;/sarperdaggc> ehmm I don't understand
+16:04 1/=g;/jlillyg</>g eI'm not sure I can explain it.
+16:04 1/=g;/jlillyg</>g esorry.  just way too busy at work.
+16:05 1/=g;/sarperdaggc> eok thanks anyway
+16:14 1/=g;/sarperdaggc> ejust tell me if I should put this somewhere in my forms.py or not
+16:14 1/=g;/sarperdaggc> e logo_image = forms.ImageField(required=False)
+16:14 1/=g;/jlillyg</>g enot sure, really.
+16:15 1/=g;/jlillyg</>g eI haven't messed with forms.py in quite some time. I usually stick with ModelForms when I have to do them.
+16:15 1/=g;/sarperdaggc> ewell if I need to use some widgets and stuff, I had to go for a forms.py
+16:15 1/=g;/sarperdaggc> ein other case there is no such path problem
+19:34 #django-social: 1/ 4/leahculver1/c>g ejlilly: can you do me a favor and send me a screenshot of your fork queue for oebfare?
+19:39 #django-social: 1/ 4/_newman_1/c>g ejlilly: i think leahculver just said fork you to you :D
+--- Log closed Sat Apr 04 23:56:12 2009
+--- Log opened Sat Apr 04 23:56:28 2009
+--- Day changed Sun Apr 05 2009
+18:26 #emacs: 1/ yashh> eetaperl grummund jrockway xAFFE literal igrek Rapp hexmode shelagh stoffepojken Seb pgas  liiwi vinbarnes decklin torbjorn balzac dominikh vandijk Kobaz r0bby maskd kelaouchi bartiosze cods mpr boyd cmang ieure kjwr chii docgnome klutometis Chalain_ Borbus krig_ mcxx walkah dsevil gnuvince lloydhuang _newman_ duckpond ojuice Aiviru jedediah raph_ael jlilly djinni akv ulfd jasonmay Chrononaut onre tekr tibaza tessier_
+--- Log closed Mon Apr 06 13:52:09 2009
+--- Log opened Mon Apr 06 13:54:12 2009
+15:39 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: not at all
+15:49 1/=g;/SeanMcQgc> eI have returned from the land of press craziness
+15:49 1/=g;/SeanMcQgc> egit question about oebfare
+15:49 1/=g;/SeanMcQgc> edo I want to merge brosner's trunk to mine using git remote add && git pull?
+15:51 1/=g;/jlillyg</>g edo you?
+15:51 1/=g;/jlillyg</>g edoes he have interesting crap that you want?
+15:51 1/=g;/SeanMcQgc> eI think so
+15:51 1/=g;/jlillyg</>g eokay. then yes, that's what you do.
+15:51 1/=g;/SeanMcQgc> eok
+15:51 1/=g;/jlillyg</>g egit remote add brosner url-to-rep
+15:51 1/=g;/jlillyg</>g egit pull oebfare master
+15:51 1/=g;/SeanMcQgc> ekk
+15:52 1/=g;/SeanMcQgc> ebtw did my quote play where you are?
+15:53 1/=g;/SeanMcQgc> eI know it was all over Iowa, but no one seems to be putting the story online
+15:53 1/=g;/jlillyg</>g equote?
+15:53 1/=g;/jlillyg</>g ehuh?
+15:53 1/=g;/jlillyg</>g esorry, I'm rather insulated. I don't read the news or have TV
+15:53 1/=g;/SeanMcQgc> eoh, Iowa ruled in favor of Marriage Equality on friday
+15:53 1/=g;/SeanMcQgc> elol it's ok
+15:53 1/=g;/jlillyg</>g eahh. congrats.
+15:53 1/=g;/SeanMcQgc> eyou're the prototypical member of our generation then =p
+15:54 1/=g;/SeanMcQgc> eI don't read news or watch tv unless I'm in it :)
+16:09 #django: 1/ 4/mkorman_1/c>g ejlilly: i think maybe forms.HiddenInput is what i want.  thanks
+16:27 #django-social: 1/ bitprophet_> ejohn (I think his name's john, right jlilly? john scott-akinson or something) has some decent ideas I think. haven't looked too deep yet
+16:33 #django-social: 1/ bitprophet_> etake it up with jlilly haha
+17:27 #django-social: 1/ 4/SeanMcQ1/c>g ejlilly: I hate screen
+17:28 #django-social: 1/ 4/SeanMcQ1/c>g ejlilly: or rather, dreamhost kills my screen process randomly, causing me to not find it useful
+--- Log closed Mon Apr 06 22:35:59 2009
+--- Log opened Tue Apr 07 00:26:35 2009
+--- Log closed Tue Apr 07 00:31:50 2009
+--- Log opened Tue Apr 07 01:55:22 2009
+--- Log closed Tue Apr 07 11:31:38 2009
+--- Log opened Tue Apr 07 12:01:38 2009
+--- Log closed Tue Apr 07 13:00:21 2009
+--- Log opened Tue Apr 07 14:35:34 2009
+--- Log closed Tue Apr 07 16:22:27 2009
+--- Log opened Tue Apr 07 16:37:10 2009
+16:47 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: ping
+16:52 #django-social: 1/ 4/bitprophet_1/c>g ejlilly: will definitely want to do island burgers sometime. read the menu, looks de-fucking-licious. :D
+--- Log closed Tue Apr 07 22:07:33 2009
+--- Log opened Wed Apr 08 00:07:49 2009
+--- Log closed Wed Apr 08 08:57:00 2009
+--- Log opened Wed Apr 08 09:19:06 2009
+09:45 #django-social: 1/ 4/jezdez1/c>g ejlilly: awesome article
+10:24 1/=g;/_newman_gc> eyellow?
+10:27 1/=g;/_newman_gc> ejlilly: you there?
+--- Log closed Wed Apr 08 16:21:08 2009
+--- Log opened Wed Apr 08 16:53:44 2009
+--- Log closed Wed Apr 08 17:54:52 2009
+--- Log opened Wed Apr 08 18:24:52 2009
+--- Log closed Wed Apr 08 23:30:05 2009
+--- Log opened Thu Apr 09 00:21:15 2009
+--- Log closed Thu Apr 09 00:31:27 2009
+--- Log opened Thu Apr 09 01:25:25 2009
+11:31 #django-dev: 1/ 4/Alex_Gaynor1/c>g ejlilly: congrats, you're in the tree!
+--- Log closed Thu Apr 09 14:39:56 2009
+--- Log opened Thu Apr 09 15:10:53 2009
+--- Log closed Thu Apr 09 16:41:59 2009
+--- Log opened Thu Apr 09 17:33:26 2009
+--- Log closed Thu Apr 09 23:59:10 2009
+--- Log opened Fri Apr 10 01:16:19 2009
+02:25 #django-social: 1/ 4/Zain1/c>g ejlilly: I got the color issue fixed!!
+03:17 #django-social: 1/ 4/Zain1/c>g ejlilly: http://dpaste.com/31092/
+--- Log closed Fri Apr 10 09:26:42 2009
+--- Log opened Fri Apr 10 09:58:16 2009
+--- Log closed Fri Apr 10 10:42:14 2009
+--- Log opened Fri Apr 10 11:52:31 2009
+--- Log closed Fri Apr 10 12:05:11 2009
+--- Log opened Fri Apr 10 12:36:54 2009
+--- Log closed Fri Apr 10 12:39:21 2009
+--- Log opened Fri Apr 10 13:11:28 2009
+--- Log closed Fri Apr 10 14:48:38 2009
+--- Log opened Fri Apr 10 15:47:58 2009
+--- Log closed Fri Apr 10 17:29:18 2009
+--- Log opened Fri Apr 10 18:03:01 2009
+19:00 #oebfare: 1/ defunkt> ejust you and me, jlilly 
+--- Log closed Fri Apr 10 19:10:58 2009
+--- Log opened Fri Apr 10 19:50:10 2009
+--- Log closed Fri Apr 10 19:52:57 2009
+--- Log opened Fri Apr 10 20:25:39 2009
+--- Log closed Fri Apr 10 21:55:19 2009
+--- Log opened Fri Apr 10 22:25:19 2009
+--- Log closed Fri Apr 10 22:31:21 2009
+--- Log opened Fri Apr 10 23:14:59 2009
+--- Log closed Sat Apr 11 01:11:43 2009
+--- Log opened Sat Apr 11 01:41:43 2009
+--- Log closed Sat Apr 11 23:36:28 2009
+--- Log opened Sat Apr 11 23:36:34 2009
+--- Log closed Sun Apr 12 20:46:57 2009
+--- Log opened Sun Apr 12 21:48:51 2009
+--- Log closed Sun Apr 12 21:51:14 2009
+--- Log opened Sun Apr 12 22:30:27 2009
+--- Log closed Sun Apr 12 22:48:04 2009
+--- Log opened Sun Apr 12 23:32:35 2009
+--- Log closed Mon Apr 13 00:32:57 2009
+--- Log opened Mon Apr 13 01:03:19 2009
+--- Log closed Mon Apr 13 01:05:05 2009
+--- Log opened Mon Apr 13 02:40:20 2009
+--- Log closed Mon Apr 13 09:24:46 2009
+--- Log opened Mon Apr 13 09:55:29 2009
+--- Log closed Mon Apr 13 10:19:14 2009
+--- Log opened Mon Apr 13 10:50:54 2009
+--- Log closed Mon Apr 13 10:55:30 2009
+--- Log opened Mon Apr 13 11:55:13 2009
+--- Log closed Mon Apr 13 12:02:04 2009
+--- Log opened Mon Apr 13 12:32:21 2009
+--- Log closed Mon Apr 13 13:06:56 2009
+--- Log opened Mon Apr 13 15:07:02 2009
+--- Log closed Mon Apr 13 15:31:07 2009
+--- Log opened Mon Apr 13 16:13:25 2009
+--- Log closed Mon Apr 13 16:39:22 2009
+--- Log opened Mon Apr 13 17:43:27 2009
+--- Log closed Mon Apr 13 18:35:49 2009
+--- Log opened Mon Apr 13 19:08:13 2009
+--- Log closed Mon Apr 13 19:21:07 2009
+--- Log opened Mon Apr 13 19:51:55 2009
+--- Log closed Mon Apr 13 19:54:58 2009
+--- Log opened Mon Apr 13 22:00:42 2009
+--- Log closed Tue Apr 14 00:07:51 2009
+--- Log opened Tue Apr 14 00:08:40 2009
+08:45 #django: 1/ 4/skorpan1/c>g ejlilly, so assume i have a model Question and a model Answer. i want to get all questions but from each object in the queryset, but given a question, i'd like to access all of the answers to that question. any suggestions?
+10:22 #emacs: 1/ 4/ootput1/c>g ejlilly: i was referred to egg, but i can't get it to work either
+13:38 #django-social: 1/ 4/brosner1/c>g ejlilly: to django?
+13:39 #django-social: 1/ 4/brosner1/c>g ejlilly: in 1.1 it uses transactions
+13:42 #django-social: 1/ 4/Alex_Gaynor1/c>g ejlilly: nothing is going to solve that problem, in fact I think any other behavior makes no sense
+--- Log closed Tue Apr 14 13:43:56 2009
+--- Log opened Tue Apr 14 14:16:21 2009
+--- Log closed Tue Apr 14 14:26:41 2009
+--- Log opened Tue Apr 14 15:06:43 2009
+--- Log closed Tue Apr 14 16:54:36 2009
+--- Log opened Tue Apr 14 17:33:06 2009
+--- Log closed Tue Apr 14 17:54:40 2009
+--- Log opened Tue Apr 14 18:26:39 2009
+--- Log closed Tue Apr 14 18:36:22 2009
+--- Log opened Tue Apr 14 19:38:50 2009
+--- Log closed Tue Apr 14 20:06:56 2009
+--- Log opened Tue Apr 14 23:53:53 2009
+--- Log closed Wed Apr 15 00:01:33 2009
+--- Log opened Wed Apr 15 00:55:12 2009
+--- Log closed Wed Apr 15 01:19:10 2009
+--- Log opened Wed Apr 15 03:31:52 2009
+08:22 #django-social: 1/ 4/_newman_1/c>g ejlilly: i prefer zenburn
+--- Log closed Wed Apr 15 09:28:39 2009
+--- Log opened Wed Apr 15 10:06:04 2009
+--- Log closed Wed Apr 15 10:26:21 2009
+--- Log opened Wed Apr 15 11:16:03 2009
+--- Log closed Wed Apr 15 13:58:34 2009
+--- Log opened Wed Apr 15 14:28:34 2009
+--- Log closed Wed Apr 15 14:38:32 2009
+--- Log opened Wed Apr 15 15:08:54 2009
+--- Log closed Wed Apr 15 15:17:09 2009
+--- Log opened Wed Apr 15 15:49:11 2009
+15:50 #django-social: 1/ 4/leahculver1/c>g ejlilly: I see you updated oebfare... can you add the changes to mightylemon? should I?
+--- Log closed Wed Apr 15 15:52:54 2009
+--- Log opened Wed Apr 15 17:17:31 2009
+--- Log closed Wed Apr 15 17:33:47 2009
+--- Log opened Wed Apr 15 18:15:33 2009
+--- Log closed Thu Apr 16 23:32:30 2009
+--- Log opened Fri Apr 17 00:41:07 2009
+--- Log closed Fri Apr 17 09:59:40 2009
+--- Log opened Fri Apr 17 10:38:40 2009
+--- Log closed Fri Apr 17 21:26:13 2009
+--- Log opened Fri Apr 17 22:08:12 2009
+--- Log closed Fri Apr 17 22:18:57 2009
+--- Log opened Fri Apr 17 23:02:41 2009
+--- Log closed Fri Apr 17 23:08:10 2009
+--- Log opened Fri Apr 17 23:44:59 2009
+--- Log closed Sat Apr 18 00:56:01 2009
+--- Log opened Sat Apr 18 02:33:20 2009
+06:09 #django-social: 1/ 4/jezdez1/c>g ejlilly: ping
+--- Log closed Sat Apr 18 11:23:42 2009
+--- Log opened Sat Apr 18 12:05:39 2009
+--- Log closed Sat Apr 18 12:25:01 2009
+--- Log opened Sat Apr 18 13:00:55 2009
+16:23 1/=g;/jlillyg</>g eI'll try to help au gratis.
+--- Log closed Sat Apr 18 16:23:13 2009
+--- Log opened Sat Apr 18 17:42:51 2009
+--- Log closed Sat Apr 18 18:21:18 2009
+--- Log opened Sat Apr 18 18:53:11 2009
+--- Log closed Sat Apr 18 19:07:02 2009
+--- Log opened Sat Apr 18 19:46:12 2009
+--- Log closed Sat Apr 18 21:32:37 2009
+--- Log opened Sat Apr 18 22:04:17 2009
+--- Log closed Sat Apr 18 22:18:50 2009
+--- Log opened Sat Apr 18 22:48:54 2009
+--- Log closed Sat Apr 18 22:58:42 2009
+--- Log opened Sat Apr 18 23:28:43 2009
+--- Log closed Sat Apr 18 23:47:12 2009
+--- Log opened Sun Apr 19 01:03:47 2009
+--- Log closed Sun Apr 19 12:35:14 2009
+--- Log opened Sun Apr 19 13:35:35 2009
+--- Log closed Sun Apr 19 15:16:24 2009
+--- Log opened Sun Apr 19 16:08:37 2009
+--- Log closed Sun Apr 19 16:12:08 2009
+--- Log opened Sun Apr 19 16:42:50 2009
+--- Log closed Sun Apr 19 16:49:59 2009
+--- Log opened Sun Apr 19 17:20:09 2009
+--- Log closed Mon Apr 20 06:33:54 2009
+--- Log opened Mon Apr 20 07:10:11 2009
+--- Log closed Mon Apr 20 07:10:48 2009
+--- Log opened Mon Apr 20 08:24:42 2009
+--- Log closed Mon Apr 20 09:10:26 2009
+--- Log opened Mon Apr 20 09:58:57 2009
+--- Log closed Mon Apr 20 10:06:13 2009
+--- Log opened Mon Apr 20 10:36:32 2009
+--- Log closed Mon Apr 20 11:16:02 2009
+--- Log opened Mon Apr 20 11:46:36 2009
+--- Log closed Mon Apr 20 13:45:57 2009
+--- Log opened Mon Apr 20 14:15:57 2009
+--- Log closed Mon Apr 20 14:38:23 2009
+--- Log opened Mon Apr 20 15:14:04 2009
+--- Log closed Mon Apr 20 15:39:46 2009
+--- Log opened Mon Apr 20 16:10:09 2009
+--- Log closed Mon Apr 20 20:39:28 2009
+--- Log opened Mon Apr 20 22:02:41 2009
+--- Day changed Tue Apr 21 2009
+02:57 #emacs: c>/>>?/ c=/QinGW>/<< e:/    ivan` cenhinen jlilly Ghoul pfo_ jamessan chii ustunozgur_ hroptatyr
+--- Log closed Tue Apr 21 06:36:59 2009
+--- Log opened Tue Apr 21 07:36:06 2009
+--- Log closed Tue Apr 21 08:13:28 2009
+--- Log opened Tue Apr 21 08:45:21 2009
+--- Log closed Tue Apr 21 09:48:39 2009
+--- Log opened Tue Apr 21 10:21:50 2009
+--- Log closed Tue Apr 21 11:35:14 2009
+--- Log opened Tue Apr 21 12:11:59 2009
+--- Log closed Tue Apr 21 12:50:03 2009
+--- Log opened Tue Apr 21 13:20:46 2009
+--- Log closed Tue Apr 21 13:42:33 2009
+--- Log opened Tue Apr 21 15:11:57 2009
+--- Log closed Tue Apr 21 15:15:35 2009
+--- Log opened Tue Apr 21 15:45:35 2009
+--- Log closed Wed Apr 22 11:31:13 2009
+--- Log opened Wed Apr 22 12:02:18 2009
+--- Log closed Wed Apr 22 14:16:48 2009
+--- Log opened Wed Apr 22 14:49:42 2009
+--- Log closed Wed Apr 22 15:06:10 2009
+--- Log opened Wed Apr 22 15:36:10 2009
+--- Log closed Wed Apr 22 16:55:52 2009
+--- Log opened Wed Apr 22 18:01:44 2009
+--- Log closed Wed Apr 22 18:31:47 2009
+--- Log opened Wed Apr 22 19:01:47 2009
+--- Log closed Wed Apr 22 19:59:40 2009
+--- Log opened Wed Apr 22 23:11:26 2009
+--- Log closed Wed Apr 22 23:48:27 2009
+--- Log opened Thu Apr 23 00:38:54 2009
+--- Log closed Thu Apr 23 01:06:35 2009
+--- Log opened Thu Apr 23 01:38:59 2009
+07:57 cc<;/guru_g> ehi
+07:57 cc<;/guru_g> eTurkish man takes an interest?
+--- Log closed Thu Apr 23 09:17:53 2009
+--- Log opened Thu Apr 23 09:48:57 2009
+--- Log closed Thu Apr 23 10:37:47 2009
+--- Log opened Thu Apr 23 11:07:47 2009
+--- Log closed Thu Apr 23 11:14:12 2009
+--- Log opened Thu Apr 23 12:30:01 2009
+--- Log closed Thu Apr 23 13:40:41 2009
+--- Log opened Thu Apr 23 14:24:14 2009
+--- Log closed Thu Apr 23 15:20:05 2009
+--- Log opened Thu Apr 23 17:15:03 2009
+--- Log closed Thu Apr 23 17:19:40 2009
+--- Log opened Thu Apr 23 18:27:12 2009
+--- Log closed Fri Apr 24 00:07:59 2009
+--- Log opened Fri Apr 24 00:45:18 2009
+--- Log closed Fri Apr 24 00:58:09 2009
+--- Log opened Fri Apr 24 01:59:22 2009
+--- Log closed Fri Apr 24 02:41:08 2009
+--- Log opened Fri Apr 24 03:11:49 2009
+--- Log closed Fri Apr 24 10:51:11 2009
+--- Log opened Fri Apr 24 12:44:59 2009
+--- Log closed Fri Apr 24 16:35:08 2009
+--- Log opened Fri Apr 24 17:07:40 2009
+--- Log closed Sat Apr 25 03:46:16 2009
+--- Log opened Sat Apr 25 04:16:16 2009
+--- Log closed Sat Apr 25 11:53:59 2009
+--- Log opened Sat Apr 25 12:23:59 2009
+--- Log closed Sat Apr 25 21:32:19 2009
+--- Log opened Sat Apr 25 22:02:19 2009
+--- Log closed Sat Apr 25 22:15:27 2009
+--- Log opened Sat Apr 25 22:46:55 2009
+--- Log closed Sun Apr 26 09:19:27 2009
+--- Log opened Sun Apr 26 09:49:27 2009
+--- Log closed Sun Apr 26 10:56:40 2009
+--- Log opened Sun Apr 26 11:31:38 2009
+--- Log closed Sun Apr 26 11:38:00 2009
+--- Log opened Sun Apr 26 12:08:00 2009
+--- Log closed Sun Apr 26 15:05:39 2009
+--- Log opened Sun Apr 26 16:21:26 2009
+--- Log closed Sun Apr 26 20:19:14 2009
+--- Log opened Sun Apr 26 22:55:09 2009
+--- Log closed Sun Apr 26 23:34:04 2009
+--- Log opened Mon Apr 27 00:04:04 2009
+--- Log closed Mon Apr 27 00:59:20 2009
+--- Log opened Mon Apr 27 01:37:25 2009
+--- Log closed Mon Apr 27 01:52:30 2009
+--- Log opened Mon Apr 27 02:42:28 2009
+--- Log closed Mon Apr 27 10:20:47 2009
+--- Log opened Mon Apr 27 10:51:03 2009
+--- Log closed Mon Apr 27 11:21:49 2009
+--- Log opened Mon Apr 27 12:38:49 2009
+--- Log closed Mon Apr 27 14:00:27 2009
+--- Log opened Mon Apr 27 15:20:37 2009
+--- Log closed Mon Apr 27 15:53:59 2009
+--- Log opened Mon Apr 27 16:43:27 2009
+--- Log closed Mon Apr 27 18:34:42 2009
+--- Log opened Mon Apr 27 20:13:58 2009
+20:36 #webfaction: c>/>>?/ c=/likebike1>/<< e:/Hi jlilly
+20:37 #webfaction: c>/>>?/ c=/likebike1g>/<< e:/jlilly: your server, web78, is working fine for me.  Are you still having the problem?
+--- Day changed Tue Apr 28 2009
+01:27 #avendar: c>/>>?/@c=/Nimbilusg>/<< e:/jlilly = aunes
+--- Log closed Tue Apr 28 07:03:19 2009
+--- Log opened Tue Apr 28 07:36:28 2009
+--- Log closed Tue Apr 28 07:45:17 2009
+--- Log opened Tue Apr 28 08:15:33 2009
+--- Log closed Tue Apr 28 09:16:57 2009
+--- Log opened Tue Apr 28 10:07:55 2009
+10:11 #django-social: c>/>>?/ c=/ericholscherg>/<< e:/jlilly, indeed, then it would be more aptly named at least :)
+--- Log closed Tue Apr 28 10:12:04 2009
+--- Log opened Tue Apr 28 11:23:27 2009
+--- Log closed Tue Apr 28 11:50:09 2009
+--- Log opened Tue Apr 28 12:20:09 2009
+--- Log closed Tue Apr 28 12:22:42 2009
+--- Log opened Tue Apr 28 13:31:38 2009
+--- Log closed Tue Apr 28 13:36:41 2009
+--- Log opened Tue Apr 28 15:27:48 2009
+--- Log closed Tue Apr 28 15:48:04 2009
+--- Log opened Tue Apr 28 17:13:32 2009
+--- Log closed Tue Apr 28 17:16:02 2009
+--- Log opened Tue Apr 28 19:02:40 2009
+--- Log closed Wed Apr 29 14:14:32 2009
+--- Log opened Wed Apr 29 16:24:17 2009
+--- Log closed Wed Apr 29 17:17:19 2009
+--- Log opened Wed Apr 29 18:38:29 2009
+--- Log closed Wed Apr 29 19:32:32 2009
+--- Log opened Wed Apr 29 20:48:29 2009
+--- Log closed Thu Apr 30 01:07:41 2009
+--- Log opened Thu Apr 30 01:50:23 2009
+--- Log closed Thu Apr 30 09:42:54 2009
+--- Log opened Thu Apr 30 10:13:56 2009
+--- Log closed Thu Apr 30 10:16:36 2009
+--- Log opened Thu Apr 30 10:48:09 2009
+--- Log closed Thu Apr 30 11:51:29 2009
+--- Log opened Thu Apr 30 12:25:19 2009
+--- Log closed Thu Apr 30 13:03:10 2009
+--- Log opened Thu Apr 30 14:49:47 2009
+--- Log closed Thu Apr 30 15:27:01 2009
+--- Log opened Thu Apr 30 15:57:05 2009
+--- Log closed Thu Apr 30 23:37:55 2009
+--- Log opened Fri May 01 00:07:55 2009
+--- Log closed Fri May 01 10:22:52 2009
+--- Log opened Fri May 01 11:20:41 2009
+--- Log closed Fri May 01 13:02:30 2009
+--- Log opened Fri May 01 14:36:57 2009
+--- Log closed Fri May 01 14:38:55 2009
+--- Log opened Fri May 01 15:26:47 2009
+--- Log closed Fri May 01 16:02:13 2009
+--- Log opened Fri May 01 18:27:12 2009
+--- Log closed Sat May 02 08:05:33 2009
+--- Log opened Sat May 02 09:24:19 2009
+--- Log closed Sat May 02 13:55:13 2009
+--- Log opened Sat May 02 14:26:52 2009
+--- Log closed Sun May 03 04:05:38 2009
+--- Log opened Sun May 03 05:09:30 2009
+14:32 #eurodjangocon: c>/>>?/ c=/andriijasg>/<< e:/jlilly: just set topic "#djangocon is the channel to be in"
+--- Log closed Sun May 03 17:08:48 2009
+--- Log opened Sun May 03 17:42:40 2009
+--- Log closed Sun May 03 17:42:46 2009
+--- Log opened Sun May 03 18:22:58 2009
+--- Log closed Sun May 03 21:19:13 2009
+--- Log opened Sun May 03 21:49:13 2009
+--- Day changed Mon May 04 2009
+02:43 cc</jlillyg eheh.
+--- Log closed Mon May 04 02:43:15 2009
+--- Log opened Mon May 04 03:13:29 2009
+--- Log closed Mon May 04 07:20:36 2009
+--- Log opened Mon May 04 07:50:36 2009
+--- Log closed Mon May 04 08:21:44 2009
+--- Log opened Mon May 04 09:17:01 2009
+--- Log closed Mon May 04 11:42:53 2009
+--- Log opened Mon May 04 12:12:53 2009
+--- Log closed Tue May 05 18:44:51 2009
+--- Log opened Tue May 05 19:33:58 2009
+--- Log closed Tue May 05 20:57:34 2009
+--- Log opened Tue May 05 21:46:05 2009
+22:15 #django-social: c>/>>?/ c=/brosnerg>/<< e:/jlilly: that was a short european trip.
+--- Log closed Tue May 05 22:17:09 2009
+--- Log opened Tue May 05 22:53:39 2009
+--- Log closed Wed May 06 08:15:35 2009
+--- Log opened Wed May 06 09:09:44 2009
+09:34 #nycpython: c>/>>?/ c=/dugan_g>/<< e:/jlilly: cool
+09:38 #nycpython: c>/>>?/ c=/dugan_g>/<< e:/jlilly: I've got a trainer from out of town who offered to give a presentation this month, trying to figure out the details and see if he'd be able to do a half hour presentation as well (that would be my preference to one 1h talk anyway)
+09:39 #nycpython: c>/>>?/ c=/dugan_g>/<< e:/jlilly: but otherwise would you be willing to speak in June?
+10:05 cc<;/dugan_g> eyou there?
+--- Log closed Wed May 06 10:05:17 2009
+--- Log opened Wed May 06 11:55:02 2009
+12:47 ##michat: c>/>>?/ c=/crozzbot>/<< e:/'sup jlilly?
+--- Log closed Wed May 06 13:04:26 2009
+--- Log opened Wed May 06 13:47:49 2009
+--- Log closed Wed May 06 15:14:44 2009
+--- Log opened Wed May 06 15:53:16 2009
+--- Log closed Wed May 06 16:00:54 2009
+--- Log opened Wed May 06 17:19:48 2009
+--- Log closed Wed May 06 17:23:45 2009
+--- Log opened Wed May 06 17:53:46 2009
+--- Log closed Wed May 06 18:51:55 2009
+--- Log opened Wed May 06 19:33:50 2009
+--- Log closed Wed May 06 20:57:11 2009
+--- Log opened Wed May 06 21:32:04 2009
+--- Log closed Wed May 06 22:21:07 2009
+--- Log opened Wed May 06 22:51:39 2009
+23:21 #django-social: c>/>>?/ c=/montyloungeg>/<< e:/jlilly
+--- Log closed Thu May 07 00:31:57 2009
+--- Log opened Thu May 07 01:03:03 2009
+--- Log closed Thu May 07 08:05:58 2009
+--- Log opened Thu May 07 08:38:02 2009
+--- Log closed Thu May 07 10:42:37 2009
+--- Log opened Thu May 07 12:14:39 2009
+--- Log closed Thu May 07 12:15:10 2009
+--- Log opened Thu May 07 13:12:44 2009
+--- Log closed Thu May 07 13:38:21 2009
+--- Log opened Thu May 07 14:08:23 2009
+--- Log closed Thu May 07 14:30:07 2009
+--- Log opened Thu May 07 19:37:52 2009
+--- Log closed Thu May 07 20:11:45 2009
+--- Log opened Thu May 07 20:57:07 2009
+--- Log closed Thu May 07 21:21:53 2009
+--- Log opened Thu May 07 21:51:53 2009
+--- Log closed Thu May 07 21:58:50 2009
+--- Log opened Thu May 07 23:04:34 2009
+--- Log closed Thu May 07 23:43:04 2009
+--- Log opened Fri May 08 00:25:55 2009
+--- Log closed Fri May 08 08:22:46 2009
+--- Log opened Fri May 08 08:56:33 2009
+--- Log closed Fri May 08 10:28:27 2009
+--- Log opened Fri May 08 11:18:55 2009
+--- Log closed Fri May 08 11:28:58 2009
+--- Log opened Fri May 08 12:53:11 2009
+--- Log closed Fri May 08 14:17:32 2009
+--- Log opened Fri May 08 15:26:53 2009
+--- Log closed Fri May 08 15:35:12 2009
+--- Log opened Fri May 08 16:06:20 2009
+--- Log closed Fri May 08 16:15:39 2009
+--- Log opened Fri May 08 16:47:08 2009
+--- Day changed Sun May 10 2009
+12:09 ##michat: c>/>>?/ c=/crozzbotg>/<< e:/jlilly: hey there
+--- Log closed Tue May 12 07:37:19 2009
+--- Log opened Tue May 12 08:24:50 2009
+--- Log closed Tue May 12 09:30:15 2009
+--- Log opened Tue May 12 10:20:18 2009
+--- Log closed Tue May 12 10:34:21 2009
+--- Log opened Tue May 12 11:04:21 2009
+--- Log closed Tue May 12 13:38:44 2009
+--- Log opened Tue May 12 14:08:44 2009
+--- Log closed Tue May 12 16:21:18 2009
+--- Log opened Tue May 12 16:55:04 2009
+--- Log closed Wed May 13 10:58:52 2009
+--- Log opened Wed May 13 11:34:13 2009
+--- Log closed Wed May 13 13:56:58 2009
+--- Log opened Wed May 13 14:43:06 2009
+--- Log closed Wed May 13 16:25:26 2009
+--- Log opened Wed May 13 16:55:26 2009
+--- Log closed Fri May 15 00:20:37 2009
+--- Log opened Fri May 15 01:00:23 2009
+--- Log closed Fri May 15 11:30:20 2009
+--- Log opened Fri May 15 12:01:50 2009
+--- Log closed Fri May 15 13:50:43 2009
+--- Log opened Fri May 15 14:36:28 2009
+14:54 #django-social: c>/>>?/ c=/andrewgodwing>/<< e:/jlilly: for VCSen, I think there's only SVN, and possibly a downloadable Perforce one, so not brill
+--- Log closed Fri May 15 15:06:21 2009
+--- Log opened Fri May 15 15:45:29 2009
+--- Log closed Fri May 15 16:09:15 2009
+--- Log opened Fri May 15 16:45:11 2009
+--- Log closed Fri May 15 17:06:05 2009
+--- Log opened Fri May 15 17:36:05 2009
+--- Log closed Fri May 15 21:11:36 2009
+--- Log opened Fri May 15 22:04:26 2009
+--- Log closed Fri May 15 22:54:25 2009
+--- Log opened Fri May 15 23:24:25 2009
+--- Log closed Sun May 17 11:45:10 2009
+--- Log opened Sun May 17 12:15:10 2009
+--- Log closed Sun May 17 12:40:24 2009
+--- Log opened Sun May 17 13:10:24 2009
+--- Log closed Sun May 17 23:51:18 2009
+--- Log opened Mon May 18 00:50:29 2009
+--- Log closed Mon May 18 11:19:51 2009
+--- Log opened Mon May 18 11:49:51 2009
+14:09 #nycpython: c>/>>?/ c=/dugan>/<< e:/and hopefully jlilly and martin blais will give good presentations and people will want to come back. 
+--- Log closed Mon May 18 14:25:37 2009
+--- Log opened Mon May 18 15:03:41 2009
+--- Log closed Tue May 19 08:57:24 2009
+--- Log opened Tue May 19 09:27:27 2009
+--- Log closed Tue May 19 10:23:41 2009
+--- Log opened Tue May 19 10:54:18 2009
+--- Log closed Tue May 19 11:21:48 2009
+--- Log opened Tue May 19 11:52:17 2009
+14:17 #haystack: c>/>>?/ c=/daniel_sickg>/<< e:/jlilly: Rumor has it you were asking about faceting eariler.
+--- Log closed Tue May 19 15:29:09 2009
+--- Log opened Tue May 19 16:08:31 2009
+--- Log closed Tue May 19 16:52:03 2009
+--- Log opened Tue May 19 17:23:01 2009
+--- Log closed Wed May 20 09:27:09 2009
+--- Log opened Wed May 20 09:57:09 2009
+--- Log closed Wed May 20 13:21:42 2009
+--- Log opened Wed May 20 14:20:53 2009
+--- Log closed Wed May 20 14:37:46 2009
+--- Log opened Wed May 20 15:14:49 2009
+--- Log closed Thu May 21 11:05:50 2009
+--- Log opened Thu May 21 12:09:44 2009
+--- Log closed Thu May 21 13:17:11 2009
+--- Log opened Thu May 21 13:47:11 2009
+--- Log closed Thu May 21 20:40:50 2009
+--- Log opened Thu May 21 21:56:38 2009
+--- Log closed Fri May 22 08:25:43 2009
+--- Log opened Fri May 22 08:55:47 2009
+--- Log closed Fri May 22 13:11:36 2009
+--- Log opened Fri May 22 14:02:12 2009
+--- Log closed Fri May 22 14:14:26 2009
+--- Log opened Fri May 22 14:44:47 2009
+16:10 #django-social: c>/>>?/ c=/jezdezg>/<< e:/jlilly: ah, good
+16:12 #django-social: c>/>>?/ c=/jezdezg>/<< e:/jlilly: I've never tried those things in inlines
+--- Log closed Fri May 22 17:05:15 2009
+--- Log opened Fri May 22 17:35:15 2009
+17:44 #nycpython: c>/>>?/ c=/dugang>/<< e:/jlilly: nope
+--- Log closed Fri May 22 17:48:29 2009
+--- Log opened Fri May 22 18:20:29 2009
+--- Log closed Fri May 22 18:32:19 2009
+--- Log opened Fri May 22 19:03:49 2009
+--- Log closed Fri May 22 21:03:01 2009
+--- Log opened Fri May 22 21:44:05 2009
+--- Log closed Fri May 22 23:19:46 2009
+--- Log opened Fri May 22 23:49:48 2009
+--- Log closed Fri May 22 23:59:38 2009
+--- Log opened Sat May 23 01:03:48 2009
+01:51 #django-social: c>/>>?/ c=/jezdezg>/<< e:/jlilly: cool, that's what I did in the refactor anyway, http://github.com/django-extensions/django-extensions/blob/677509fab305cba77d86b71a906f05be6d972fff/django_extensions/views/autocomplete.py
+--- Log closed Sat May 23 11:11:42 2009
+--- Log opened Sat May 23 11:41:51 2009
+--- Log closed Sat May 23 12:39:24 2009
+--- Log opened Sat May 23 13:14:23 2009
+--- Log closed Sat May 23 14:41:38 2009
+--- Log opened Sat May 23 15:15:43 2009
+--- Log closed Sat May 23 15:57:33 2009
+--- Log opened Sat May 23 16:30:26 2009
+--- Log closed Sat May 23 20:33:02 2009
+--- Log opened Sat May 23 21:03:02 2009
+--- Log closed Mon May 25 22:12:09 2009
+--- Log opened Mon May 25 22:42:19 2009
+23:36 #django-social: c>/>>?/ c=/Zain>/<< e:/i think jlilly just burned you :D
+--- Log closed Tue May 26 08:08:37 2009
+--- Log opened Tue May 26 08:39:50 2009
+17:57 #django-social: c>/>>?/ c=/ericholscher>/<< e:/or my reply to jlilly? :)
+19:39 #solr: c>/>>?/ c=/ambling>/<< e:/jlilly hey funny seeing you here
+--- Log closed Tue May 26 20:40:46 2009
+--- Log opened Tue May 26 21:18:51 2009
+--- Log closed Wed May 27 13:44:20 2009
+--- Log opened Wed May 27 14:15:25 2009
+--- Log closed Wed May 27 14:35:48 2009
+--- Log opened Wed May 27 15:09:28 2009
+--- Log closed Wed May 27 15:47:31 2009
+--- Log opened Wed May 27 16:26:21 2009
+--- Log closed Wed May 27 17:57:03 2009
+--- Log opened Wed May 27 18:27:25 2009
+--- Log closed Wed May 27 18:33:35 2009
+--- Log opened Wed May 27 19:03:49 2009
+--- Log closed Wed May 27 20:41:43 2009
+--- Log opened Wed May 27 21:21:07 2009
+--- Log closed Wed May 27 21:33:54 2009
+--- Log opened Wed May 27 22:03:54 2009
+--- Log closed Wed May 27 22:13:03 2009
+--- Log opened Wed May 27 23:08:06 2009
+--- Day changed Thu May 28 2009
+07:08 cc<;/santafeg> ehi
+--- Log closed Thu May 28 09:33:05 2009
+--- Log opened Thu May 28 11:06:16 2009
+11:26 cc<;/netmunkyg> ewe will connect to the global network shortly, once we are satisified ipeng is done working on the routing
+--- Log closed Thu May 28 11:35:31 2009
+--- Log opened Thu May 28 12:08:25 2009
+15:05 #nycpython: c>/>>?/ c=/hughdbrowng>/<< e:/jlilly: yes, still having problems with flatpages. 
+--- Log closed Thu May 28 15:13:36 2009
+--- Log opened Thu May 28 16:03:01 2009
+--- Log closed Thu May 28 16:19:22 2009
+--- Log opened Thu May 28 16:49:22 2009
+18:32 #nycpython: c>/>>?/ c=/hughdbrowng>/<< e:/jlilly: I finally have a handle on the flatpages thing but I don't understand it. Adding a handler404 setting (url.py redirects to view+template) to my caused all of my flatpages to get eaten by the 404 handler *and* remapped to a 200 HTTP return before the flatpages handler saw the 404. I don't know why, but solution is to remove handler404 setting in urls.py.
+18:37 #nycpython: c>/>>?/ c=/hughdbrown>/<< e:/dugan, jlilly: how do you debug things like this? Everything in my app was working (including 404 pages) until I added flatpages.  It was really hard to figure out what to inspect: settings, urls, flatpage configuration, etc.
+--- Log closed Fri May 29 11:45:28 2009
+--- Log opened Fri May 29 12:16:27 2009
+--- Log closed Fri May 29 12:43:50 2009

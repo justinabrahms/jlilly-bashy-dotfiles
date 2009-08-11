@@ -1,0 +1,23 @@
+[ui]
+username = Justin Lilly <justinlilly@gmail.com>
+ssh = ssh -C
+ignore = ~/.hgignore
+merge = internal:merge
+
+[pager]
+pager = LESS='FSRX' less
+quiet = True
+ignore = push shelve fetch pull merge clone
+
+[extensions]
+hgext.bookmarks=
+hgext.hg-git = ~/Code/hgext/hg-git
+color=
+hgext.fetch=
+hgext.rebase=
+hgext.purge=
+hgext.mq=
+hgext.shelve=~/Code/hgext/hgshelve/hgshelve.py
+hgext.crecord=/home/jlilly/Code/python/crecord/crecord/
+hgsvn = ~/Code/hgext/hgsvn/hgsubversion
+pager=

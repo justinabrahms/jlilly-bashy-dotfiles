@@ -6,3 +6,8 @@
 local_settings.py
 .DS_Store
 .#*
+.ipython/db/
+.ipython/logs/
+.ipython/history
+.venv
+*.wpr

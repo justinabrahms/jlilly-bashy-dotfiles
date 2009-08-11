@@ -1,28 +1,60 @@
-export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$PATH
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory autocd extendedglob nomatch autopushd  pushdignoredups
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/jlilly/.zshrc'
+
+autoload -Uz compinit
+autoload -U zmv
+compinit
+# End of lines added by compinstall
+PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
+
+
+#  BEGINNING OF BASH PROFILE IMPORT
+
+export PATH=$HOME/.gems/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$PATH
 export GDAL_DATA=/opt/local/share
-export MANPATH=/opt/local/share/man:$MANPATH
+export MANPAGER='/usr/bin/less'
+export PAGER='/usr/bin/less'
+unset MANPATH # man is apparently really good at figuring that out
 export DISPLAY=:0.0
 
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31'
-export EDITOR='emacsclient'
+
+export LESS="-R"
+export LESSHISTFILE=/dev/null
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;37m'
+
+# For OpenOffice to look more gtk-friendly.
+export OOO_FORCE_DESKTOP=gnome
+
+
+export EDITOR='vim'
 export GOOGLE_CODE_CHECKOUTS="$HOME/Code/trunks"
+export BROWSER=firefox-3.5
+
 
 export HISTCONTROL=erasedups  # Ignore duplicate entries in history
 export HISTSIZE=10000         # Increases size of history
 export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
-shopt -s histappend        # Append history instead of overwriting
-shopt -s cdspell           # Correct minor spelling errors in cd command
-shopt -s dotglob           # includes dotfiles in pathname expansion
-shopt -s checkwinsize      # If window size changes, redraw contents
-shopt -s cmdhist           # Multiline commands are a single command in history.
-shopt -s extglob           # Allows basic regexps in bash.
-set ignoreeof on           # Typing EOF (CTRL+D) will not exit interactive sessions
 
 # ALAISES
 
 # set some OS specific definitions
-case $MACHTYPE in
+case $OSTYPE in
     *redhat*)
         # Redhat, which I use at work
         export PYTHONPATH=/usr/lib/python2.4/site-packages:$PYTHON_PATH
@@ -40,9 +72,9 @@ case $MACHTYPE in
         ;;
     *linux*)
         # Linux Specific
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages
+        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/var/lib/python-support/python2.6:
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
-        export EDITOR='emacsclient'
+        export EDITOR='vim'
         ini () {
             command sudo /etc/init.d/$@
         }
@@ -51,11 +83,12 @@ case $MACHTYPE in
         alias acsh="sudo apt-cache show"
         alias aguu="sudo apt-get update && sudo apt-get upgrade"
         alias ls="ls -F --color"       # Color is handled differently on Linux
+        alias open="nautilus"
         ;;
     *darwin*)
         # Mac Specific
         export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/opt/local/lib/python2.5/site-packages:
+        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/python:/usr/lib/python2.6/dist-packages/
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
@@ -81,6 +114,7 @@ export GIT_EDITOR=$VISUAL
 # Filesystem
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
+alias ....='cd ../../..'    # this could go on all day, and I love it.
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
@@ -97,7 +131,7 @@ alias irc="ssh justinlilly.com"
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
-alias pycclean='find . -name "*.pyc" -exec rm {} \;'
+alias pycclean='find . -type f -name "*.pyc" -exec rm {} \;'
 
 # GIT ALIASES
 alias ga='git add'
@@ -119,6 +153,7 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 # HG ALIASES
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
+alias hgo='hg outgoing'
 
 # SVN ALIASES
 gcco () {
@@ -126,6 +161,20 @@ gcco () {
 }
 
 ## Functions
+add_auth_key () {
+    host=$1
+    if  [ -z $host ] ; then;
+        echo "You must provide a host as the first (and only) argument"
+        return
+    fi
+    if [ ! -f ~/.ssh/id_rsa.pub ] ; then
+        command ssh-keygen -t rsa
+    fi
+    command ssh $host -t "mkdir ~/.ssh/"
+    # TODO: Make this append, not copy
+    command scp ~/.ssh/id_rsa.pub $host:~/.ssh/authorized_keys
+    command ssh $host -t "chmod -R 700 ~/.ssh"
+}
 
 svim () {
     # Run vim as super user
@@ -156,22 +205,39 @@ extract () {
     fi
 }
 
+pastie() {
+        url=$(curl http://pastie.caboo.se/pastes/create \
+                -H "Expect:"                                \
+                -F "paste[parser]=$PASTIE_LANG"             \
+                -F "paste[body]=<-"                         \
+                -F "paste[authorization]=burger"            \
+                -s -L -o /dev/null -w "%{url_effective}" )
+        echo "$url" | xclip
+	echo "$url"
+}
+
+
 dict() {
     grep "$@" /usr/share/dict/words
 }
+
 dls () {
  # directory LS
  echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
 }
+
 dgrep() {
     # A recursive, case-insensitive grep that excludes binary files
     grep -iR "$@" * | grep -v "Binary"
+    echo "You should be using ack. Its awesome."
 }
+
 dfgrep() {
     # A recursive, case-insensitive grep that excludes binary files
     # and returns only unique filenames
     grep -iR "$@" * | grep -v "Binary" | sed 's/:/ /g' | awk '{ print $1 }' | sort | uniq
 }
+
 psgrep() {
     if [ ! -z $1 ] ; then
         echo "Grepping for processes matching $1..."
@@ -217,28 +283,15 @@ parse_svn_rev(){
     svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
 }
 
+unegg () {
+    unzip $1 -d tmp
+    rm $1
+    mv tmp $1
+}
 
-## PROMPT
-# Prompt Colors
-BRIGHT="\[`tput bold`\]"
-DIM="\[`tput dim`\]"
-GREEN="\[`tput setaf 2 sgr0`\]"
-BGREEN="${BRIGHT}${GREEN}"
-RED="\[`tput setaf 1 sgr0`\]"
-BRED="${BRIGHT}${RED}"
-BLUE="\[`tput setaf 4 sgr0`\]"
-BBLUE="${BRIGHT}${BLUE}"
-CYAN="\[`tput setaf 6 sgr0`\]"
-DEFAULT="\[`tput sgr0`\]"
-NORMAL="${DIM}${DEFAULT}"
-# Prompt
 
-PS1="${BRED}: ${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
+
 ORIG_PS1=$PS1
-
-# Old Prompts 
-# export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
-#export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 
 source $HOME/bin/virtualenvwrapper_bashrc
 
@@ -247,15 +300,14 @@ has_virtualenv() {
         workon `cat .venv`
     fi
 }
+
 venv_cd () {
     cd "$@" && has_virtualenv
 }
+
 alias cd="venv_cd"
 
 # Welcome Message
-echo -e ""
-echo -ne "Today is "; date
-echo -e ""; cal;
-echo -ne "Up time: ";uptime | awk /'up/ {print $3,$4}'
-echo "";
+echo ""
 fortune
+echo ""

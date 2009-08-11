@@ -31,10 +31,10 @@
 # ===============================================================
 # Uncomment one/some following lines to automatically let
 # SCREEN start some programs in the given window numbers:
-screen -t irssi     0 irssi
-screen -t mutt      1 mutt
-screen -t EDIT      2 emacs
-screen -t GOOGLE    3 links http://www.google.com
+# screen -t irssi     0 irssi
+# screen -t mutt      1 mutt
+# screen -t EDIT      2 emacs
+# screen -t GOOGLE    3 links http://www.google.com
 # screen -t NEWS        4 slrn
 # screen -t WWW         5 links http://www.math.fu-berlin.de/~guckes/
 #
