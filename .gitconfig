@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/jlilly/.gitignore
+	excludesfile = /home/jlilly/.gitignore
 [user]
   name = Justin Lilly
   email = justinlilly@gmail.com
