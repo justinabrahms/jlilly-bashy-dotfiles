@@ -1,9 +1,0 @@
-# ~/bin/nt
-# A simple script to open a new tab in Terminal in the current directory with an
-# optional command
-#
-# Stolen from: http://gist.github.com/35556 and modified
- 
-osascript -e 'tell application "System Events" to tell process "Terminal" to keystroke "t" using command down' > /dev/null
-osascript -e "tell application \"Terminal\" to do script \"cd $PWD && clear\" in window 1" > /dev/null
-osascript -e "tell application \"Terminal\" to do script \"$*\" in window 1" > /dev/null
