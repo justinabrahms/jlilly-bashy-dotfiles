@@ -246,7 +246,8 @@ hilights = (
 );
 ignores = (
   { mask = "pavelus"; level = "ALL"; },
-  { mask = "buzul"; level = "ALL"; }
+  { mask = "buzul"; level = "ALL"; },
+  { mask = "totic29"; level = "ALL"; }
 );
-notifies = { jacobkm = { }; };
+notifies = { jacobkm = { }; ipmb = { }; };
 logs = { };
