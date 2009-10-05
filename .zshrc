@@ -23,6 +23,7 @@ export GDAL_DATA=/opt/local/share
 export MANPAGER='/usr/bin/less'
 export PAGER='/usr/bin/less'
 unset MANPATH # man is apparently really good at figuring that out
+export INFOPATH=$INFOPATH:/usr/share/info
 export DISPLAY=:0.0
 
 export GREP_OPTIONS='--color=auto'
@@ -306,6 +307,31 @@ venv_cd () {
 }
 
 alias cd="venv_cd"
+
+function create_pinax_env() {
+    PINAX_ROOT=$HOME/Code/django/pinax
+    PROJECT = $1
+    python $PINAX_ROOT/scripts/pinax-boot.py --development --source=$PINAX_ROOT $HOME/.virtualenvs/$PROJECT
+    workon $PROJECT
+    pip install --no-deps -r $PINAX_ROOT/requirements/external_apps.txt
+}
+
+function update_git_dirs() {
+    # so what the below does is finds all files named .git in my home
+    # directory, but excludes the .virtualenvs folder then strips the .git from
+    # the end, cd's into the directory, pulls from the origin master, then
+    # repeats
+
+    OLD_DIR=`pwd`
+    cd ~
+    for i in `find . -type d -name ".virtualenvs" -prune -o -name ".git" | sed 's/\.git//'`; do
+        echo "Going into $i"
+        cd $i
+        git pull origin master
+        cd ~
+    done
+    cd $OLD_DIR
+}
 
 # Welcome Message
 echo ""
