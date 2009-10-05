@@ -6,7 +6,7 @@ ignore = ~/.hgignore
 [pager]
 pager = LESS='FSRX' less
 quiet = True
-ignore = push shelve fetch pull merge clone
+ignore = push shelve fetch pull merge clone record crecord
 
 [extensions]
 hgext.bookmarks=
@@ -19,6 +19,7 @@ hgext.purge=
 hgext.mq=
 hgext.shelve=~/Code/hgext/hgshelve/hgshelve.py
 hgext.crecord=/home/jlilly/Code/python/crecord/crecord/
+hgext.record=
 hgsvn = ~/Code/hgext/hgsvn/hgsubversion
 pager=
 
