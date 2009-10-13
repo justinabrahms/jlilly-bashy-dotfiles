@@ -72,7 +72,7 @@ case $OSTYPE in
         ;;
     *linux*)
         # Linux Specific
-        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/var/lib/python-support/python2.6:
+        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/var/lib/python-support/python2.6:$HOME/python:
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
         export EDITOR='vim'
         ini () {
@@ -83,7 +83,7 @@ case $OSTYPE in
         alias acsh="sudo apt-cache show"
         alias aguu="sudo apt-get update && sudo apt-get upgrade"
         alias ls="ls -F --color"       # Color is handled differently on Linux
-        alias open="nautilus"
+        alias open="gnome-open"
         ;;
     *darwin*)
         # Mac Specific

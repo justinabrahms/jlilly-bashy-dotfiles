@@ -110,7 +110,7 @@ set reverse_name=yes
 # Defaults to the EMAIL environment variable's content.
 
 
-#alternates    ^jlilly@hugeinc\\.com$      ^justinlilly@gmail\\.com$
+alternates "(jlilly@hugeinc\.com)|(justinlilly@gmail\.com)"
 
 
 set use_from=yes
@@ -585,9 +585,8 @@ subscribe sed-users@yahoogroups.com
 # the mailboxes command,and indicate which contain new messages.
 # mutt-announceMutt will automatically enter this mode when invoked from the command line with the -y option.
 
-mailboxes =lists/django-users =lists/django-devel =lists/pathfinder =lists/rubynyc =lists/lispnyc
-mailboxes =lists/nodejs 
-mailboxes =unimportant =.
+mailboxes =lists/django-devel =lists/django-users =lists/pathfinder =lists/rubynyc =lists/lispnyc
+mailboxes =lists/nodejs =unimportant =. =uncategorized
 mailboxes =work =work/mercurial =work/buildbot =work/jira 
 
 ###########

@@ -3,7 +3,7 @@
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [user]
   name = Justin Lilly
-  email = justinlilly@gmail.com
+  email = justin@justinlilly.com
 [color]
   ui = auto
 [color "branch"]
