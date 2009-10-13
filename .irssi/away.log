@@ -759,3 +759,47 @@
 --- Log closed Fri May 29 11:45:28 2009
 --- Log opened Fri May 29 12:16:27 2009
 --- Log closed Fri May 29 12:43:50 2009
+--- Log opened Wed Sep 30 13:20:50 2009
+13:26 cc<;/zling> ecoupla other things: 1. the days need to be links 2. we need a class for the current day
+13:27 cc<;/zling> eif i need to use js to set the class for the current day, i can...but is there a way to set that on the BE?
+13:30 cc<;/mevans541g> eso... i got a spanish version
+13:30 cc<;/mevans541g> eof office to install
+13:35 #wmii: c>/>>?/ c=/marcolandia>/<< e:/\ø jlilly 
+13:43 #wmii: c>/>>?/ c=/WindMakerg>/<< e:/jlilly: ?
+13:44 #wmii: c>/>>?/ c=/WindMaker>/<< e:/:) hello jlilly 
+13:44 cc</jlillyg ehah
+13:44 #wmii: c>/>>?/ c=/WindMakerg>/<< e:/jlilly: I use wmii, and speaking spanish
+13:44 #wmii: c>/>>?/ c=/WindMaker>/<< e:/marcolandia too , jlilly 
+13:45 cc<;/mevans541g> ebienvenido a microsoft word
+13:45 cc</jlillyg eque bueno? yo soy Clippy.
+13:45 cc<;/mevans541g> eits ridiculous
+13:46 cc</jlillyg eTe gustaria hacer una hoja de calculo?
+13:46 cc<;/mevans541g> equestion for you
+13:46 cc</jlillyg eanswer for you
+13:47 #wmii: c>/>>?/ c=/WindMakerg>/<< e:/jlilly: he says "hello"
+13:47 cc</jlillyg eprobably
+13:47 cc<;/mevans541g> ehow do I get the print html from houselogic if it doesnt open in a new page?
+13:47 cc<;/zling> eno big deal either way...
+13:47 cc</jlillyg efile -> print preview
+--- Log closed Wed Sep 30 13:48:01 2009
+--- Log opened Wed Oct 07 18:39:57 2009
+18:40 cc<;/VinnyRamosg> eOk cool
+18:40 cc<;/VinnyRamosg> eI'll be online
+19:22 cc<;/happy7go7luckee__g> efreakin awesome! I especially like the ferret cake and the 'toteros' cake
+19:57 cc<;/zling> eyt?
+20:34 cc</jlillyg eI'm here.
+20:34 cc</jlillyg ewhat's up?
+20:34 cc<;/zling> eyay!
+20:34 cc<;/zling> evinnie was looking for you
+20:35 cc</jlillyg eoh?
+20:35 cc<;/zling> esaid he felt lost and alone
+20:35 cc<;/zling> eand couldn't get anything done
+20:35 cc</jlillyg ehe never IMed me about that. :(
+--- Log closed Wed Oct 07 20:35:32 2009
+--- Log opened Wed Oct 07 22:03:00 2009
+22:06 cc<;/zling> emarkup for the prev/next links:
+22:07 cc<;/zling> e<a href="javascript:void(0);" class="previous_month">Aug</a>  <a href="javascript:void(0);" class="next_month">Oct</a>
+22:20 cc<;/zling> ehere's sample markup for the calendar:
+22:20 cc<;/zling> ehttp://dpaste.de/Jwr0/ [http://dpaste.de/Jwr0/]
+22:21 cc<;/zling> ealso, I noticed that {% if event.neighborhoods %} is no longer working
+--- Log closed Wed Oct 07 23:24:23 2009
