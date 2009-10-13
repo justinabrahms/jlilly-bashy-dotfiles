@@ -11,3 +11,4 @@ local_settings.py
 .ipython/history
 .venv
 *.wpr
+.irssi/away.log
