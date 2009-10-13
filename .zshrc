@@ -128,7 +128,7 @@ alias du='du -h -c'         # Calculate total disk usage for a folder
 alias sgi='sudo gem install' # Install ruby stuff
 
 # Nifty extras
-alias irc="ssh justinlilly.com"
+alias irc="ssh -R 10999:localhost:22 jlilly@justinlilly.com"
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
