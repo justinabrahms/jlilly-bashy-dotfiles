@@ -81,6 +81,7 @@ aliases = {
   "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
   EXEMPTLIST = "mode $C +e";
   ATAG = "WINDOW SERVER";
+  gt = "/window goto";
 };
 
 statusbar = {
@@ -228,13 +229,6 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "perl/core/scripts" = { trackbar_style = "%g"; };
 };
-windows = {
-  1 = { 
-    immortal = "yes";
-    name = "(msgs)";
-    level = "MSGS ACTIONS DCCMSGS";
-  };
-};
 hilights = (
   { text = "manch0pz"; nick = "yes"; word = "yes"; },
   { text = "aunes"; nick = "yes"; word = "yes"; },
@@ -249,5 +243,227 @@ ignores = (
   { mask = "buzul"; level = "ALL"; },
   { mask = "totic29"; level = "ALL"; }
 );
-notifies = { jacobkm = { }; ipmb = { }; };
+notifies = { };
 logs = { };
+windows = {
+  1 = { 
+    immortal = "yes";
+    name = "(msgs)";
+    level = "MSGS ACTIONS DCCMSGS";
+  };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#django-social";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#django";
+        tag = "freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#django-dev";
+        tag = "freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "##michat";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pinax";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pinax-dev";
+        tag = "freenode";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#emacs";
+        tag = "freenode";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#nycpython";
+        tag = "freenode";
+      }
+    );
+  };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#irssi";
+        tag = "freenode";
+      }
+    );
+  };
+  11 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#mutt";
+        tag = "freenode";
+      }
+    );
+  };
+  12 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "##javascript";
+        tag = "freenode";
+      }
+    );
+  };
+  13 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#avendar";
+        tag = "servercentral";
+      }
+    );
+  };
+  14 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pocoo";
+        tag = "freenode";
+      }
+    );
+  };
+  15 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#git";
+        tag = "freenode";
+      }
+    );
+  };
+  16 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "newman";
+        tag = "freenode";
+      }
+    );
+  };
+  17 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#sammy";
+        tag = "freenode";
+      }
+    );
+  };
+  18 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#movabletype";
+        tag = "freenode";
+      }
+    );
+  };
+  19 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "&bitlbee";
+        tag = "localhost";
+      }
+    );
+  };
+  20 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "jpolikowski";
+        tag = "localhost";
+      }
+    );
+  };
+  21 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "davidchristian";
+        tag = "localhost";
+      }
+    );
+  };
+  22 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "mahilo";
+        tag = "localhost";
+      }
+    );
+  };
+  23 = { name = "hilight"; sticky = "yes"; };
+};
+mainwindows = {
+  22 = { first_line = "8"; lines = "53"; };
+  23 = { first_line = "1"; lines = "7"; };
+};
