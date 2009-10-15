@@ -76,6 +76,7 @@ case $OSTYPE in
         export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/var/lib/python-support/python2.6:$HOME/python:
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
         export EDITOR='vim'
+        export OPENER='gnome-open'
         ini () {
             command sudo /etc/init.d/$@
         }
@@ -93,6 +94,7 @@ case $OSTYPE in
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
+        export OPENER='open'
         alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
         alias agi='sudo port install'
         alias acs='sudo port list'
@@ -149,7 +151,7 @@ alias gsa='git stash apply'
 alias gr='git stash && git svn rebase && git svn dcommit && git stash apply' # git refresh
 alias gd='git diff | $GIT_EDITOR -'
 alias gmv='git mv'
-alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
+alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/$OPENER http:\/\//g")'
 
 # HG ALIASES
 alias hgst='hg status'
