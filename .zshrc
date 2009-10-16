@@ -20,11 +20,12 @@ PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blu
 
 #  BEGINNING OF BASH PROFILE IMPORT
 
-export PATH=$HOME/.gems/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$PATH
+export PATH=$HOME/.gems/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9.0/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPAGER='/usr/bin/less'
 export PAGER='/usr/bin/less'
 unset MANPATH # man is apparently really good at figuring that out
+export INFOPATH=$INFOPATH:/usr/share/info
 export DISPLAY=:0.0
 
 export GREP_OPTIONS='--color=auto'
@@ -77,6 +78,7 @@ case $OSTYPE in
         export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/var/lib/python-support/python2.6:$HOME/python:
         export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31;00:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:"
         export EDITOR='vim'
+        export OPENER='gnome-open'
         ini () {
             command sudo /etc/init.d/$@
         }
@@ -94,6 +96,7 @@ case $OSTYPE in
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
+        export OPENER='open'
         alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
         alias agi='sudo port install'
         alias acs='sudo port list'
@@ -129,7 +132,7 @@ alias du='du -h -c'         # Calculate total disk usage for a folder
 alias sgi='sudo gem install' # Install ruby stuff
 
 # Nifty extras
-alias irc="ssh justinlilly.com"
+alias irc="ssh -R 10999:localhost:22 jlilly@justinlilly.com"
 alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
@@ -150,7 +153,7 @@ alias gsa='git stash apply'
 alias gr='git stash && git svn rebase && git svn dcommit && git stash apply' # git refresh
 alias gd='git diff | $GIT_EDITOR -'
 alias gmv='git mv'
-alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
+alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/$OPENER http:\/\//g")'
 
 # HG ALIASES
 alias hgst='hg status'
@@ -308,6 +311,31 @@ venv_cd () {
 }
 
 alias cd="venv_cd"
+
+function create_pinax_env() {
+    PINAX_ROOT=$HOME/Code/django/pinax
+    PROJECT = $1
+    python $PINAX_ROOT/scripts/pinax-boot.py --development --source=$PINAX_ROOT $HOME/.virtualenvs/$PROJECT
+    workon $PROJECT
+    pip install --no-deps -r $PINAX_ROOT/requirements/external_apps.txt
+}
+
+function update_git_dirs() {
+    # so what the below does is finds all files named .git in my home
+    # directory, but excludes the .virtualenvs folder then strips the .git from
+    # the end, cd's into the directory, pulls from the origin master, then
+    # repeats
+
+    OLD_DIR=`pwd`
+    cd ~
+    for i in `find . -type d -name ".virtualenvs" -prune -o -name ".git" | sed 's/\.git//'`; do
+        echo "Going into $i"
+        cd $i
+        git pull origin master
+        cd ~
+    done
+    cd $OLD_DIR
+}
 
 # Welcome Message
 echo ""
