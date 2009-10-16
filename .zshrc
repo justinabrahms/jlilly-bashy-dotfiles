@@ -13,6 +13,8 @@ autoload -Uz compinit
 autoload -U zmv
 compinit
 # End of lines added by compinstall
+
+# I'd really like to work in ☺ and ☹ into status codes 
 PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
 
 
