@@ -175,10 +175,8 @@ add_auth_key () {
     if [ ! -f ~/.ssh/id_rsa.pub ] ; then
         command ssh-keygen -t rsa
     fi
-    command ssh $host -t "mkdir ~/.ssh/"
-    # TODO: Make this append, not copy
-    command scp ~/.ssh/id_rsa.pub $host:~/.ssh/authorized_keys
-    command ssh $host -t "chmod -R 700 ~/.ssh"
+    command scp ~/.ssh/id_rsa.pub $host:/tmp/tmp_rsa
+    command ssh $host -t "if [ ! -d ~/.ssh ]; then; mkdir ~/.ssh/;fi && cat /tmp/tmp_rsa >> ~/.ssh/authorized_keys && rm /tmp/tmp_rsa && chmod -R 700 ~/.ssh"
 }
 
 svim () {
