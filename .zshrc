@@ -102,8 +102,8 @@ case $OSTYPE in
         alias acs='sudo port list'
         alias aguu='sudo port -d selfupdate'
         alias ls='ls -GFp'          # Compact view, show colors
-
-        . ~/Code/django-trunk/extras/django_bash_completion
+        alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
+	alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
 
         ;;
     *)
