@@ -91,8 +91,8 @@ case $OSTYPE in
         ;;
     *darwin*)
         # Mac Specific
-        export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
-        export PYTHONPATH=$PYTHONPATH:/home/jlilly/Code/django:/Library/Python/2.5/site-packages:/home/jlilly/Code/python:/usr/lib/python2.6/dist-packages/
+        export PATH=/Applications/Emacs.app/Contents/MacOS/bin:/usr/local/git/bin:$PATH
+        export PYTHONPATH=$PYTHONPATH:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/opt/local/lib/python2.5/site-packages/
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
