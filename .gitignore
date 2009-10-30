@@ -12,3 +12,8 @@ local_settings.py
 .venv
 *.wpr
 .irssi/away.log
+.project
+.pydevproject
+.settings
+pip-log.txt
+env
