@@ -93,6 +93,7 @@ case $OSTYPE in
         # Mac Specific
         export PATH=/Applications/Emacs.app/Contents/MacOS/bin:/usr/local/git/bin:$PATH
         export PYTHONPATH=$PYTHONPATH:/Library/Python/2.5/site-packages:/usr/lib/python2.6/dist-packages/:/opt/local/lib/python2.5/site-packages/
+	export CLASSPATH=.:$(ls $HOME/src/jars/*.jar | awk '{ printf("%s:", $1); }')
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
@@ -137,6 +138,7 @@ alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
 alias pycclean='find . -type f -name "*.pyc" -exec rm {} \;'
+alias ssh='ssh -L 10999:localhost:22'
 
 # GIT ALIASES
 alias ga='git add'
