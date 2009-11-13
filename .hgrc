@@ -10,17 +10,17 @@ ignore = push shelve fetch pull merge clone record crecord
 
 [extensions]
 hgext.bookmarks=
-hgext.hg-git = ~/Code/hgext/hg-git
-hgext.histedit = ~/Code/hgext/histedit
+#hgext.hg-git = ~/Code/hgext/hg-git
+#hgext.histedit = ~/Code/hgext/histedit
 color=
 hgext.fetch=
 hgext.rebase=
 hgext.purge=
 hgext.mq=
-hgext.shelve=~/Code/hgext/hgshelve/hgshelve.py
-hgext.crecord=/home/jlilly/Code/python/crecord/crecord/
+#hgext.shelve=~/Code/hgext/hgshelve/hgshelve.py
+#hgext.crecord=/home/jlilly/Code/python/crecord/crecord/
 hgext.record=
-hgsvn = ~/Code/hgext/hgsvn/hgsubversion
+#hgsvn = ~/Code/hgext/hgsvn/hgsubversion
 pager=
 
 [bookmarks]
