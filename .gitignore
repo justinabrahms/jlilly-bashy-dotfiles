@@ -17,3 +17,4 @@ local_settings.py
 .settings
 pip-log.txt
 env
+TAGS
