@@ -22,5 +22,6 @@
   untracked = cyan
 [alias]
   log1 = log --pretty=oneline --abbrev-commit
+  serve = daemon --reuseaddr --base-path=. --export-all --verbose
 [merge]
   tool=kdiff3
