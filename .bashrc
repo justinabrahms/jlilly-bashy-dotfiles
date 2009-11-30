@@ -1,4 +1,4 @@
-export PATH=$PATH:/opt/local/bin/:
+export PATH=$PATH:/opt/local/bin/:$HOME/bin:
 export CLASSPATH=$HOME/src/jars/*
 
 # Global
