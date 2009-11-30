@@ -214,6 +214,14 @@ venv_cd () {
 }
 alias cd="venv_cd"
 
+unegg () {
+    unzip $1 -d tmp
+    rm $1
+    mv tmp $1
+}
+
+
+
 # Welcome Message
 echo -e ""
 echo -ne "Today is "; date
