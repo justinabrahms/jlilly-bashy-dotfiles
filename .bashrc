@@ -1,4 +1,4 @@
-export PATH=$PATH:/opt/local/bin/:$HOME/bin:
+export PATH=/Applications/Emacs.app/Contents/MacOS/bin/:$PATH:/opt/local/bin/:$HOME/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9/bin:
 export CLASSPATH=$HOME/src/jars/*
 
 # Global
@@ -25,6 +25,7 @@ alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "eg
 alias pycclean='find . -name "*.pyc" -exec rm {} \;'
 
 # GIT ALIASES
+alias git='hub'
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
