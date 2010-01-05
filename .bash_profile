@@ -60,7 +60,7 @@ case $MACHTYPE in
     *darwin*)
         # Mac Specific
         export PATH=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin:$PATH
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/opt/local/lib/python2.5/site-packages:/usr/local/Cellar/python/2.6.2/lib/python2.6/site-packages:
+        export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.6/site-packages/:/Library/Python/2.5/site-packages:/usr/local/Cellar/python/2.6.2/lib/python2.6/site-packages:
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
