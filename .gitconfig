@@ -26,3 +26,5 @@
   top-commits = shortlog -s -n --no-merges
 [merge]
   tool=kdiff3
+[github]
+	user = justinlilly
