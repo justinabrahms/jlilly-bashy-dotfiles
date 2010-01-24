@@ -162,6 +162,17 @@ exip () {
     curl -s -m 5 http://myip.dk | grep "<title>" | sed -e 's/<title>Your IP address is: //g' -e 's/<\/title>//g'
 }
 
+pastie() {
+        url=$(curl http://pastie.caboo.se/pastes/create \
+                -H "Expect:"                                \
+                -F "paste[parser]=$PASTIE_LANG"             \
+                -F "paste[body]=<-"                         \
+                -F "paste[authorization]=burger"            \
+                -s -L -o /dev/null -w "%{url_effective}" )
+        echo "$url" | xclip
+	echo "$url"
+}
+
 ips () {
     # determine local IP address
     ifconfig | grep "inet " | awk '{ print $2 }'
