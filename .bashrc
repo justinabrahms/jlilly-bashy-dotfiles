@@ -1,4 +1,4 @@
-export PATH=/Applications/Emacs.app/Contents/MacOS/bin/:$PATH:/opt/local/bin/:$HOME/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9/bin:
+export PATH=/usr/local/Cellar/python/2.6.2/bin:/usr/local/Cellar/swig/1.3.40/bin/:/Applications/Emacs.app/Contents/MacOS/bin:$PATH:/opt/local/bin/:$HOME/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9/bin:
 export CLASSPATH=$HOME/src/jars/*
 
 # Global
@@ -45,3 +45,10 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 # HG ALIASES
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
+
+# -- start rip config -- #
+RIPDIR=/Users/jlilly/.rip
+RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
+PATH="$PATH:$RIPDIR/active/bin"
+export RIPDIR RUBYLIB PATH
+# -- end rip config -- #
