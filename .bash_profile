@@ -88,6 +88,19 @@ gcco () {
 }
 
 ## Functions
+add_auth_key () {
+    host=$1
+    if  [ -z $host ] ; then
+        echo "You must provide a host as the first (and only) argument"
+        return
+    fi
+    if [ ! -f ~/.ssh/id_rsa.pub ] ; then
+        command ssh-keygen -t rsa
+    fi
+    command scp ~/.ssh/id_rsa.pub $host:/tmp/tmp_rsa
+    command ssh $host -t "if [ ! -d ~/.ssh ]; then mkdir ~/.ssh/;fi && cat /tmp/tmp_rsa >> ~/.ssh/authorized_keys && rm /tmp/tmp_rsa && chmod -R 700 ~/.ssh"
+}
+
 
 svim () {
     # Run vim as super user
@@ -229,3 +242,4 @@ echo -e ""; cal;
 echo -ne "Up time: ";uptime | awk /'up/ {print $3,$4}'
 echo "";
 fortune
+
