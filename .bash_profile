@@ -60,7 +60,7 @@ case $MACHTYPE in
     *darwin*)
         # Mac Specific
         export PATH=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin:$PATH
-        export PYTHONPATH=$PYTHONPATH:/Users/jlilly/Code/django:/Library/Python/2.5/site-packages:/Users/jlilly/Code/trunks/pinax/apps:/Users/jlilly/Code/django/pinax/local_apps:/Users/jlilly/Code/python:/Users/jlilly/Code/trunks:/opt/local/lib/python2.5/site-packages:/usr/local/Cellar/python/2.6.2/lib/python2.6/site-packages:
+        export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.6/site-packages/:/Library/Python/2.5/site-packages:/usr/local/Cellar/python/2.6.2/lib/python2.6/site-packages:
         export EMACSLOADPATH=~/.emacs.d:/Applications/MacPorts/Emacs.app/Contents/Resources/lisp:/Applications/MacPorts/Emacs.app/Contents/Resources/site-lisp:/opt/local/share/emacs/site-lisp:/Applications/Emacs.app/Contents/Resources/lisp:/Applications/Emacs.app/Contents/Resources/site-lisp:
         export LSCOLORS='Gxfxcxdxdxegedabagacad'
         export WORKON_HOME="$HOME/.virtualenvs"
@@ -88,6 +88,19 @@ gcco () {
 }
 
 ## Functions
+add_auth_key () {
+    host=$1
+    if  [ -z $host ] ; then
+        echo "You must provide a host as the first (and only) argument"
+        return
+    fi
+    if [ ! -f ~/.ssh/id_rsa.pub ] ; then
+        command ssh-keygen -t rsa
+    fi
+    command scp ~/.ssh/id_rsa.pub $host:/tmp/tmp_rsa
+    command ssh $host -t "if [ ! -d ~/.ssh ]; then mkdir ~/.ssh/;fi && cat /tmp/tmp_rsa >> ~/.ssh/authorized_keys && rm /tmp/tmp_rsa && chmod -R 700 ~/.ssh"
+}
+
 
 svim () {
     # Run vim as super user
@@ -240,3 +253,4 @@ echo -e ""; cal;
 echo -ne "Up time: ";uptime | awk /'up/ {print $3,$4}'
 echo "";
 fortune
+
