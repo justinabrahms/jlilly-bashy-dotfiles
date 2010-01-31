@@ -6,7 +6,7 @@ ignore = ~/.hgignore
 [pager]
 pager = LESS='FSRX' less
 quiet = True
-ignore = push shelve fetch pull merge clone record crecord
+ignore = push shelve fetch pull merge clone record crecord serve
 
 [extensions]
 hgext.bookmarks=
