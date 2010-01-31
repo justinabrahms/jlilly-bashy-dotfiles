@@ -69,9 +69,6 @@ case $MACHTYPE in
         alias acs='sudo port list'
         alias aguu='sudo port -d selfupdate'
         alias ls='ls -GFp'          # Compact view, show colors
-
-        . ~/Code/django-trunk/extras/django_bash_completion
-
         ;;
     *)
         ;;
