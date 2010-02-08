@@ -3,6 +3,6 @@
 shopt -s dotglob # shows dots in file globbing
 
 for i in *; do
-ln -s `pwd`/$i `pwd`/../$i
+ln -s `pwd`/$i $HOME/$i
 done
-rm ../symlink_files.sh
+rm $HOME/symlink_files.sh
