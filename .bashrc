@@ -11,6 +11,10 @@ alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
 
+# Mac Helpers
+alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
+alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
+
 # Helpers
 alias grep='grep --color=auto' # Always highlight grep search term
 alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
