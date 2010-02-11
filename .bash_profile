@@ -203,6 +203,10 @@ parse_svn_rev(){
     svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
 }
 
+get_rip_env(){
+    rip env active | awk '{ print $2 }'
+}
+
 
 ## PROMPT
 # Prompt Colors
@@ -219,7 +223,7 @@ DEFAULT="\[`tput sgr0`\]"
 NORMAL="${DIM}${DEFAULT}"
 # Prompt
 
-PS1="${BRED}: ${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
+PS1="${GREEN}rip:\$(get_rip_env) ${BRED}:${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
 ORIG_PS1=$PS1
 
 # Old Prompts 
@@ -245,12 +249,7 @@ unegg () {
 }
 
 
-
-# Welcome Message
-echo -e ""
-echo -ne "Today is "; date
-echo -e ""; cal;
-echo -ne "Up time: ";uptime | awk /'up/ {print $3,$4}'
-echo "";
+# Run on new shell
+echo ""
 fortune
-
+echo ""
