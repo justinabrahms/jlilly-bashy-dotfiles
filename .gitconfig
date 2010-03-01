@@ -21,6 +21,7 @@
   changed = green
   untracked = cyan
 [alias]
+  ci = commit
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
   top-commits = shortlog -s -n --no-merges
