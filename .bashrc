@@ -56,7 +56,14 @@ alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
 
 # -- start rip config -- #
-RIPDIR=/Users/jlilly/.rip
+case $MACHTYPE in
+    *darwin*)
+        RIPDIR=/Users/jlilly/.rip
+    ;;
+    *)
+        RIPDIR=/home/jlilly/.rip
+    ;;
+esac
 RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
 PATH="$PATH:$RIPDIR/active/bin"
 export RIPDIR RUBYLIB PATH
