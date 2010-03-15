@@ -25,6 +25,7 @@
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
   top-commits = shortlog -s -n --no-merges
+#  fixme = grep -E "\#\s+([A-Z]{3,}+\:)"
 [push]
 	default = current
 [github]
