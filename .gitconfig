@@ -32,5 +32,5 @@
 	user = justinlilly
 [mergetool]
 	tool = kdiff3
-[difftool]
+[diff]
     tool = kdiff3
