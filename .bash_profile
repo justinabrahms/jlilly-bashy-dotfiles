@@ -231,7 +231,10 @@ source $HOME/bin/virtualenvwrapper_bashrc
 
 has_virtualenv() {
     if [ -e .venv ]; then
-        workon `cat .venv`
+        CURRENT_VENV=$WORKON_HOME/`cat .venv`
+        if [ "$CURRENT_VENV" != "$VIRTUAL_ENV" ]; then
+            workon `cat .venv`
+        fi
     fi
 }
 venv_cd () {
