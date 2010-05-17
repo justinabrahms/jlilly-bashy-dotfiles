@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/jlilly/.gitignore 
+  excludesfile = /home/jlilly/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [user]
   name = Justin Lilly
@@ -31,4 +31,6 @@
 [github]
 	user = justinlilly
 [mergetool]
-	tool = opendiff
+	tool = kdiff3
+[diff]
+    tool = kdiff3

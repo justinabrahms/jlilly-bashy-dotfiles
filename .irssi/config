@@ -1,8 +1,16 @@
 servers = (
   {
-    address = "carbon.justinlilly.com";
+    address = "irc.freenode.net";
     chatnet = "freenode";
-    port = "9999";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.efnet.org";
+    chatnet = "EFNet";
+    port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
@@ -24,10 +32,10 @@ channels = (
   { name = "#nycpython"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#django"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##michat"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#pinax"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#pinax-dev"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#emacs"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#emacs"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#invitemedia-ui"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#invitemedia"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#avendar"; chatnet = "EFNet"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -196,6 +204,13 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_1 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -203,15 +218,13 @@ settings = {
     real_name = "Justin Lilly";
     user_name = "jlilly";
     nick = "justinlilly";
-    alternate_nick = "jlilly";
-    skip_motd = "ON";
   };
   "fe-common/core" = {
     autocreate_own_query = "yes";
     autocreate_query_level = "MSGS DCCMSGS";
     use_status_window = "no";
     use_msgs_window = "yes";
-    theme = "hnsk";
+    theme = "blue_grey";
     term_charset = "utf-8";
     hilight_color = "%g";
     hilight_act_color = "%R";
@@ -227,7 +240,8 @@ hilights = (
   { text = "gencal"; nick = "yes"; word = "yes"; },
   { text = "django-locales"; nick = "yes"; word = "yes"; },
   { text = "pyvcs"; nick = "yes"; word = "yes"; },
-  { text = "django-vcs"; nick = "yes"; word = "yes"; }
+  { text = "django-vcs"; nick = "yes"; word = "yes"; },
+  { text = "justinlilly"; nick = "yes"; word = "yes"; }
 );
 ignores = (
   { mask = "pavelus"; level = "ALL"; },

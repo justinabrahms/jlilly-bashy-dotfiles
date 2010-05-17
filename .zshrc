@@ -2,7 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory autocd extendedglob nomatch autopushd  pushdignoredups
+setopt appendhistory autocd extendedglob nomatch autopushd  pushdignoredups promptsubst
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -10,17 +10,21 @@ bindkey -e
 zstyle :compinstall filename '/home/jlilly/.zshrc'
 
 autoload -Uz compinit
-autoload -U zmv
 compinit
+autoload -U zmv
+autoload -U promptinit
+promptinit
+
+prompt wunjo
 # End of lines added by compinstall
 
 # I'd really like to work in ☺ and ☹ into status codes 
-PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
+#PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
 
 
 #  BEGINNING OF BASH PROFILE IMPORT
 
-export PATH=$HOME/.gems/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9.0/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$PATH
+export PATH=$HOME/.gems/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9.0/bin:$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/opt/local/apache2/bin:/opt/local/apache/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/sbin:/usr/bin:/bin:/sbin:/Library/PostgreSQL/8.3/bin/:$HOME/bin:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPAGER='/usr/bin/less'
 export PAGER='/usr/bin/less'
@@ -139,6 +143,7 @@ alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory 
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
 alias pycclean='find . -type f -name "*.pyc" -exec rm {} \;'
 alias ssh='ssh -L 10999:localhost:22'
+alias nethack='telnet nethack.alt.org'
 
 # GIT ALIASES
 alias ga='git add'
