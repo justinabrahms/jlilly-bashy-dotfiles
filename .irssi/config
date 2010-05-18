@@ -297,32 +297,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#pinax";
-        tag = "freenode";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#pinax-dev";
-        tag = "freenode";
-      }
-    );
-  };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#emacs";
         tag = "freenode";
       }
     );
   };
-  8 = {
+  6 = {
     items = (
       {
         type = "CHANNEL";
