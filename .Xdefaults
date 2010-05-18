@@ -1,0 +1,6 @@
+*customization: -color
+XTerm*termName:  xterm-256color
+XTerm*transparent: true
+XTerm*shading: 30
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
