@@ -40,7 +40,8 @@ channels = (
   { name = "#nyc.rb"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#cassandra"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#mongodb"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#mongodb"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#python-testing"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
