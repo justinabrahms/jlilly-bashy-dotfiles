@@ -35,7 +35,12 @@ channels = (
   { name = "#emacs"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#invitemedia-ui"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#invitemedia"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#avendar"; chatnet = "EFNet"; autojoin = "yes"; }
+  { name = "#avendar"; chatnet = "EFNet"; autojoin = "yes"; },
+  { name = "#nyc.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#nyc.rb"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#cassandra"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#mongodb"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
