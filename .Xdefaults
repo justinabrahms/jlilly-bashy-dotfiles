@@ -4,3 +4,12 @@ XTerm*transparent: true
 XTerm*shading: 30
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
+URxvt*perl-ext: default,matcher
+URxvt*urlLauncher: gnome-open
+URxvt*matcher.button: 1
+URxvt*termName:  xterm-256color
+URxvt*transparent: true
+URxvt*foreground: white
+URxvt*shading: 20
+URxvt*metaSendsEscape: true
+URxvt*eightBitInput: false
