@@ -1,1 +1,4 @@
 set show-all-if-ambiguous on  # only require 1 <Tab> to see ambiguous listings
+set meta-flag on
+set convert-meta off
+set output-meta on

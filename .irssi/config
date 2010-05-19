@@ -46,10 +46,13 @@ channels = (
   { name = "#invitemedia-ui"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#invitemedia"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#avendar"; chatnet = "EFNet"; autojoin = "yes"; },
-  { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#github"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#nyc.js"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#nyc.rb"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#nyc.rb"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#cassandra"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#mongodb"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#python-testing"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -298,32 +301,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#pinax";
-        tag = "freenode";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#pinax-dev";
-        tag = "freenode";
-      }
-    );
-  };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#emacs";
         tag = "freenode";
       }
     );
   };
-  8 = {
+  6 = {
     items = (
       {
         type = "CHANNEL";
