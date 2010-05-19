@@ -5,7 +5,7 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   {
     address = "irc.efnet.org";
@@ -13,8 +13,17 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "carbon.justinlilly.com";
+    chatnet = "bouncer";
+    port = "9999";
+    use_ssl = "no";
+    ssl_verify = "no";
     autoconnect = "yes";
-  }
+  },
+
 );
 
 chatnets = {
@@ -25,6 +34,7 @@ chatnets = {
     max_whois = "1";
   };
   freenode = { type = "IRC"; };
+  bouncer = { type = "IRC"; };
 };
 
 channels = (
@@ -35,7 +45,11 @@ channels = (
   { name = "#emacs"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#invitemedia-ui"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#invitemedia"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#avendar"; chatnet = "EFNet"; autojoin = "yes"; }
+  { name = "#avendar"; chatnet = "EFNet"; autojoin = "yes"; },
+  { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#github"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#nyc.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#nyc.rb"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -201,13 +215,6 @@ statusbar = {
       items = {
         barstart = { priority = "100"; };
         awl_0 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
     };
