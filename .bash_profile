@@ -201,7 +201,7 @@ parse_svn_rev(){
 }
 
 get_rip_env(){
-    rip env active | awk '{ print $2 }'
+    rip-env
 }
 
 
@@ -250,10 +250,3 @@ unegg () {
 echo ""
 fortune
 echo ""
-
-# -- start rip config -- #
-RIPDIR=/home/jlilly/.rip
-RUBYLIB="$RUBYLIB:$RIPDIR/active/lib"
-PATH="$PATH:$RIPDIR/active/bin"
-export RIPDIR RUBYLIB PATH
-# -- end rip config -- #
