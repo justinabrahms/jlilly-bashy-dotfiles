@@ -1,2 +1,2 @@
-text/html; firefox-3.5 %s;
+text/html; gnome-open %s;
 text/html; lynx %s;
