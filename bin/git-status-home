@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # TODO:
 #   - Figure out how to make -prune work so I don't have to use grep -v
 #   - add the sed command to -exec param
