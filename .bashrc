@@ -25,6 +25,7 @@ alias df='df -h'            # Disk free, in gigabytes, not bytes
 alias du='du -h -c'         # Calculate total disk usage for a folder
 alias sgi='sudo gem install' # Install ruby stuff
 alias clj='clj-env-dir'        # Clojure helper
+alias tt='tt++ $HOME/.ttconf'
 
 # Nifty extras
 alias irc="ssh justinlilly.com"
