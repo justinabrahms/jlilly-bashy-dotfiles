@@ -1,0 +1,30 @@
+#CONFIG           {AUTO TAB}  {5000}
+#CONFIG           {BUFFER SIZE}  {20000}
+#CONFIG           {COMMAND COLOR}  {<078>}
+#CONFIG           {COMMAND ECHO}  {ON}
+#CONFIG           {CONNECT RETRY}  {15}
+#CONFIG           {HISTORY SIZE}  {1000}
+#CONFIG           {LOG}  {RAW}
+#CONFIG           {PACKET PATCH}  {0.01}
+#CONFIG           {REPEAT CHAR}  {!}
+#CONFIG           {REPEAT ENTER}  {OFF}
+#CONFIG           {SCROLL LOCK}  {ON}
+#CONFIG           {SPEEDWALK}  {ON}
+#CONFIG           {TINTIN CHAR}  {#}
+#CONFIG           {VERBATIM}  {OFF}
+#CONFIG           {VERBATIM CHAR}  {\}
+#CONFIG           {VERBOSE}  {OFF}
+#CONFIG           {WORDWRAP}  {ON}
+#ses ave avendar.com 9999
+#action {You glance around suspiciously, but fail to attune yourself to the foliage.} {sharp}
+#action {You try to focus on the darkness, but fail.} {night}
+
+#highlight {You have become better at %1!} {b yellow}
+#highlight {You have become better at %1, and gain %2 experience!} {b yellow}
+#highlight {You lure %1 into deeper mud, slowing %2 attacks.} {b yellow}
+#highlight {You sure are BLEEDING!} {red}
+#highlight {PK} {red}
+#highlight {You step out from the foliage.} {yellow}
+#highlight {Your skill at %1 improves.} {b yellow}
+#config speedwalk on
+#split
