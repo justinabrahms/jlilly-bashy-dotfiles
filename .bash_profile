@@ -220,12 +220,13 @@ DEFAULT="\[`tput sgr0`\]"
 NORMAL="${DIM}${DEFAULT}"
 # Prompt
 
-PS1="${GREEN}rip:\$(get_rip_env) ${BRED}:${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
-ORIG_PS1=$PS1
+#PS1="${GREEN}rip:\$(get_rip_env) ${BRED}:${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
 
 # Old Prompts 
-# export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
-#export PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
+# PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
+PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
+
+ORIG_PS1=$PS1
 
 source $HOME/bin/virtualenvwrapper_bashrc
 
