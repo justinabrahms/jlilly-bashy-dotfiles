@@ -1,0 +1,2 @@
+# Install with: cat crontab | grep -v "^#" | crontab -
+@reboot /usr/bin/emacs --daemon 1>/dev/null 2>/dev/null
