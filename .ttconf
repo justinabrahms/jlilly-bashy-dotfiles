@@ -1,3 +1,23 @@
+#ACTION {You glance around suspiciously, but fail to attune yourself to the foliage.}
+{
+	sharp
+}
+{5}
+
+#ACTION {You try to focus on the darkness, but fail.}
+{
+	night
+}
+{5}
+
+#ALIAS {brand}
+{
+	remove %1;
+	c firebrand %1;
+	hold %1
+}
+{5}
+
 #CONFIG           {AUTO TAB}  {5000}
 #CONFIG           {BUFFER SIZE}  {20000}
 #CONFIG           {COMMAND COLOR}  {<078>}
@@ -15,16 +35,28 @@
 #CONFIG           {VERBATIM CHAR}  {\}
 #CONFIG           {VERBOSE}  {OFF}
 #CONFIG           {WORDWRAP}  {ON}
+#HIGHLIGHT        {PK}  {red}  {5}
+#HIGHLIGHT        {You attack %* again with your offhand while %* is unable to defend %*!}                                                    {green}  {5}
+#HIGHLIGHT        {You gained %1 exploration point and %2 experience point!}                                      {yellow}  {5}
+#HIGHLIGHT        {You have become better at %*!}           {yellow}  {5}
+#HIGHLIGHT        {You have become better at %*, and gain %* experience!}                                   {yellow}  {5}
+#HIGHLIGHT        {You lure %* into deeper mud, slowing %* attacks.}                              {green}  {5}
+#HIGHLIGHT        {You outmaneuver an %* on the uneven terrain, tiring %*.}                                     {green}  {5}
+#HIGHLIGHT        {You slip behind a tree, and its trunk stops %*'s attack.}                                      {green}  {5}
+#HIGHLIGHT        {You sure are BLEEDING!}    {red}  {5}
+#HIGHLIGHT        {You use the high grasses to destract %*.}                      {green}  {5}
+#HIGHLIGHT        {Your blood surges as your rage intensifies!}                         {red}  {5}
+#HIGHLIGHT        {Your skill at %* improves, and you gain %* experience points.}                                           {yellow}  {5}
+#HIGHLIGHT        {Your skill at %* improves.}        {yellow}  {5}
+#PATHDIR          {d}  {u}  {32}
+#PATHDIR          {e}  {w}  {2}
+#PATHDIR          {n}  {s}  {1}
+#PATHDIR          {ne}  {sw}  {3}
+#PATHDIR          {nw}  {se}  {9}
+#PATHDIR          {s}  {n}  {4}
+#PATHDIR          {se}  {nw}  {6}
+#PATHDIR          {sw}  {ne}  {12}
+#PATHDIR          {u}  {d}  {16}
+#PATHDIR          {w}  {e}  {8}
 #ses ave avendar.com 9999
-#action {You glance around suspiciously, but fail to attune yourself to the foliage.} {sharp}
-#action {You try to focus on the darkness, but fail.} {night}
-
-#highlight {You have become better at %1!} {b yellow}
-#highlight {You have become better at %1, and gain %2 experience!} {b yellow}
-#highlight {You lure %1 into deeper mud, slowing %2 attacks.} {b yellow}
-#highlight {You sure are BLEEDING!} {red}
-#highlight {PK} {red}
-#highlight {You step out from the foliage.} {yellow}
-#highlight {Your skill at %1 improves.} {b yellow}
-#config speedwalk on
 #split
