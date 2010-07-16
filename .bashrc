@@ -1,6 +1,11 @@
-export PATH=/usr/local/Cellar/python/2.6.2/bin:/usr/local/Cellar/swig/1.3.40/bin/:/Applications/Emacs.app/Contents/MacOS/bin:$PATH:/opt/local/bin/:$HOME/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9/bin:$HOME/src/clojure-contrib/launchers/bash:
+export PATH=/usr/gmacs-23.2/bin:$PATH:/opt/local/bin/:$HOME/bin:$HOME/.gem/ruby/1.8/bin:$HOME/.gem/ruby/1.9/bin:$HOME/src/clojure-contrib/launchers/bash:
 export CLASSPATH=$HOME/src/jars/*
 export CLOJURE_EXT=$HOME/.clojure
+export P4CONFIG=$HOME/.p4config
+export P4DIFF=/home/build/public/google/tools/p4diff
+export P4MERGE=/home/build/public/eng/perforce/mergep4.tcl
+export P4EDITOR=$EDITOR
+export WORKON_HOME=$HOME/.virtualenvs
 
 # Global
 # Filesystem
