@@ -64,5 +64,7 @@ alias hgd='hg diff | $GIT_EDITOR -'
 # -- start rip config -- #
 export RUBYLIB="$RUBYLIB:$HOME/src/rip/lib/"
 export PATH="$PATH:$HOME/src/rip/bin/"
-eval `rip-config`
+if [ `which rip-config` ]; then
+    eval `rip-config`
+fi
 # -- end rip config -- #
