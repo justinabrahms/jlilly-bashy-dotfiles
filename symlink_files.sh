@@ -9,6 +9,7 @@ done
 
 # Clean up after our naieve loop
 rm $HOME/symlink_files.sh
+rm $HOME/crontab
 rm -rf $HOME/.git
 
 echo "Symlinking successful."

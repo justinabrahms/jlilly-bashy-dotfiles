@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+from __future__ import with_statement
+import sys
+import os
+import subprocess
+
+if __name__ == '__main__':
+    EMACS_STRING = """
+      (with-current-buffer 
+        (get-buffer-create \"Pipe-%(pid)s\") 
+        (delete-region (point-min) (point-max)) 
+        (insert \"%(contents)s\") 
+        (display-buffer \"Pipe-%(pid)s\"))
+    """
+
+    EMACS_STRING = EMACS_STRING.replace('\n', ' ') % {
+	'contents': ''.join(sys.stdin),
+	'pid': os.getpid(),
+    }
+    with open('/dev/null', 'w') as out_file:
+	    _ = subprocess.Popen(['/usr/bin/emacsclient', "-e", "%s" % EMACS_STRING.encode('string-escape')], stdout=out_file)
+    print "It should be waiting in your emacs!"
