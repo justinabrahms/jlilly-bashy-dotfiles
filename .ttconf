@@ -38,6 +38,7 @@
 #HIGHLIGHT        {PK}  {red}  {5}
 #HIGHLIGHT        {You attack %* again with your offhand while %* is unable to defend %*!}                                                    {green}  {5}
 #HIGHLIGHT        {You gained %1 exploration point and %2 experience point!}                                      {yellow}  {5}
+#HIGHLIGHT        {You gained %1 exploration points and %2 experience points!}                                        {yellow}  {5}
 #HIGHLIGHT        {You have become better at %*!}           {yellow}  {5}
 #HIGHLIGHT        {You have become better at %*, and gain %* experience!}                                   {yellow}  {5}
 #HIGHLIGHT        {You lure %* into deeper mud, slowing %* attacks.}                              {green}  {5}
