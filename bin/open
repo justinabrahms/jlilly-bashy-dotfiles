@@ -1,0 +1,11 @@
+#!/bin/sh
+# Generalized open command for OS X and gnome's open command.
+
+case $MACHTYPE in
+    *linux*)
+        /usr/bin/gnome-open
+        ;;
+    *darwin*)
+        /usr/bin/open
+        ;;
+esac
