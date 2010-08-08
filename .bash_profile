@@ -227,7 +227,7 @@ PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39
 
 ORIG_PS1=$PS1
 
-source $HOME/bin/virtualenvwrapper_bashrc
+source $HOME/bin/virtualenvwrapper.sh
 
 has_virtualenv() {
     if [ -e .venv ]; then
