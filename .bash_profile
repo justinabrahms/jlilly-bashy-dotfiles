@@ -250,6 +250,8 @@ unegg () {
 
 
 # Run on new shell
-echo ""
-fortune
-echo ""
+if [ `which fortune` ]; then
+    echo ""
+    fortune
+    echo ""
+fi
