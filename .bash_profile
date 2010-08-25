@@ -224,6 +224,10 @@ NORMAL="${DIM}${DEFAULT}"
 # Old Prompts 
 # PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
+if [ $TERM == "eterm-color" ]; then
+  # prompt for emacs (width sensitive)
+  PS1='\u@\h:\w\$ '
+fi
 
 ORIG_PS1=$PS1
 
