@@ -38,6 +38,7 @@
 #HIGHLIGHT        {PK}  {red}  {5}
 #HIGHLIGHT        {You attack %* again with your offhand while %* is unable to defend %*!}                                                    {green}  {5}
 #HIGHLIGHT        {You gained %1 exploration point and %2 experience point!}                                      {yellow}  {5}
+#HIGHLIGHT        {You gained %1 exploration point%* and %2 experience point%*!}                                          {yellow}  {5}
 #HIGHLIGHT        {You gained %1 exploration points and %2 experience points!}                                        {yellow}  {5}
 #HIGHLIGHT        {You have become better at %*!}           {yellow}  {5}
 #HIGHLIGHT        {You have become better at %*, and gain %* experience!}                                   {yellow}  {5}
@@ -49,6 +50,8 @@
 #HIGHLIGHT        {Your blood surges as your rage intensifies!}                         {red}  {5}
 #HIGHLIGHT        {Your skill at %* improves, and you gain %* experience points.}                                           {yellow}  {5}
 #HIGHLIGHT        {Your skill at %* improves.}        {yellow}  {5}
+#highlight {%*'s skin begins to turn brittle, but returns to normal.} {yellow}
+#highlight {%*'s skin takes on a slightly glassy look.} {green}
 #PATHDIR          {d}  {u}  {32}
 #PATHDIR          {e}  {w}  {2}
 #PATHDIR          {n}  {s}  {1}
