@@ -5,7 +5,7 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   {
     address = "irc.efnet.org";
@@ -13,15 +13,15 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   {
-    address = "carbon.justinlilly.com";
+    address = "irc.justinlilly.com";
     chatnet = "bouncer";
     port = "9999";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "no";
+    autoconnect = "yes";
   },
 
 );
