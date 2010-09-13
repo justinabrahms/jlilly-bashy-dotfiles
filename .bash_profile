@@ -252,6 +252,11 @@ unegg () {
     mv tmp $1
 }
 
+if [ -z `pidof emacs` ]; then
+  # If emacs isn't running, start it in daemon mode.
+  emacs --daemon 2>/dev/null
+fi
+
 
 # Run on new shell
 if [ `which fortune` ]; then
