@@ -291,17 +291,20 @@ function parse_git_branch {
   echo "${remote}${remote_ff}${GREEN}(${branch})${COLOR_NONE}${git_is_dirty}${COLOR_NONE}"
 }
 
-
 function set_prompt {
+  [[ -n $HOMEBREW_DEBUG_INSTALL ]] && \
+    homebrew_prompt="${BROWN}Homebrew:${COLOR_NONE} debugging ${HOMEBREW_DEBUG_INSTALL}\n"
+
   git_prompt="$(parse_git_branch)"
-  export PS1="[\w] ${git_prompt}${COLOR_NONE}\n\$ "
+
+  export PS1="[\w] ${git_prompt}${COLOR_NONE}\n${homebrew_prompt}\$ "
 }
+export PROMPT_COMMAND=set_prompt
 
 # Prompt
 # PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 # PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 # PS1="${GREEN}rip:\$(get_rip_env) ${BRED}:${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
-set_prompt
 
 
 
