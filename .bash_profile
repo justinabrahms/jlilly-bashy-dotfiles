@@ -157,9 +157,11 @@ killit() {
     ps aux | grep -v "grep" | grep "$@" | awk '{print $2}' | xargs sudo kill
 }
 
-#tree () {
-#    find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
-#}
+if [ -z `which tree` ]; then
+  tree () {
+      find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+  }
+fi
 
 mcd () {
     mkdir "$@" && cd "$@"
