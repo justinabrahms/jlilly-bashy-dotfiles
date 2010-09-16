@@ -338,7 +338,9 @@ unegg () {
 
 if [ -z `pidof emacs` ]; then
   # If emacs isn't running, start it in daemon mode.
+  echo -n "Starting emacs..."
   emacs --daemon 2>/dev/null
+  echo "Done."
 fi
 
 
