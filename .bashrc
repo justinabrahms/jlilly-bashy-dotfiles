@@ -361,8 +361,13 @@ function set_prompt {
     homebrew_prompt="${BROWN}Homebrew:${COLOR_NONE} debugging ${HOMEBREW_DEBUG_INSTALL}\n"
 
   git_prompt="$(parse_git_branch)"
+  if [ ! -z $VIRTUAL_ENV ]; then
+    venv_name="<${CYAN}venv:${VIRTUAL_ENV##*/}${COLOR_NONE}> " # last folder's name in a directory path
+  else
+    venv_name=""
+  fi
 
-  export PS1="[\w] ${git_prompt}${COLOR_NONE}\n${homebrew_prompt}\$ "
+  export PS1="${venv_name}[\w] ${git_prompt}${COLOR_NONE}\n${homebrew_prompt}\$ "
 }
 export PROMPT_COMMAND=set_prompt
 
