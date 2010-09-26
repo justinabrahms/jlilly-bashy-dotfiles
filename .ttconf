@@ -4,6 +4,12 @@
 }
 {5}
 
+#ACTION {You strain your vision, but don't really feel more aware.}
+{
+	det
+}
+{5}
+
 #ACTION {You try to focus on the darkness, but fail.}
 {
 	night
@@ -35,6 +41,8 @@
 #CONFIG           {VERBATIM CHAR}  {\}
 #CONFIG           {VERBOSE}  {OFF}
 #CONFIG           {WORDWRAP}  {ON}
+#HIGHLIGHT        {%*'s skin begins to turn brittle, but returns to normal.}                                      {yellow}  {5}
+#HIGHLIGHT        {%*'s skin takes on a slightly glassy look.}                        {green}  {5}
 #HIGHLIGHT        {PK}  {red}  {5}
 #HIGHLIGHT        {You attack %* again with your offhand while %* is unable to defend %*!}                                                    {green}  {5}
 #HIGHLIGHT        {You gained %1 exploration point and %2 experience point!}                                      {yellow}  {5}
@@ -50,8 +58,6 @@
 #HIGHLIGHT        {Your blood surges as your rage intensifies!}                         {red}  {5}
 #HIGHLIGHT        {Your skill at %* improves, and you gain %* experience points.}                                           {yellow}  {5}
 #HIGHLIGHT        {Your skill at %* improves.}        {yellow}  {5}
-#highlight {%*'s skin begins to turn brittle, but returns to normal.} {yellow}
-#highlight {%*'s skin takes on a slightly glassy look.} {green}
 #PATHDIR          {d}  {u}  {32}
 #PATHDIR          {e}  {w}  {2}
 #PATHDIR          {n}  {s}  {1}
@@ -62,5 +68,3 @@
 #PATHDIR          {sw}  {ne}  {12}
 #PATHDIR          {u}  {d}  {16}
 #PATHDIR          {w}  {e}  {8}
-#ses ave avendar.com 9999
-#split
