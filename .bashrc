@@ -28,7 +28,7 @@ alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
-if [ -e /usr/bin/byobu ]; then
+if [ `which byobu` ]; then
     alias screen='byobu'
 fi
 
