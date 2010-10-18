@@ -21,3 +21,4 @@ TAGS
 .ipython/IPython_crash_report.txt
 \#*\#
 .irssi/*.log
+*.swp
