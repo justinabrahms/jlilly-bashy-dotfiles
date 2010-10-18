@@ -394,8 +394,6 @@ if [ $TERM == "eterm-color" ]; then
   PS1='\u@\h:\w\$ '
 fi
 
-ORIG_PS1=$PS1
-
 source $HOME/bin/virtualenvwrapper.sh
 
 has_virtualenv() {
