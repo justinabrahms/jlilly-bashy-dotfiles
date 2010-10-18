@@ -84,6 +84,16 @@ if [ `which rip-config` ]; then
 fi
 # -- end rip config -- #
 
+# Autocomplete bits
+set completion-ignore-case On
+for comp in \
+    ~/bin/completion/git-completion.bash \
+    ~/bin/completion/fab-completion.bash \
+    ~/bin/completion/pip-completion.bash
+do
+    [[ -e $comp ]] && source $comp
+done
+
 
 # == STOP IF NON INTERACTIVE ==
 [ -z "$PS1" ] && return
@@ -421,4 +431,3 @@ if [ `which fortune` ]; then
     fortune
     echo ""
 fi
-
