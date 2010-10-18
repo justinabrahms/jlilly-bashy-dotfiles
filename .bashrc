@@ -1,3 +1,4 @@
+export PATH=$HOME/bin:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLASSPATH=$HOME/src/jars/*
