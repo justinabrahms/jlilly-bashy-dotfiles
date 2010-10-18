@@ -1,3 +1,4 @@
+export PATH=$HOME/bin:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLASSPATH=$HOME/src/jars/*
@@ -82,6 +83,16 @@ if [ `which rip-config` ]; then
     eval `rip-config`
 fi
 # -- end rip config -- #
+
+# Autocomplete bits
+set completion-ignore-case On
+for comp in \
+    ~/bin/completion/git-completion.bash \
+    ~/bin/completion/fab-completion.bash \
+    ~/bin/completion/pip-completion.bash
+do
+    [[ -e $comp ]] && source $comp
+done
 
 
 # == STOP IF NON INTERACTIVE ==
@@ -418,4 +429,3 @@ if [ `which fortune` ]; then
     fortune
     echo ""
 fi
-

@@ -15,7 +15,7 @@ autoload -U zmv
 autoload -U promptinit
 promptinit
 
-prompt wunjo
+#prompt wunjo
 # End of lines added by compinstall
 
 # I'd really like to work in ☺ and ☹ into status codes 
@@ -346,3 +346,5 @@ function update_git_dirs() {
 echo ""
 fortune
 echo ""
+
+. ~/.zsh_prompt
