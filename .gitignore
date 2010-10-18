@@ -22,3 +22,4 @@ TAGS
 \#*\#
 .irssi/*.log
 *.swp
+.bash_local
