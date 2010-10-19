@@ -1,0 +1,36 @@
+export PATH=$HOME/bin:$PATH
+export GDAL_DATA=/opt/local/share
+export MANPATH=/opt/local/share/man:$MANPATH
+export CLASSPATH=$HOME/src/jars/*
+export CLOJURE_EXT=$HOME/.clojure
+export P4CONFIG=$HOME/.p4config
+export P4EDITOR=$EDITOR
+export WORKON_HOME=$HOME/.virtualenvs
+
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;31'
+export EDITOR='emacsclient'
+
+export HISTCONTROL=erasedups  # Ignore duplicate entries in history
+export HISTSIZE=10000         # Increases size of history
+export HISTIGNORE="&:ls:ll:la:l.:pwd:exit:clear:clr:[bf]g"
+
+RED="\[\033[0;31m\]"
+PINK="\[\033[1;31m\]"
+YELLOW="\[\033[1;33m\]"
+GREEN="\[\033[0;32m\]"
+LT_GREEN="\[\033[1;32m\]"
+BLUE="\[\033[0;34m\]"
+WHITE="\[\033[1;37m\]"
+PURPLE="\[\033[1;35m\]"
+CYAN="\[\033[1;36m\]"
+BROWN="\[\033[0;33m\]"
+COLOR_NONE="\[\033[0m\]"
+
+shopt -s histappend        # Append history instead of overwriting
+shopt -s cdspell           # Correct minor spelling errors in cd command
+shopt -s dotglob           # includes dotfiles in pathname expansion
+shopt -s checkwinsize      # If window size changes, redraw contents
+shopt -s cmdhist           # Multiline commands are a single command in history.
+shopt -s extglob           # Allows basic regexps in bash.
+set ignoreeof on           # Typing EOF (CTRL+D) will not exit interactive sessions

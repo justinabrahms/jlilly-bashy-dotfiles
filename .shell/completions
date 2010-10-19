@@ -1,0 +1,8 @@
+set completion-ignore-case On
+for comp in \
+    ~/bin/completion/git-completion.bash \
+    ~/bin/completion/fab-completion.bash \
+    ~/bin/completion/pip-completion.bash
+do
+    [[ -e $comp ]] && source $comp
+done

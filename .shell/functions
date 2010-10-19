@@ -1,0 +1,123 @@
+## Functions
+add_auth_key () {
+    host=$1
+    if  [ -z $host ] ; then
+        echo "You must provide a host as the first (and only) argument"
+        return
+    fi
+    if [ ! -f ~/.ssh/id_rsa.pub ] ; then
+        command ssh-keygen -t rsa
+    fi
+    command scp ~/.ssh/id_rsa.pub $host:/tmp/tmp_rsa
+    command ssh $host -t "if [ ! -d ~/.ssh ]; then mkdir ~/.ssh/;fi && cat /tmp/tmp_rsa >> ~/.ssh/authorized_keys && rm /tmp/tmp_rsa && chmod -R 700 ~/.ssh"
+}
+
+
+svim () {
+    # Run vim as super user
+    command sudo vim $@
+}
+
+emc () {
+    emacsclient $@ &
+}
+
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)        tar xjf $1        ;;
+            *.tar.gz)         tar xzf $1        ;;
+            *.bz2)            bunzip2 $1        ;;
+            *.rar)            unrar x $1        ;;
+            *.gz)             gunzip $1         ;;
+            *.tar)            tar xf $1         ;;
+            *.tbz2)           tar xjf $1        ;;
+            *.tgz)            tar xzf $1        ;;
+            *.zip)            unzip $1          ;;
+            *.Z)              uncompress $1     ;;
+            *)                echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+dict() {
+    grep "$@" /usr/share/dict/words
+}
+dls () {
+ # directory LS
+ echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
+}
+dgrep() {
+    # A recursive, case-insensitive grep that excludes binary files
+    grep -iR "$@" * | grep -v "Binary"
+}
+dfgrep() {
+    # A recursive, case-insensitive grep that excludes binary files
+    # and returns only unique filenames
+    grep -iR "$@" * | grep -v "Binary" | sed 's/:/ /g' | awk '{ print $1 }' | sort | uniq
+}
+psgrep() {
+    if [ ! -z $1 ] ; then
+        echo "Grepping for processes matching $1..."
+        ps aux | grep $1 | grep -v grep
+    else
+        echo "!! Need name to grep for"
+    fi
+}
+
+killit() {
+    # Kills any process that matches a regexp passed to it
+    ps aux | grep -v "grep" | grep "$@" | awk '{print $2}' | xargs sudo kill
+}
+
+if [ -z `which tree` ]; then
+  tree () {
+      find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+  }
+fi
+
+mcd () {
+    mkdir "$@" && cd "$@"
+}
+
+exip () {
+    # gather external ip address
+    echo -n "Current External IP: "
+    curl -s -m 5 http://myip.dk | grep "<title>" | sed -e 's/<title>Your IP address is: //g' -e 's/<\/title>//g'
+}
+
+pastie() {
+        url=$(curl http://pastie.caboo.se/pastes/create \
+                -H "Expect:"                                \
+                -F "paste[parser]=$PASTIE_LANG"             \
+                -F "paste[body]=<-"                         \
+                -F "paste[authorization]=burger"            \
+                -s -L -o /dev/null -w "%{url_effective}" )
+        echo "$url" | xclip
+	echo "$url"
+}
+
+ips () {
+    # determine local IP address
+    ifconfig | grep "inet " | awk '{ print $2 }'
+}
+
+gsvn () {
+     cat .git/config | grep url
+}
+
+parse_git_branch(){ 
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /';
+}
+
+parse_svn_rev(){ 
+    svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
+}
+
+unegg () {
+    unzip $1 -d tmp
+    rm $1
+    mv tmp $1
+}
