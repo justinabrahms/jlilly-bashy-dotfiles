@@ -2,6 +2,7 @@
 # PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[1;37m\]\T \[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 # PS1='\[\033[0;36m\]\d \[\033[00m\]- \[\033[0;37m\]\T \[\033[1;37m\]\u\[\033[0;39m\]@\[\033[1;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 # PS1="${GREEN}rip:\$(get_rip_env) ${BRED}:${NORMAL}\@${BRED}: ${BBLUE}[${NORMAL}\w${BBLUE}]${BGREEN} \$(parse_svn_rev)\$(parse_git_branch)${NORMAL}\u${BBLUE}@\H${BRED}; ${NORMAL}"
+# PS1="%B%F{red}:%f%b%@ %B%F{red}:%f%b %B%F{blue}[%f%b%~%B%F{blue}]%f%b %n%B%F{blue}@%m%f%F{red};%f%b "
 # Prompt Colors
 
 RED="\[\033[0;31m\]"
@@ -101,3 +102,8 @@ function set_prompt {
   export PS1="${venv_name}[\w] ${git_prompt}${COLOR_NONE}\n${homebrew_prompt}\$ "
 }
 export PROMPT_COMMAND=set_prompt
+
+
+if [ shell == 'zsh' ]; then
+  . ~/.zsh_prompt
+fi

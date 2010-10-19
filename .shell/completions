@@ -6,3 +6,10 @@ for comp in \
 do
     [[ -e $comp ]] && source $comp
 done
+
+
+# Load zsh autocompletion
+if [ $SHELL == 'zsh' ]; then
+     autoload -Uz compinit
+   compinit
+fi

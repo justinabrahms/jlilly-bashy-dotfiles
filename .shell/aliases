@@ -29,6 +29,7 @@ alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory 
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
 alias pycclean='find . -name "*.pyc" -exec rm {} \;'
 alias ssh='ssh -R 10999:localhost:22'
+alias nethack='telnet nethack.alt.org'
 
 # GIT ALIASES
 alias git='hub'
@@ -51,3 +52,4 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 # HG ALIASES
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
+alias hgo='hg outgoing'

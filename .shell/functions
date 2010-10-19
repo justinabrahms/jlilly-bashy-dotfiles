@@ -72,7 +72,7 @@ killit() {
     ps aux | grep -v "grep" | grep "$@" | awk '{print $2}' | xargs sudo kill
 }
 
-if [ -z `which tree` ]; then
+if [ -z "\${which tree}" ]; then
   tree () {
       find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
   }
@@ -120,4 +120,25 @@ unegg () {
     unzip $1 -d tmp
     rm $1
     mv tmp $1
+}
+
+update_git_dirs() {
+    # so what the below does is finds all files named .git in my home
+    # directory, but excludes the .virtualenvs folder then strips the .git from
+    # the end, cd's into the directory, pulls from the origin master, then
+    # repeats
+
+    OLD_DIR=`pwd`
+    cd ~
+    for i in `find . -type d -name ".virtualenvs" -prune -o -name ".git" | sed 's/\.git//'`; do
+        echo "Going into $i"
+        cd $i
+        git pull origin master
+        cd ~
+    done
+    cd $OLD_DIR
+}
+
+shell () {
+  ps | grep `echo $$` | awk '{ print $4 }'
 }
