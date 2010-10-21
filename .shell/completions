@@ -1,3 +1,5 @@
+return
+
 set completion-ignore-case On
 for comp in \
     ~/bin/completion/git-completion.bash \

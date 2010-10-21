@@ -46,7 +46,9 @@ case $MACHTYPE in
         ;;
 esac
 
-if [ $TERM == "eterm-color" ]; then
+
+
+if [ $TERM = "eterm-color" ]; then
   # prompt for emacs (width sensitive)
   PS1='\u@\h:\w\$ '
 fi

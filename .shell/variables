@@ -1,7 +1,6 @@
 export PATH=$HOME/bin:$PATH
 export GDAL_DATA=/opt/local/share
 export MANPATH=/opt/local/share/man:$MANPATH
-export CLASSPATH=$HOME/src/jars/*
 export CLOJURE_EXT=$HOME/.clojure
 export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
@@ -41,10 +40,14 @@ CYAN="\[\033[1;36m\]"
 BROWN="\[\033[0;33m\]"
 COLOR_NONE="\[\033[0m\]"
 
-shopt -s histappend        # Append history instead of overwriting
-shopt -s cdspell           # Correct minor spelling errors in cd command
-shopt -s dotglob           # includes dotfiles in pathname expansion
-shopt -s checkwinsize      # If window size changes, redraw contents
-shopt -s cmdhist           # Multiline commands are a single command in history.
-shopt -s extglob           # Allows basic regexps in bash.
+
+SHOPT=`which shopt`
+if [ -z SHOPT ]; then
+    shopt -s histappend        # Append history instead of overwriting
+    shopt -s cdspell           # Correct minor spelling errors in cd command
+    shopt -s dotglob           # includes dotfiles in pathname expansion
+    shopt -s checkwinsize      # If window size changes, redraw contents
+    shopt -s cmdhist           # Multiline commands are a single command in history.
+    shopt -s extglob           # Allows basic regexps in bash.
+fi
 set ignoreeof on           # Typing EOF (CTRL+D) will not exit interactive sessions

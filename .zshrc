@@ -19,7 +19,8 @@ promptinit
 . ~/.bash_local
 
 # Run on new shell
-if [ `which fortune` ]; then
+have_fortune=`which fortune`
+if [ -e have_fortune ]; then
     echo ""
     fortune
     echo ""
