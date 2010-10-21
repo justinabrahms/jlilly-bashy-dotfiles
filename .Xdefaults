@@ -12,7 +12,6 @@ URxvt*bolditalicFontont: xft:Terminus:pixelsize=9
 URxvt*perl-ext: default,matcher
 URxvt*urlLauncher: gnome-open
 URxvt*matcher.button: 1
-URxvt*termName:  xterm-256color
 URxvt*transparent: true
 URxvt*foreground: white
 URxvt*shading: 20
@@ -20,3 +19,23 @@ URxvt*internalBorder: 6
 URxvt*scrollBar: false
 URxvt*metaSendsEscape: true
 URxvt*eightBitInput: false
+
+! ZOMG, legible colors!
+*.foreground:           #ffffff
+*.background:           #000000
+*.color0:               #000000
+*.color1:               #ee3b3b
+*.color2:               #00ee76
+*.color3:               #eeee00
+*.color4:               #00b2ee
+*.color5:               #ee00ee
+*.color6:               #97ffff
+*.color7:               #f5fffa
+*.color8:               #404040
+*.color9:               #ff3030
+*.color10:              #00ff7f
+*.color11:              #ffff00
+*.color12:              #00bfff
+*.color13:              #ff00ff
+*.color14:              #00ffff
+*.color15:              #ffffff
