@@ -1,20 +1,6 @@
-case $MACHTYPE in
-    *redhat*)
-        # Redhat, which I use at work
-        export PYTHONPATH=/usr/lib/python2.4/site-packages:$PYTHON_PATH
-        export LS_COLORS='no=01:fi=01:di=01;35:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.flac=01;35:*.mp3=01;35:*.mpc=01;35:*.ogg=01;35:*.wav=01;35:';
-        ini () {
-            command sudo service $@
-        }
-        # this is really just so I have something to bellyache about
-        alias agi="time sudo yum -C install"
-        alias acs="time sudo yum -C search"
-        alias acsh="time sudo yum -C info"
-        alias ls="ls -F --color"
-        export GOOGLE_CODE_CHECKOUTS="/opt/trunks/"
-        export EDITOR='vim'
-        ;;
-    *linux*)
+uname_str=`uname`
+case $uname_str in
+    Linux)
         # Linux Specific
         export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.5/site-packages/:
         export LS_COLORS="di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43:su=0;41:sg=32;38:tw=0;42:ow=0;43:"
@@ -29,7 +15,7 @@ case $MACHTYPE in
         alias aguu="sudo apt-get update && sudo apt-get upgrade"
         alias ls="ls -F --color"       # Color is handled differently on Linux
         ;;
-    *darwin*)
+    Darwin)
         # Mac Specific
         export PATH=/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin:/usr/local/bin:$PATH
         export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.6/site-packages/:/Library/Python/2.5/site-packages:/usr/local/Cellar/python/2.6.2/lib/python2.6/site-packages:
