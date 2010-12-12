@@ -10,6 +10,6 @@ for dir in `find . -name ".git" -type d 2>/dev/null | grep -v "env" | grep -v ".
 do
     echo "=== $dir ==="
     pushd $dir
-    git status
+    git status -sb
     popd
 done
