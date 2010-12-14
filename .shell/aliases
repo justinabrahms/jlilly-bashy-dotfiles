@@ -53,3 +53,8 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
 alias hgo='hg outgoing'
+
+# curl for useragents
+alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
+alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.0 (.NET CLR 3.5.30729)\""
+
