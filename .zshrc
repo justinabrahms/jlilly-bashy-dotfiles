@@ -16,7 +16,9 @@ promptinit
 . ~/.shell/variables
 . ~/bin/virtualenvwrapper.sh
 . ~/.shell/host_specific
-. ~/.bash_local
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
 
 # Run on new shell
 have_fortune=`which fortune`
