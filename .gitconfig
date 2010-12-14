@@ -23,7 +23,7 @@
 [alias]
   a = commit --ammend
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  ci = commit
+  ci = commit -v
   pick = cherry-pick -s
   sb = status -sb
   log1 = log --pretty=oneline --abbrev-commit
