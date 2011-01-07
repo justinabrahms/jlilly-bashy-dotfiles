@@ -29,6 +29,7 @@
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
   top-commits = shortlog -s -n --no-merges
+  gdiff = difftool --gui --no-prompt
 #  fixme = grep -E "\#\s+([A-Z]{3,}+\:)"
 [push]
 	default = current
@@ -37,4 +38,4 @@
 [mergetool]
 	tool = kdiff3
 [diff]
-    tool = kdiff3
+    guitool = kdiff3
