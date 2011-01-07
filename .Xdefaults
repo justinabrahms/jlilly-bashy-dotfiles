@@ -4,11 +4,13 @@ XTerm*transparent: true
 XTerm*shading: 30
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
+XTerm*background: black
+XTerm*foreground: white
+XTerm*cursorColor: white
 
-URxvt*font: xft:Terminus:pixelsize=9
-URxvt*boldFont: xft:Terminus:pixelsize=9
-URxvt*italicFontont: xft:Terminus:pixelsize=9
-URxvt*bolditalicFontont: xft:Terminus:pixelsize=9
+URxvt.font:      xft:Liberation Mono-9
+URxvt.boldFont:  xft:Liberation Mono-9:bold
+URxvt.italicFont: xft:Liberation Mono-9:italic
 URxvt*perl-ext: default,matcher
 URxvt*urlLauncher: gnome-open
 URxvt*matcher.button: 1
