@@ -21,14 +21,14 @@
   changed = green
   untracked = cyan
 [alias]
-  a = commit --ammend
+  a = commit --amend
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  ci = commit -v
-  pick = cherry-pick -s
-  sb = status -sb
+  ci = commit --verbose
+  pick = cherry-pick --sign-off
+  sb = status --short --branch
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
-  top-commits = shortlog -s -n --no-merges
+  top-commits = shortlog --summary --numbered --no-merges
   gdiff = difftool --gui --no-prompt
 #  fixme = grep -E "\#\s+([A-Z]{3,}+\:)"
 [push]
