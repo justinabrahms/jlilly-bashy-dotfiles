@@ -1,3 +1,3 @@
 # Install with: cat crontab | grep -v "^#" | crontab -
-@reboot /usr/bin/emacs --daemon 1>/dev/null 2>/dev/null
-@reboot /usr/bin/tmux new-session -d
+@reboot /bin/sh -c "cd /home/justinlilly && tmux new-session -d"
+@reboot /bin/sh -c "cd /home/justinlilly && src/emacs/src/emacs --daemon 1>/dev/null 2>/dev/null"
