@@ -14,7 +14,7 @@ URxvt.italicFont: xft:Liberation Mono-9:italic
 URxvt*perl-ext: default,matcher
 URxvt*urlLauncher: gnome-open
 URxvt*matcher.button: 1
-URxvt*transparent: true
+URxvt*transparent: false
 URxvt*foreground: white
 URxvt*shading: 20
 URxvt*internalBorder: 6
