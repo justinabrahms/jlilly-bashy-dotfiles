@@ -161,7 +161,7 @@ def scrape_somafm_info(url):
         station_desc = format_station_description(station_desc)
         station_url = station.a['href']
         pls_name_info = station_url.rsplit('/')
-        pls_url = '%s%s%s' % (url, pls_name_info[2], '.pls')
+        pls_url = '%s%s%s' % (url, pls_name_info[1], '.pls')
         irs = InternetRadioStation(name=station_name,
                                    pls_url=pls_url,
                                    desc=station_desc)
