@@ -167,7 +167,9 @@ def scrape_somafm_info(url):
                                    desc=station_desc)
         station_list.append(irs)
     return station_list
-        
-if __name__ == "__main__":
-    print crank_the_radio()
 
+if __name__ == "__main__":
+    if (which('mpg123') == None and which('mpg321') == None):
+        print "You must have mpg123 or mpg321 installed."
+    else:
+        print crank_the_radio()
