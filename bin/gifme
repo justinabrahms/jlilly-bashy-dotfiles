@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# GIF ME
+# as in: "GIF ME AN ANIMATED GIF, DAMMIT"
+#
+# Use imagemagick to make an animated gif of awesome. Upload to CloudApp.
+#
+# Examples:
+#
+#   gifme ~/Desktop/rtomayko.png ~/Desktop/pimpcane.jpg
+#   gifme ~/IncriminatingPhotosOfKyle/*.jpg
+
+output="$HOME/tmp/animated.gif"
+
+convert -verbose -delay 15 -loop 0 -resize 500 -layers OptimizeTransparency \
+  $* $output
