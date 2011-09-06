@@ -3,10 +3,10 @@
 ###########
 
 set mbox_type="Maildir"
-set mbox="~/Maildir/"
-set folder="~/Maildir/"
+# set mbox="~/.mail/work"
+set folder="~/.mail/work/inbox"
 set mask="!^\\.[^.]"
-set spoolfile="~/Maildir"
+set spoolfile="~/.mail/work/inbox"
 
 set xterm_set_titles="yes"
 #set xterm_title="Mutt with %?m?%m messages&no messages?%?n? [%n NEW]?"
