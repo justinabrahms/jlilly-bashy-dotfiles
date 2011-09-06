@@ -49,12 +49,12 @@ class InternetRadioStation:
         self.name = name
         self.pls_url = pls_url
         self.desc = desc
-        
+
     def play(self):
         urls_available = self.urls_from_pls(self.pls_url)
         for url in urls_available:
             print '\nTrying url ::: %s' % (url)
-            val = os.system('%s %s' % (mp3_player, url)) 
+            val = os.system('%s %s' % (mp3_player, url))
             if val == 2:
                 return '\nFinished playing'
         return "No usable urls found"
@@ -75,7 +75,7 @@ class InternetRadioStation:
     def pad_description(self, width, padding):
         wrapped_desc = wrap(self.desc, width)
         lines = wrapped_desc.split('\n')
-        padfu = lambda s: ' ' * padding + s + '\n'        
+        padfu = lambda s: ' ' * padding + s + '\n'
         new_desc = map(padfu, lines)
         return ''.join(new_desc).rstrip()
 
@@ -121,19 +121,19 @@ def term_width():
 def crank_the_radio():
     # Initialize list with soma.fm
     station_list = scrape_somafm_info(somafm_url)
-    
+
     # include additional pls files
     for station in stations_info:
         station_obj = make_station(station)
         station_list.append(station_obj)
-        
+
     print "Stations:"
     for key, station in enumerate(station_list):
         print "  %2d. %s :: %s\n%s" % (key,
                                        station.name,
                                        station.pls_url,
                                        station.pad_description((term_width()-6), 6))
-    choice = input("Choice ?: ")
+    choice = input("Choice?: ")
     station = station_list[choice]
     return station.play()
 
