@@ -110,7 +110,7 @@ set reverse_name=yes
 # Defaults to the EMAIL environment variable's content.
 
 
-alternates "(jlilly@hugeinc\.com)|(justinlilly@gmail\.com)"
+alternates "(justinlilly@google\.com)|(justinlilly@gmail\.com)"
 
 
 set use_from=yes
