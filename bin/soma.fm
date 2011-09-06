@@ -53,8 +53,11 @@ class InternetRadioStation:
     def play(self):
         urls_available = self.urls_from_pls(self.pls_url)
         for url in urls_available:
-            print '\nTrying url ::: %s' % (url)
             val = os.system('%s %s' % (mp3_player, url))
+            if val == 0:
+                # JUSTIN ADDED
+                print "Assuming you pressed ^c. Ending."
+                os._exit(1)
             if val == 2:
                 return '\nFinished playing'
         return "No usable urls found"
@@ -149,7 +152,7 @@ def format_station_description(description):
     description = description.replace("  ", " ")
     description = description.strip()
     return description
-    
+
 def scrape_somafm_info(url):
     station_list = []
     page = urllib2.urlopen(url)
