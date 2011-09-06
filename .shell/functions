@@ -152,3 +152,7 @@ unpatch () {
 current_shell () {
   ps | grep `echo $$` | grep -v "grep" | awk '{ print $4 }'
 }
+
+notify () {
+  echo $@ | xargs notify-send --urgency="low" --expire-time=1000
+}
