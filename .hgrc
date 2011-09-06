@@ -25,3 +25,6 @@ pager=
 
 [bookmarks]
 track.current = True
+
+[web]
+cacerts = /etc/ssl/certs/ca-certificates.crt
