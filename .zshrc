@@ -14,7 +14,6 @@ promptinit
 . ~/.shell/functions
 . ~/.shell/prompt
 . ~/.shell/variables
-. ~/bin/virtualenvwrapper.sh
 . ~/.shell/host_specific
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
