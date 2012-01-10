@@ -25,3 +25,7 @@ TAGS
 .bash_local
 *.egg
 /.shell/.local
+*.ipw
+*.ipr
+*.6
+6.out

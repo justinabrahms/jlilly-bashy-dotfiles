@@ -30,7 +30,6 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit --verbose
   pick = cherry-pick --sign-off
-  sb = status --short --branch
   st = status --short --branch
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
