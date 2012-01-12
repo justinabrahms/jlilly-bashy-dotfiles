@@ -29,3 +29,5 @@ TAGS
 *.ipr
 *.6
 6.out
+build/lib/
+build/scripts-2.7/

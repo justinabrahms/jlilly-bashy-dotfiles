@@ -21,8 +21,28 @@ alias ssh='ssh -R 10999:localhost:22'
 alias nethack='telnet nethack.alt.org'
 
 # GIT ALIASES
+alias g=git
 alias git='hub'
-alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gl='git pull'
+alias gp='git push'
+alias gst='git status'
+alias gsd='git svn dcommit'
+alias gsr='git svn rebase'
+alias gs='git stash'
+alias gsa='git stash apply'
+alias gr='git stash && git svn rebase && git svn dcommit && git stash pop' # git refresh
+alias gd='git diff | $GIT_EDITOR -'
+alias gmv='git mv'
+alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([a-z]\.\)*/\1/" -e "s/\.git$//g" -e "s/.*@\(.*\)$/\1/g" | tr ":" "/" | tr -d "\011" | sed -e "s/^/open http:\/\//g")'
+
+# HG ALIASES
+alias hgst='hg status'
+alias hgd='hg diff | $GIT_EDITOR -'
+alias hgo='hg outgoing'
 
 # curl for useragents
 alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
