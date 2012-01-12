@@ -35,6 +35,7 @@ extract () {
             *.tgz)            tar xzf $1        ;;
             *.zip)            unzip $1          ;;
             *.Z)              uncompress $1     ;;
+	    *.jar)	      unzip $1   	;;
             *)                echo "'$1' cannot be extracted via extract()" ;;
         esac
     else
@@ -108,11 +109,11 @@ gsvn () {
      cat .git/config | grep url
 }
 
-parse_git_branch(){ 
+parse_git_branch(){
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /';
 }
 
-parse_svn_rev(){ 
+parse_svn_rev(){
     svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
 }
 
@@ -150,4 +151,8 @@ unpatch () {
 
 current_shell () {
   ps | grep `echo $$` | grep -v "grep" | awk '{ print $4 }'
+}
+
+notify () {
+  echo $@ | xargs notify-send --urgency="low" --expire-time=1000
 }

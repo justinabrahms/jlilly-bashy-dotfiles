@@ -1,11 +1,16 @@
 [core]
   excludesfile = ~/.gitignore
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  whitespace=trailing-space,space-before-tab
 [user]
   name = Justin Lilly
   email = justin@justinlilly.com
 [color]
   ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  pager = true
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -25,7 +30,6 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit --verbose
   pick = cherry-pick --sign-off
-  sb = status --short --branch
   st = status --short --branch
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
@@ -41,3 +45,7 @@
 	tool = kdiff3
 [diff]
     guitool = kdiff3
+[apply]
+    whitespace = fix
+[rerere]
+    enabled = true
