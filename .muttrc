@@ -3,10 +3,10 @@
 ###########
 
 set mbox_type="Maildir"
-set mbox="~/Maildir/"
-set folder="~/Maildir/"
+# set mbox="~/.mail/work"
+set folder="~/.mail/work/inbox"
 set mask="!^\\.[^.]"
-set spoolfile="~/Maildir"
+set spoolfile="~/.mail/work/inbox"
 
 set xterm_set_titles="yes"
 #set xterm_title="Mutt with %?m?%m messages&no messages?%?n? [%n NEW]?"
@@ -110,7 +110,7 @@ set reverse_name=yes
 # Defaults to the EMAIL environment variable's content.
 
 
-alternates "(jlilly@hugeinc\.com)|(justinlilly@gmail\.com)"
+alternates "(justinlilly@google\.com)|(justinlilly@gmail\.com)"
 
 
 set use_from=yes
@@ -203,7 +203,7 @@ set send_charset=us-ascii:iso-8859-1:iso-8859-15:utf-8
 #set sendmail="/usr/sbin/sendmail -oem -oi -f justinlilly@justinlilly.com"
 set sendmail="/usr/sbin/sendmail -oem -oi"
 # The -t header does some stuff that allows BCC's to work.
-# http://sysmonblog.co.uk/2009/04/mutt-exim4-debian-unbuntu-and-bcc-fail-fix-included.html  
+# http://sysmonblog.co.uk/2009/04/mutt-exim4-debian-unbuntu-and-bcc-fail-fix-included.html
 
 
 # Specifies the program and arguments used to deliver mail sent by Mutt.
@@ -587,7 +587,7 @@ subscribe sed-users@yahoogroups.com
 
 mailboxes =lists/django-devel =lists/django-users =lists/pathfinder =lists/rubynyc =lists/lispnyc
 mailboxes =lists/nodejs =unimportant =. =uncategorized
-mailboxes =work =work/mercurial =work/buildbot =work/jira 
+mailboxes =work =work/mercurial =work/buildbot =work/jira
 
 ###########
 # Aliases #

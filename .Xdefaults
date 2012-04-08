@@ -1,41 +1,42 @@
-*customization: -color
 XTerm*termName:  xterm-256color
 XTerm*transparent: true
 XTerm*shading: 30
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
+XTerm*background: black
+XTerm*foreground: white
+XTerm*cursorColor: white
 
-URxvt*font: xft:Terminus:pixelsize=9
-URxvt*boldFont: xft:Terminus:pixelsize=9
-URxvt*italicFontont: xft:Terminus:pixelsize=9
-URxvt*bolditalicFontont: xft:Terminus:pixelsize=9
+URxvt.font:       xft:Anonymous Pro-10
+URxvt.boldFont:   xft:Anonymous Pro-10:bold
+URxvt.italicFont: xft:Anonymous Pro-10:italic
 URxvt*perl-ext: default,matcher
 URxvt*urlLauncher: gnome-open
 URxvt*matcher.button: 1
-URxvt*transparent: true
-URxvt*foreground: white
+URxvt*transparent: false
+URxvt*foreground: black
 URxvt*shading: 20
 URxvt*internalBorder: 6
 URxvt*scrollBar: false
 URxvt*metaSendsEscape: true
 URxvt*eightBitInput: false
 
-! ZOMG, legible colors!
-*.foreground:           #ffffff
-*.background:           #000000
-*.color0:               #000000
-*.color1:               #ee3b3b
-*.color2:               #00ee76
-*.color3:               #eeee00
-*.color4:               #00b2ee
-*.color5:               #ee00ee
-*.color6:               #97ffff
-*.color7:               #f5fffa
-*.color8:               #404040
-*.color9:               #ff3030
-*.color10:              #00ff7f
-*.color11:              #ffff00
-*.color12:              #00bfff
-*.color13:              #ff00ff
-*.color14:              #00ffff
-*.color15:              #ffffff
+!!! ZOMG, legible colors!
+.foreground:           #ffffff
+.background:           #000000
+.color0:               #000000
+.color1:               #ee3b3b
+.color2:               #00ee76
+.color3:               #eeee00
+.color4:               #00b2ee
+.color5:               #ee00ee
+.color6:               #97ffff
+.color7:               #f5fffa
+.color8:               #404040
+.color9:               #ff3030
+.color10:              #00ff7f
+.color11:              #ffff00
+.color12:              #00bfff
+.color13:              #ff00ff
+.color14:              #00ffff
+.color15:              #ffffff

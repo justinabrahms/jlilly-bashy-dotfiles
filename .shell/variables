@@ -1,7 +1,4 @@
 export PATH=$HOME/bin:$PATH
-export GDAL_DATA=/opt/local/share
-export MANPATH=/opt/local/share/man:$MANPATH
-export CLOJURE_EXT=$HOME/.clojure
 export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
 export WORKON_HOME=$HOME/.virtualenvs
@@ -10,6 +7,7 @@ export INFOPATH=$INFOPATH:/usr/share/info
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31'
 export LESS="-R"
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESSHISTFILE=/dev/null
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
@@ -19,7 +17,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;37m'
 export EDITOR='emacsclient'
-export OOO_FORCE_DESKTOP=gnome # For OpenOffice to look more gtk-friendly.
 export BROWSER=google-chrome
 
 export HISTCONTROL=erasedups  # Ignore duplicate entries in history
@@ -39,7 +36,6 @@ PURPLE="\[\033[1;35m\]"
 CYAN="\[\033[1;36m\]"
 BROWN="\[\033[0;33m\]"
 COLOR_NONE="\[\033[0m\]"
-
 
 SHOPT=`which shopt`
 if [ -z SHOPT ]; then
