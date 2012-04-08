@@ -11,5 +11,6 @@ done
 rm $HOME/symlink_files.sh
 rm $HOME/crontab
 rm -rf $HOME/.git
+mkdir $HOME/.virtualenvs
 
 echo "Symlinking successful."
