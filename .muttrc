@@ -4,9 +4,9 @@
 
 set mbox_type="Maildir"
 # set mbox="~/.mail/work"
-set folder="~/.mail/work/inbox"
+set folder="~/Mail"
 set mask="!^\\.[^.]"
-set spoolfile="~/.mail/work/inbox"
+set spoolfile="/var/spool/mail/justinlilly"
 
 set xterm_set_titles="yes"
 #set xterm_title="Mutt with %?m?%m messages&no messages?%?n? [%n NEW]?"
@@ -156,7 +156,7 @@ set postpone=ask-yes
 # Controls whether or not messages are saved in the
 # '$postponed' mailbox when you elect not to send immediately
 
-set postponed="+.Drafts"
+set postponed="+drafts"
 #set postponed=~/Mail/postponed
 # folder for postponed messages
 
@@ -165,7 +165,7 @@ set signature=~/Mail/signature
 # If the filename ends with a pipe (``|''), it is assumed that filename is a shell
 # command and input should be read from its stdout.
 
-set record="+.Sent"
+set record="+sent"
 # set record=~/Mail/mailsent
 # This specifies the file into which your outgoing messages should be appended.
 # (This is meant as the primary method for saving a copy of your messages, but
@@ -201,7 +201,8 @@ set send_charset=us-ascii:iso-8859-1:iso-8859-15:utf-8
 # koi8-r or iso-2022-jp) either instead of or after "iso-8859-1".
 
 #set sendmail="/usr/sbin/sendmail -oem -oi -f justinlilly@justinlilly.com"
-set sendmail="/usr/sbin/sendmail -oem -oi"
+#set sendmail="/usr/sbin/sendmail -oem -oi"
+set sendmail="/usr/bin/msmtp"
 # The -t header does some stuff that allows BCC's to work.
 # http://sysmonblog.co.uk/2009/04/mutt-exim4-debian-unbuntu-and-bcc-fail-fix-included.html
 
@@ -455,7 +456,7 @@ set sort_aux=date # sorting the threads
 # Sortierung im File-Browser #
 ##############################
 
-#set sort_browser=reverse-date
+set sort_browser=alpha
 # Specifies how to sort entries in the file browser. By default, the
 # entries are sorted alphabetically. Valid values:
 # alpha (alphabetically)
