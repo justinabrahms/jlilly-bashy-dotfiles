@@ -4,7 +4,13 @@
 #   - add the sed command to -exec param
 #   - do better filtering of git status. Might require moving this out
 #     of bash and using something like dulwich
-cd $HOME
+if [ -n $1 ]; then
+    DIR=$1
+else
+    DIR=$HOME
+fi
+
+cd $DIR
 echo "Searching for git repositories.."
 for dir in `find . -name ".git" -type d 2>/dev/null | grep -v "env" | grep -v ".virtualenv" | sed 's/\/.git//g'`
 do
