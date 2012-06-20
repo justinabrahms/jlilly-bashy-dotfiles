@@ -3,8 +3,8 @@ XTerm*transparent: true
 XTerm*shading: 30
 XTerm*metaSendsEscape: true
 XTerm*eightBitInput: false
-XTerm*background: black
-XTerm*foreground: white
+XTerm*background: white
+XTerm*foreground: black
 XTerm*cursorColor: white
 
 URxvt.font:       xft:Anonymous Pro-10
@@ -14,17 +14,19 @@ URxvt*perl-ext: default,matcher
 URxvt*urlLauncher: gnome-open
 URxvt*matcher.button: 1
 URxvt*transparent: false
-URxvt*foreground: black
+URxvt*foreground: white
+URxvt*background: black
 URxvt*shading: 20
+URxvt*saveLines: 65535
 URxvt*internalBorder: 6
 URxvt*scrollBar: false
 URxvt*metaSendsEscape: true
 URxvt*eightBitInput: false
 
 !!! ZOMG, legible colors!
-.foreground:           #ffffff
+.foreground:           #FFFFFF
 .background:           #000000
-.color0:               #000000
+.color0:               #FFFFFF
 .color1:               #ee3b3b
 .color2:               #00ee76
 .color3:               #eeee00
@@ -40,3 +42,23 @@ URxvt*eightBitInput: false
 .color13:              #ff00ff
 .color14:              #00ffff
 .color15:              #ffffff
+
+!!! And repeat it for urxvt
+URxvt*.foreground:           #FFFFFF
+URxvt*.background:           #000000
+URxvt*.color0:               #FFFFFF
+URxvt*.color1:               #ee3b3b
+URxvt*.color2:               #00ee76
+URxvt*.color3:               #eeee00
+URxvt*.color4:               #00b2ee
+URxvt*.color5:               #ee00ee
+URxvt*.color6:               #97ffff
+URxvt*.color7:               #f5fffa
+URxvt*.color8:               #404040
+URxvt*.color9:               #ff3030
+URxvt*.color10:              #00ff7f
+URxvt*.color11:              #ffff00
+URxvt*.color12:              #00bfff
+URxvt*.color13:              #ff00ff
+URxvt*.color14:              #00ffff
+URxvt*.color15:              #ffffff
