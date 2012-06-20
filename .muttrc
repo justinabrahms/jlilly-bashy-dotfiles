@@ -14,8 +14,6 @@ set xterm_title="Mutt%?b?*? %f"
 
 set check_new="yes"
 
-
-
 # set folder=imap://jlilly@mail.mse3.exchange.ms/
 # This option tells mutt to use an IMAP server
 # the format is: imap://[user@]server[:port]/path/to/mailbox
@@ -394,53 +392,7 @@ bind browser x exit
 # Color #
 #########
 
-color status brightwhite blue
-mono message bold
-color message white red
-color error brightyellow red
-color indicator white red
-color tree brightmagenta default
-color signature red default
-color attachment brightyellow red
-color search brightyellow red
-color tilde brightmagenta default
-color markers brightmagenta default
-color quoted white default
-color quoted1 magenta default
-color quoted2 red default
-color quoted3 green default
-color quoted4 cyan default
-color quoted5 blue default
-color quoted6 magenta default
-color quoted7 red default
-color quoted8 green default
-color quoted9 cyan default
-color hdrdefault brightred default
-color header brightyellow default "^(from):"
-color header brightblue default "^(to):"
-color header green default "^(subject):"
-color body brightcyan default \ "((ftp|http|https)://|(file|mailto|news):|www\\.)[-a-z@0-9_.:]*[a-z0-9](/[^][{} \t\n\r\"<>()]*[^][{} \t\n\r\"<>().,:])?"
-color body brightcyan default "[-a-z_0-9.+]+@[-a-z_0-9.]+"
-color body red default "(^| )\\*[-a-z0-9äöüß*]+\\*[,.?]?[ \n]"
-
-#color underline green default
-#color header default default "[ \t]+[^:]*$"
-#color bold brightblack default
-
-# threads
-#color index brightyellow default "~h 'References: +<.+>'"
-#color index yellow default "~h 'References: +<.+> +<.+>'"
-#color index brightred default "~h 'References: +<.+> +<.+> +<.+>'"
-#color index red default "~h 'References: +<.+> +<.+> +<.+> +<.+>'"
-#color index blue default "~h 'References: +<.+> +<.+> +<.+> +<.+> +<.+>'"
-#color index green default "~h 'References: +<.+> +<.+> +<.+> +<.+> +<.+> +<.+>'"
-
-# spam
-color index magenta default "\(Resent-\)?Message-Id: <>"
-color index magenta default "\(Resent-\)?Message-Id: '<.* .*>'"
-color index magenta default "\(Resent-\)?Message-Id: localhost"
-color index magenta default "! \(Resent-\)?Message-Id: @"
-color index magenta default '~C Undisclosed.*Recipients'
+source ~/.muttrc-colors
 
 ########################
 # Sorting of the mails #
