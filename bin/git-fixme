@@ -1,2 +1,2 @@
 #!/bin/bash
-git grep -E "(@@@|FIXME)"
+git grep -C2 -E "(@@@|FIXME)"

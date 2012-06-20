@@ -36,7 +36,6 @@
   top-commits = shortlog --summary --numbered --no-merges
   gdiff = difftool --gui --no-prompt
   prune-all = !git remote | xargs -n 1 git remote prune
-#  fixme = grep -E "\#\s+([A-Z]{3,}+\:)"
 [push]
 	default = current
 [github]
