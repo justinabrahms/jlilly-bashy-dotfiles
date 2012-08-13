@@ -1,0 +1,13 @@
+#!/bin/sh
+EMACS_LOCATION="/usr/local/google/home/justinlilly/emacs/"
+
+cd $EMACS_LOCATION
+git reset --hard HEAD
+git clean -dxf
+git pull
+./autoconf.sh
+make boostrap
+cd lisp
+make autoloads
+cd ..
+sudo make install
