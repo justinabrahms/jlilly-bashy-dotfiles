@@ -12,7 +12,6 @@ promptinit
 . ~/.shell/aliases
 . ~/.shell/completions
 . ~/.shell/functions
-. ~/.shell/prompt
 . ~/.shell/variables
 . ~/.shell/host_specific
 if [ -f ~/.bash_local ]; then
