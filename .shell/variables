@@ -2,6 +2,7 @@ export PATH=$HOME/bin:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:/Applications/E
 export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
 export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/src
 export INFOPATH=$INFOPATH:/usr/share/info
 
 export GREP_OPTIONS='--color=auto'
