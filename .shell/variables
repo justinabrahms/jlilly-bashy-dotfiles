@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:$PATH
 export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
 export WORKON_HOME=$HOME/.virtualenvs
