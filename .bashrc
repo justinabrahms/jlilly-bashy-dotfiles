@@ -3,6 +3,7 @@
 . ~/.shell/variables
 . ~/.shell/host_specific
 [[ -s "$HOME/.bash_local" ]] && . ~/.bash_local
+[[ -s "/usr/local/bin/virtualenvwrapper_lazy.sh" ]] && . /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # TODO(justinlilly): We should always start tmux if it is available to
 # us. Tidy up this if statement to do so.
