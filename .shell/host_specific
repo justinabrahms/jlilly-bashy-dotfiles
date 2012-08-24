@@ -2,3 +2,7 @@ if [ $TERM = "eterm-color" ]; then
   # prompt for emacs (width sensitive)
   PS1='\u@\h:\w\$ '
 fi
+
+export PATH="./bin:$PATH" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
