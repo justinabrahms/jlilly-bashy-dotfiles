@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Automatic options added
 setopt appendhistory autocd nomatch autopushd pushdignoredups promptsubst
-unsetopt beep
+unsetopt beep correctall
 bindkey -e
 zstyle :compinstall filename '/home/jlilly/.zshrc'
 # end automatic options
