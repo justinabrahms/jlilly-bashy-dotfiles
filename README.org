@@ -1,0 +1,8 @@
+* Dotfiles
+These are dotfiles. A few things here or there I've picked up over the
+years. I'm attempting to convert most of these files, as the need
+strikes to do big updates to them, into literate programming. You can
+read more about my setup on [[http://justinlilly.com/emacs/literate_programming.html][my website]].
+
+As such, these are artifacts of a separate system. Updates will likely
+come in large chunks and poorly commented via commits.
