@@ -1,9 +1,12 @@
+
 [core]
   excludesfile = ~/.gitignore
-  whitespace=trailing-space,space-before-tab
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
 [user]
   name = Justin Lilly
   email = justin@justinlilly.com
+
 [color]
   ui = auto
   diff = auto
@@ -25,26 +28,30 @@
   added = yellow
   changed = green
   untracked = cyan
+
 [alias]
   a = add
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit --verbose
   pick = cherry-pick --sign-off
+  sb = status --short --branch
   st = status --short --branch
   log1 = log --pretty=oneline --abbrev-commit
   serve = daemon --reuseaddr --base-path=. --export-all --verbose
   top-commits = shortlog --summary --numbered --no-merges
   gdiff = difftool --gui --no-prompt
   prune-all = !git remote | xargs -n 1 git remote prune
+
 [push]
-	default = current
-[github]
-	user = justinlilly
-[mergetool]
-	tool = kdiff3
-[diff]
-    guitool = kdiff3
-[apply]
-    whitespace = fix
+        default = current
+
 [rerere]
     enabled = true
+
+[github]
+        user = justinlilly
+
+[mergetool]
+        tool = kdiff3
+[diff]
+    guitool = kdiff3
