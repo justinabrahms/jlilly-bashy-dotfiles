@@ -1,25 +1,7 @@
+
 ## Functions
 add_auth_key () {
-    host=$1
-    if  [ -z $host ] ; then
-        echo "You must provide a host as the first (and only) argument"
-        return
-    fi
-    if [ ! -f ~/.ssh/id_rsa.pub ] ; then
-        command ssh-keygen -t rsa
-    fi
-    command scp ~/.ssh/id_rsa.pub $host:/tmp/tmp_rsa
-    command ssh $host -t "if [ ! -d ~/.ssh ]; then mkdir ~/.ssh/;fi && cat /tmp/tmp_rsa >> ~/.ssh/authorized_keys && rm /tmp/tmp_rsa && chmod -R 700 ~/.ssh"
-}
-
-
-svim () {
-    # Run vim as super user
-    command sudo vim $@
-}
-
-emc () {
-    emacsclient $@ &
+    ssh-copy-id $@
 }
 
 extract () {
@@ -35,7 +17,6 @@ extract () {
             *.tgz)            tar xzf $1        ;;
             *.zip)            unzip $1          ;;
             *.Z)              uncompress $1     ;;
-	    *.jar)	      unzip $1   	;;
             *)                echo "'$1' cannot be extracted via extract()" ;;
         esac
     else
@@ -46,6 +27,7 @@ extract () {
 dict() {
     grep "$@" /usr/share/dict/words
 }
+
 dls () {
  # directory LS
  echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
@@ -86,27 +68,12 @@ mcd () {
 exip () {
     # gather external ip address
     echo -n "Current External IP: "
-    curl -s -m 5 http://myip.dk | grep "<title>" | sed -e 's/<title>Your IP address is: //g' -e 's/<\/title>//g'
-}
-
-pastie() {
-        url=$(curl http://pastie.caboo.se/pastes/create \
-                -H "Expect:"                                \
-                -F "paste[parser]=$PASTIE_LANG"             \
-                -F "paste[body]=<-"                         \
-                -F "paste[authorization]=burger"            \
-                -s -L -o /dev/null -w "%{url_effective}" )
-        echo "$url" | xclip
-	echo "$url"
+    curl -s -m 5 http://myip.dk | grep "ha4" | sed -e 's/.*ha4">//g' -e 's/<\/span>.*//g'
 }
 
 ips () {
     # determine local IP address
     ifconfig | grep "inet " | awk '{ print $2 }'
-}
-
-gsvn () {
-     cat .git/config | grep url
 }
 
 parse_git_branch(){
@@ -115,12 +82,6 @@ parse_git_branch(){
 
 parse_svn_rev(){
     svn info 2> /dev/null | grep "Revision" | sed 's/Revision: \(.*\)/[r\1] /';
-}
-
-unegg () {
-    unzip $1 -d tmp
-    rm $1
-    mv tmp $1
 }
 
 update_git_dirs() {
@@ -144,15 +105,13 @@ shell () {
   ps | grep `echo $$` | awk '{ print $4 }'
 }
 
+unegg () {
+    unzip $1 -d tmp
+    rm $1
+    mv tmp $1
+}
+
 unpatch () {
   find . -name "*.orig" -o -name "*.rej"  -type f -exec rm {} \;
   find . -name "b" -type d -exec rm -rf {} \;
-}
-
-current_shell () {
-  ps | grep `echo $$` | grep -v "grep" | awk '{ print $4 }'
-}
-
-notify () {
-  echo $@ | xargs notify-send --urgency="low" --expire-time=1000
 }

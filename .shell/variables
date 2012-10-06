@@ -1,8 +1,11 @@
+
 export PATH=$HOME/bin:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:/Applications/Emacs.app/Contents/MacOS/bin:/usr/share/source-highlight:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+export GDAL_DATA=/opt/local/share
+export MANPATH=/opt/local/share/man:$MANPATH
+export CLOJURE_EXT=$HOME/.clojure
 export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/src
 export INFOPATH=$INFOPATH:/usr/share/info
 
 export GREP_OPTIONS='--color=auto'
@@ -18,6 +21,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;37m'
 export EDITOR='emacsclient'
+export OOO_FORCE_DESKTOP=gnome # For OpenOffice to look more gtk-friendly.
 export BROWSER=google-chrome
 
 export HISTCONTROL=erasedups  # Ignore duplicate entries in history

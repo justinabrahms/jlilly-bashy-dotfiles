@@ -1,35 +1,48 @@
+
 # Filesystem
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
 alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
+alias la='ls -AF'           # Compact view, show hidden
+alias ll='ls -lFh'          # Long view, no hidden
 
 # Mac Helpers
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
 alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
 
 # Helpers
+alias grep='grep --color=auto' # Always highlight grep search term
 alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
 alias df='df -h'            # Disk free, in gigabytes, not bytes
 alias du='du -h -c'         # Calculate total disk usage for a folder
-alias tt='tt++ $HOME/.ttconf'
-alias irc="ssh justinlilly.com"
+alias sgi='sudo gem install' # Install ruby stuff
+alias clj='clj-env-dir'        # Clojure helper
 alias clr='clear;echo "Currently logged in on $(tty), as $(whoami) in directory $(pwd)."'
+alias tt='tt++ $HOME/.ttconf'
+alias svim="sudo vim" # Run vim as super user
+alias emc="emacsclient -n" # no blocking terminal waiting for edit
+
+# Nifty extras
+alias servethis="python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'"
 alias pypath='python -c "import sys; print sys.path" | tr "," "\n" | grep -v "egg"'
 alias pycclean='find . -name "*.pyc" -exec rm {} \;'
 alias ssh='ssh -R 10999:localhost:22'
 alias nethack='telnet nethack.alt.org'
 
+# curl for useragents
+alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
+alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.0 (.NET CLR 3.5.30729)\""
+
 # GIT ALIASES
 alias g=git
-alias git='hub'
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
 alias gl='git pull'
 alias gp='git push'
-alias gst='git status'
+alias gst='git status -sb'
 alias gsd='git svn dcommit'
 alias gsr='git svn rebase'
 alias gs='git stash'
@@ -43,8 +56,3 @@ alias gho='$(git remote -v 2> /dev/null | grep github | sed -e "s/.*git\:\/\/\([
 alias hgst='hg status'
 alias hgd='hg diff | $GIT_EDITOR -'
 alias hgo='hg outgoing'
-
-# curl for useragents
-alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
-alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.0 (.NET CLR 3.5.30729)\""
-
