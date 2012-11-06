@@ -1,5 +1,4 @@
-
-export PATH=$HOME/bin:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:/Applications/Emacs.app/Contents/MacOS/bin:/usr/share/source-highlight:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+export PATH=$HOME/bin:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:/Applications/Emacs.app/Contents/MacOS/bin:/usr/share/source-highlight:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/local/share/npm/bin/
 export GDAL_DATA=/opt/local/share
 export MANPATH=/opt/local/share/man:$MANPATH
 export CLOJURE_EXT=$HOME/.clojure
