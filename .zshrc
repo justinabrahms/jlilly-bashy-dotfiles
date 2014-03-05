@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="smt"
+# OLD: ZSH_THEME="smt"
+ZSH_THEME='kennethreitz'
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -63,3 +64,4 @@ if [ -e have_fortune ]; then
     fortune
     echo ""
 fi
+. /usr/local/Cellar/autojump/21.6.9/etc/autojump.zsh
