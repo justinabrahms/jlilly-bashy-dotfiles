@@ -4,8 +4,8 @@
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [user]
-  name = Justin Lilly
-  email = justin@justinlilly.com
+  name = Justin Abrahms
+  email = justin@abrah.ms
 
 [color]
   ui = auto
@@ -31,13 +31,15 @@
 
 [alias]
   a = add
+  b = branch
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit --verbose
+  chekcout = checkout
   pick = cherry-pick --sign-off
   sb = status --short --branch
   st = status --short --branch
   log1 = log --pretty=oneline --abbrev-commit
-  serve = daemon --reuseaddr --base-path=. --export-all --verbose
+  serve = daemon --reuseaddr --base-path=. --export-all --verbose --enable=receive-pack
   top-commits = shortlog --summary --numbered --no-merges
   gdiff = difftool --gui --no-prompt
   prune-all = !git remote | xargs -n 1 git remote prune
@@ -49,9 +51,10 @@
     enabled = true
 
 [github]
-        user = justinlilly
+        user = justinabrahms
 
 [mergetool]
-        tool = kdiff3
+    tool = kdiff3
 [diff]
     guitool = kdiff3
+    algorithm = patience
