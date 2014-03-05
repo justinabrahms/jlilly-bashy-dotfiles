@@ -31,3 +31,4 @@ TAGS
 6.out
 build/lib/
 build/scripts-2.7/
+.dir-locals.el
