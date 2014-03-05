@@ -115,3 +115,7 @@ unpatch () {
   find . -name "*.orig" -o -name "*.rej"  -type f -exec rm {} \;
   find . -name "b" -type d -exec rm -rf {} \;
 }
+
+gif () {
+    echo "$@" >> ~/.gifs
+}

@@ -27,4 +27,4 @@ pager=
 track.current = True
 
 [web]
-cacerts = /etc/ssl/certs/ca-certificates.crt
+cacerts = /etc/hg-dummy-cert.pem

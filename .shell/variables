@@ -1,11 +1,14 @@
-export PATH=$HOME/bin:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:/Applications/Emacs.app/Contents/MacOS/bin:/usr/share/source-highlight:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/local/share/npm/bin/
+export GOROOT=$HOME/src/hacks/go/
+export PATH=$HOME/bin:$PATH
+export PATH=$GOROOT/bin:/Applications/Emacs.app/Contents/MacOS/bin:/Applications/Emacs.app/Contents/MacOS:$HOME/.gem/ruby/1.8/bin:/usr/local/git/bin:/usr/share/source-highlight:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/local/share/npm/bin:/usr/local/go/bin:$PATH
 export GDAL_DATA=/opt/local/share
-export MANPATH=/opt/local/share/man:$MANPATH
+export MANPATH=/opt/local/share/man:/usr/local/opt/erlang/lib/erlang/man:$MANPATH
 export CLOJURE_EXT=$HOME/.clojure
 export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
 export WORKON_HOME=$HOME/.virtualenvs
 export INFOPATH=$INFOPATH:/usr/share/info
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31'
