@@ -8,7 +8,12 @@ export P4CONFIG=$HOME/.p4config
 export P4EDITOR=$EDITOR
 export WORKON_HOME=$HOME/.virtualenvs
 export INFOPATH=$INFOPATH:/usr/share/info
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# Necessary to compile things w/ pip + clang
+# http://stackoverflow.com/questions/22413050/cant-install-python-mysql-library-on-mac-mavericks
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
 
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31'
