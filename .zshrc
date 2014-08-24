@@ -65,3 +65,5 @@ if [ -e have_fortune ]; then
     echo ""
 fi
 . /usr/local/Cellar/autojump/21.6.9/etc/autojump.zsh
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
